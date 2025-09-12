@@ -276,7 +276,7 @@ $APPLICATION->SetTitle("Главная");
     );?>
     </section>
     <!--о нас-->
-    <section class="NB_content flex-column aling-items-center widthBase">
+    <section data-nav-title="О нас" id="about" class="NB_content flex-column aling-items-center widthBase">
         <div class="NB_about_content d-flex flex-column">
             <div class="NB_about_content_container d-flex flex-row justify-content-between">
                 <div class="NB_about_left d-flex flex-column justify-content-around">
@@ -436,7 +436,7 @@ $APPLICATION->SetTitle("Главная");
     </section>
 
     <!--карусель клиентов-->
-    <section class="NB_content">
+    <section data-nav-title="Наши партнеры" id="partners" class="NB_content">
          <?php $APPLICATION->IncludeComponent(
             "bitrix:main.include",
             "main_clients_title",
@@ -507,7 +507,7 @@ $APPLICATION->SetTitle("Главная");
         );?>
     </section>
     <!--Что нас обьединяет-->
-    <section class="NB_content">
+    <section data-nav-title="Что нас обьединяет?" id="union" class="NB_content">
         <?php $APPLICATION->IncludeComponent(
             "bitrix:main.include", "main_union_title", Array(
             "AREA_FILE_SHOW" => "file",	// Показывать включаемую область
@@ -577,7 +577,7 @@ $APPLICATION->SetTitle("Главная");
     </section>
 
     <!--Отделы-->
-    <section class="NB_content NB_content_department NB_rounded-20 widthBase d-flex flex-column align-items-center justify-content-center">
+    <section data-nav-title="Структура" id="struct" class="NB_content NB_content_department NB_rounded-20 widthBase d-flex flex-column align-items-center justify-content-center">
         <?php $APPLICATION->IncludeComponent(
             "bitrix:main.include",
             "main_structure_title",
@@ -623,13 +623,27 @@ $APPLICATION->SetTitle("Главная");
     </section>
      <!--модальное окно-->
     <section class="NB_modal d-flex flex-row align-items-center justify-content-center" id="modal1">
-        <div class="NB_modal_item d-flex">
+        <div class="NB_modal_item d-flex flex-column align-items-center">
             <img alt="X" src="<?=SITE_TEMPLATE_PATH?>/assets/img/X.svg" class="NB_modal_item_X close_modal">
+            <div class="NB_modal_item_item flex-column align-items-center d-flex text-white">
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	"main_modal_struct", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/local/templates/landing/includes/main_modal_item",
+		"COMPONENT_TEMPLATE" => "main_modal_struct"
+	),
+	false
+);?>
+            </div>
         </div>
     </section>
 
     <!--Традиции-->
-    <section class="NB_content NB_content_tradition widthBase d-flex flex-column">
+    <section data-nav-title="Наши традиции" id="tradition" class="NB_content NB_content_tradition widthBase d-flex flex-column">
         <?php $APPLICATION->IncludeComponent(
             "bitrix:main.include",
             "main_gallery_title",
@@ -751,7 +765,7 @@ $APPLICATION->SetTitle("Главная");
     </section>
 
     <!--где и как мы общаемся-->
-    <section class="NB_content NB_content_community d-flex flex-column widthBase">
+    <section data-nav-title="Где и как мы общаемся" id="chats"  class="NB_content NB_content_community d-flex flex-column widthBase">
         <?php $APPLICATION->IncludeComponent(
                 "bitrix:main.include",
                 "main_union_title",
@@ -974,7 +988,7 @@ $APPLICATION->SetTitle("Главная");
 
 
     <!--подписчики-->
-    <section class="NB_content d-flex flex-column widthBase">
+    <section data-nav-title="За нами интересно наблюдать" id="social"   class="NB_content d-flex flex-column widthBase">
         <?$APPLICATION->IncludeComponent(
                 "bitrix:main.include",
                 "main_union_title",

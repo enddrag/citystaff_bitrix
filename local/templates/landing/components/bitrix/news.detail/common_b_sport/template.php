@@ -19,7 +19,7 @@ foreach($arResult['PROPERTIES'] as $arProp){
 }
 ?>
 <!--спорт-->
-<section class="widthBase NB_content NB2_sport d-flex flex-row justify-content-between">
+<section data-nav-title="Поддержка здоровья" id="sport"  class="widthBase NB_content NB2_sport d-flex flex-row justify-content-between">
     <div class="NB2_sport_left d-flex flex-column justify-content-center">
         <?if((!isset($arParams["DISPLAY_PREVIEW_TEXT"]) || $arParams["DISPLAY_PREVIEW_TEXT"]!="N") && $arResult["PREVIEW_TEXT"]):?>
             <h3><?=$arResult["PREVIEW_TEXT"]?></h3>

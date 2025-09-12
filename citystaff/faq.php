@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("помощь");
 ?>
 
     <!--баннер faq-->
-    <section class="NB_banner d-flex flex-column align-items-center" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 100%), url('/upload/medialibrary/0dd/b7xl2ujmosumfht84vue53iqscd9lu3r.png'); background-size: cover; background-repeat: no-repeat; background-position-y: 20%">
+    <section data-nav-title="Ваше мнение важно" id="opinion" class="NB_banner d-flex flex-column align-items-center" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 100%), url('/upload/medialibrary/0dd/b7xl2ujmosumfht84vue53iqscd9lu3r.png'); background-size: cover; background-repeat: no-repeat; background-position-y: 20%">
         <!--навигационное меню сайта-->
         <nav class="NB_menu NB_menu_color NB_backdrop-blur NB_rounded-50 widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
             <div class="NB_left d-flex flex-row justify-content-around align-items-center">
@@ -244,7 +244,7 @@ $APPLICATION->SetTitle("помощь");
     </section>
 
     <!--как мы работаем-->
-    <section class="widthBase d-flex flex row align-items-center justify-content-between NB3_info1">
+    <section data-nav-title="Как мы работаем с обратной связью?" id="howWork" class="widthBase d-flex flex row align-items-center justify-content-between NB3_info1">
         <div class="NB3_info1_38 d-flex flex-row align-items-center justify-content-center">
             <?php $APPLICATION->IncludeComponent(
                 "bitrix:main.include",
@@ -343,7 +343,7 @@ $APPLICATION->SetTitle("помощь");
     </section>
 
     <!--вопросики-->
-    <section class="NB3_q widthBase d-flex flex-row justify-content-center NB_rounded-20">
+    <section data-nav-title="Частые вопросы" id="answers" class="NB3_q widthBase d-flex flex-row justify-content-center NB_rounded-20">
         <?$APPLICATION->IncludeComponent(
             "bitrix:news.list", "common_f_questions", Array(
             "COMPONENT_TEMPLATE" => ".default",
@@ -430,7 +430,7 @@ $APPLICATION->SetTitle("помощь");
     </script>
 
     <!--чат с поддержкой-->
-    <section class="widthBase NB_content">
+    <section data-nav-title="Чат с поддержкой" id="supportChats" class="widthBase NB_content">
         <div class="d-flex flex-row justify-content-between NB3_info3 NB_rounded-20">
             <div class="NB3_info1_38 d-flex flex-row align-items-center justify-content-between">
                 <?php $APPLICATION->IncludeComponent(
@@ -530,7 +530,7 @@ $APPLICATION->SetTitle("помощь");
     </section>
 
     <!--график работ-->
-    <section class="d-flex flex-row justify-content-between NB3_WH widthBase NB_content">
+    <section data-nav-title="График работ" id="workhours" class="d-flex flex-row justify-content-between NB3_WH widthBase NB_content">
         <?php $APPLICATION->IncludeComponent(
             "bitrix:main.include",
             ".default",

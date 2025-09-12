@@ -518,132 +518,109 @@ $APPLICATION->SetTitle("бонус");
         </div>
     </section>
 
-  <!--стаффлики-->
+    <!--стаффлики-->
     <section data-nav-title="Как заработать стаффлики?" id="staffcoinList" class="widthBase NB_content NB2_stafcoin d-flex flex-column">
-        <?php $APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	"main_community_item_title3", 
-	array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/templates/landing/includes/common_b_p_h4",
-		"COMPONENT_TEMPLATE" => "main_community_item_title3"
-	),
-	false
-);?>
-        <?php $APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"main_about_p",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/templates/landing/includes/common_b_p_p"
-	)
-);?>
-        <div class="NB2_stafcoin_items d-flex flex-row flex-wrap justify-content-center">
-	<div class="NB2_stafcoin_item NB_rounded-20 d-flex flex row justify-content-between align-items-center">
-		<p class="Fbody NB2_stafcoin_item_p">
-			 Участие в фотосъемке для социальных сетей компании
-		</p>
-		<div class="NB2_stafcoin_item_right d-flex flex-row justify-content-between NB2_stafcoin_item_p">
-			<p class="Fbody NB2_stafcoin_item_right_modal openModal1">
-				 За что начисляются?
-			</p>
-			<p class="Fbody">
-				 1 стаффлик
-			</p>
-		</div>
-	</div>
-	<div class="NB2_stafcoin_item NB_rounded-20 d-flex flex row justify-content-between align-items-center">
-		<p class="Fbody NB2_stafcoin_item_p">
-			 Участие в фотосъемке для социальных сетей компании
-		</p>
-		<div class="NB2_stafcoin_item_right d-flex flex-row justify-content-between NB2_stafcoin_item_p">
-			<p class="Fbody NB2_stafcoin_item_right_modal openModal1">
-				 За что начисляются?
-			</p>
-			<p class="Fbody">
-				 1 стаффлик
-			</p>
-		</div>
-	</div>
-	<div class="NB2_stafcoin_item NB_rounded-20 d-flex flex row justify-content-between align-items-center">
-		<p class="Fbody NB2_stafcoin_item_p">
-			 Участие в фотосъемкеasdasdasdasdassssssssssssssssssssssssssssssssssssssssssss для социальных сетей компании
-		</p>
-		<div class="NB2_stafcoin_item_right d-flex flex-row justify-content-between NB2_stafcoin_item_p">
-			<p class="Fbody NB2_stafcoin_item_right_modal openModal1">
-				 За что начисляются?
-			</p>
-			<p class="Fbody">
-				 1 стаффssssssdsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssлик
-			</p>
-		</div>
-	</div>
-	<div class="NB2_stafcoin_item NB_rounded-20 d-flex flex row justify-content-between align-items-center">
-		<p class="Fbody NB2_stafcoin_item_p">
-			 Участие в фотосъемке для социальных сетей компании
-		</p>
-		<div class="NB2_stafcoin_item_right d-flex flex-row justify-content-between NB2_stafcoin_item_p">
-			<p class="Fbody NB2_stafcoin_item_right_modal openModal1">
-				 За что начисляются?
-			</p>
-			<p class="Fbody">
-				 1 стаффлик
-			</p>
-		</div>
-	</div>
-	<div class="NB2_stafcoin_item NB_rounded-20 d-flex flex row justify-content-between align-items-center">
-		<p class="Fbody NB2_stafcoin_item_p">
-			 Участие в фотосъемке для социальных сетей компании
-		</p>
-		<div class="NB2_stafcoin_item_right d-flex flex-row justify-content-between NB2_stafcoin_item_p">
-			<p class="Fbody NB2_stafcoin_item_right_modal openModal1">
-				 За что начисляются?
-			</p>
-			<p class="Fbody">
-				 1 стаффлик
-			</p>
-		</div>
-	</div>
-	<div class="NB2_stafcoin_item NB_rounded-20 d-flex flex row justify-content-between align-items-center">
-		<p class="Fbody NB2_stafcoin_item_p">
-			 Участие в фотосъемке для социальных сетей компании
-		</p>
-		<div class="NB2_stafcoin_item_right d-flex flex-row justify-content-between NB2_stafcoin_item_p">
-			<p class="Fbody NB2_stafcoin_item_right_modal openModal1">
-				 За что начисляются?
-			</p>
-			<p class="Fbody">
-				 1 стаффлик
-			</p>
-		</div>
-	</div>
-	<div class="NB2_stafcoin_item NB_rounded-20 d-flex flex row justify-content-between align-items-center">
-		<p class="Fbody NB2_stafcoin_item_p">
-			 Участие в фотосъемке для социальных сетей компании
-		</p>
-		<div class="NB2_stafcoin_item_right d-flex flex-row justify-content-between NB2_stafcoin_item_p">
-			<p class="Fbody NB2_stafcoin_item_right_modal openModal1">
-				 За что начисляются?
-			</p>
-			<p class="Fbody">
-				 1 стаффлик
-			</p>
-		</div>
-	</div>
-</div>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "main_community_item_title3",
+            Array(
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "inc",
+                "COMPONENT_TEMPLATE" => "main_community_item_title3",
+                "EDIT_TEMPLATE" => "",
+                "PATH" => "/local/templates/landing/includes/common_b_p_h4"
+            )
+        );?>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:main.include",
+            "main_about_p",
+            Array(
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "inc",
+                "EDIT_TEMPLATE" => "",
+                "PATH" => "/local/templates/landing/includes/common_b_p_p"
+            )
+        );?>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "common_bonus_coinList",
+            array(
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "ADD_SECTIONS_CHAIN" => "Y",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "Y",
+                "DISPLAY_DATE" => "Y",
+                "DISPLAY_NAME" => "Y",
+                "DISPLAY_PICTURE" => "Y",
+                "DISPLAY_PREVIEW_TEXT" => "Y",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => array(
+                    0 => "CODE",
+                    1 => "NAME",
+                    2 => "DETAIL_TEXT",
+                    3 => "",
+                ),
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "IBLOCK_ID" => "19",
+                "IBLOCK_TYPE" => "content",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "MESSAGE_404" => "",
+                "NEWS_COUNT" => "100",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PAGER_TITLE" => "Новости",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "PROPERTY_CODE" => array(
+                    0 => "",
+                    1 => "link_name",
+                    2 => "",
+                ),
+                "SET_BROWSER_TITLE" => "Y",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "Y",
+                "SET_META_KEYWORDS" => "Y",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "Y",
+                "SHOW_404" => "N",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER1" => "DESC",
+                "SORT_ORDER2" => "ASC",
+                "STRICT_SECTION_CHECK" => "N",
+                "COMPONENT_TEMPLATE" => "common_bonus_coinList"
+            ),
+            false
+        );?>
         <div class="NB2_info_circle NB2_info_circle_green">
         </div>
         <div class="NB2_info_circle NB2_info_circle_blue">
         </div>
     </section>
     <!--модальное окно-->
-    <section class="NB_modal d-flex flex-row align-items-center justify-content-center" id="modal1">
-        <div class="NB_modal_item d-flex">
-            <img alt="X" src="<?=SITE_TEMPLATE_PATH?>/assets/img/X.svg" class="NB_modal_item_X" id="closeModal1">
+    <section class="NB_modal d-flex flex-row align-items-center justify-content-center" id="staffcoins">
+        <div class="NB_modal_item d-flex flex-column align-items-center">
+            <img alt="X" src="/local/templates/landing/assets/img/X.svg" class="NB_modal_item_X close_modal">
+            <div class="NB_modal_item_text text-white d-flex flex-column Fbody">
+                <!--текст модального окна-->
+            </div>
         </div>
     </section>
 
@@ -709,7 +686,7 @@ $APPLICATION->SetTitle("бонус");
 );?>
 
     <!--здоровье-->
-    <section class="widthBase NB_content NB2_health d-flex flex-column">
+    <section data-nav-title="Поддержка здоровья" id="health"  class="widthBase NB_content NB2_health d-flex flex-column">
         <?php $APPLICATION->IncludeComponent(
             "bitrix:main.include",
             "main_community_item_title3",

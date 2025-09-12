@@ -243,7 +243,7 @@ $APPLICATION->SetTitle("База знаний и документы");
         </div>
     </section>
     <!--общее-->
-    <section class="NB1_section_info NB_content widthBase d-flex flex-column">
+    <section data-nav-title="Общее" id="general" class="NB1_section_info NB_content widthBase d-flex flex-column">
         <?php $APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"main_union_title",
@@ -318,7 +318,7 @@ $APPLICATION->SetTitle("База знаний и документы");
         </div>
     </section>
     <!--документы-->
-    <section class="NB1_docs d-flex flex-column NB_content widthBase">
+    <section data-nav-title="Документы" id="documents" class="NB1_docs d-flex flex-column NB_content widthBase">
         <?php $APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"main_union_title",
@@ -497,7 +497,7 @@ $APPLICATION->SetTitle("База знаний и документы");
 );?>
     </section>
     <!--шаблоны-->
-    <section class="NB1_temp d-flex flex-row justify-content-between NB_content widthBase">
+    <section data-nav-title="Шаблоны" id="templates" class="NB1_temp d-flex flex-row justify-content-between NB_content widthBase">
         <div class="NB1_temp_item d-flex flex-row justify-content-between">
             <div class="NB1_docs_content">
                  <?php $APPLICATION->IncludeComponent(

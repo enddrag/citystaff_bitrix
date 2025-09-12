@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 ?>
 <?php
 $arr = [];
-$dir = $_SERVER['DOCUMENT_ROOT'];
+$dir = $_SERVER['DOCUMENT_ROOT']."/citystaff";
 
 // Получаем все PHP-файлы в текущей директории
 $files = glob($dir . '/*.php');
