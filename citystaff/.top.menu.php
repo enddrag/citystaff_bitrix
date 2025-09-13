@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"База знаний и документы", 
+		"docs_base.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Персонал", 
+		"person.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Помощь", 
+		"faq.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Бонусы", 
+		"bonus.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
