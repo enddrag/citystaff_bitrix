@@ -2,109 +2,102 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("test");
 ?>
-    <!--стаффлики-->
-    <section data-nav-title="Как заработать стаффлики?" id="staffcoinList" class="widthBase NB_content NB2_stafcoin d-flex flex-column">
-        <?$APPLICATION->IncludeComponent(
-            "bitrix:main.include",
-            "main_community_item_title3",
-            Array(
-                "AREA_FILE_SHOW" => "file",
-                "AREA_FILE_SUFFIX" => "inc",
-                "COMPONENT_TEMPLATE" => "main_community_item_title3",
-                "EDIT_TEMPLATE" => "",
-                "PATH" => "/local/templates/landing/includes/common_b_p_h4"
-            )
-        );?>
-        <?$APPLICATION->IncludeComponent(
-            "bitrix:main.include",
-            "main_about_p",
-            Array(
-                "AREA_FILE_SHOW" => "file",
-                "AREA_FILE_SUFFIX" => "inc",
-                "EDIT_TEMPLATE" => "",
-                "PATH" => "/local/templates/landing/includes/common_b_p_p"
-            )
-        );?>
-        <?$APPLICATION->IncludeComponent(
-            "bitrix:news.list",
-            "common_bonus_coinList",
-            array(
-                "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                "ADD_SECTIONS_CHAIN" => "Y",
-                "AJAX_MODE" => "N",
-                "AJAX_OPTION_ADDITIONAL" => "",
-                "AJAX_OPTION_HISTORY" => "N",
-                "AJAX_OPTION_JUMP" => "N",
-                "AJAX_OPTION_STYLE" => "Y",
-                "CACHE_FILTER" => "N",
-                "CACHE_GROUPS" => "Y",
-                "CACHE_TIME" => "36000000",
-                "CACHE_TYPE" => "A",
-                "CHECK_DATES" => "Y",
-                "DETAIL_URL" => "",
-                "DISPLAY_BOTTOM_PAGER" => "Y",
-                "DISPLAY_DATE" => "Y",
-                "DISPLAY_NAME" => "Y",
-                "DISPLAY_PICTURE" => "Y",
-                "DISPLAY_PREVIEW_TEXT" => "Y",
-                "DISPLAY_TOP_PAGER" => "N",
-                "FIELD_CODE" => array(
-                    0 => "CODE",
-                    1 => "NAME",
-                    2 => "DETAIL_TEXT",
-                    3 => "",
-                ),
-                "FILTER_NAME" => "",
-                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                "IBLOCK_ID" => "19",
-                "IBLOCK_TYPE" => "content",
-                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-                "INCLUDE_SUBSECTIONS" => "Y",
-                "MESSAGE_404" => "",
-                "NEWS_COUNT" => "100",
-                "PAGER_BASE_LINK_ENABLE" => "N",
-                "PAGER_DESC_NUMBERING" => "N",
-                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                "PAGER_SHOW_ALL" => "N",
-                "PAGER_SHOW_ALWAYS" => "N",
-                "PAGER_TEMPLATE" => ".default",
-                "PAGER_TITLE" => "Новости",
-                "PARENT_SECTION" => "",
-                "PARENT_SECTION_CODE" => "",
-                "PREVIEW_TRUNCATE_LEN" => "",
-                "PROPERTY_CODE" => array(
-                    0 => "",
-                    1 => "link_name",
-                    2 => "",
-                ),
-                "SET_BROWSER_TITLE" => "Y",
-                "SET_LAST_MODIFIED" => "N",
-                "SET_META_DESCRIPTION" => "Y",
-                "SET_META_KEYWORDS" => "Y",
-                "SET_STATUS_404" => "N",
-                "SET_TITLE" => "Y",
-                "SHOW_404" => "N",
-                "SORT_BY1" => "ACTIVE_FROM",
-                "SORT_BY2" => "SORT",
-                "SORT_ORDER1" => "DESC",
-                "SORT_ORDER2" => "ASC",
-                "STRICT_SECTION_CHECK" => "N",
-                "COMPONENT_TEMPLATE" => "common_bonus_coinList"
-            ),
-            false
-        );?>
-        <div class="NB2_info_circle NB2_info_circle_green">
-        </div>
-        <div class="NB2_info_circle NB2_info_circle_blue">
-        </div>
-    </section>
-    <!--модальное окно-->
-    <section class="NB_modal d-flex flex-row align-items-center justify-content-center" id="staffcoins">
-        <div class="NB_modal_item d-flex flex-column align-items-center">
-            <img alt="X" src="/local/templates/landing/assets/img/X.svg" class="NB_modal_item_X close_modal">
-            <div class="NB_modal_item_text text-white d-flex flex-column Fbody">
-                <!--текст модального окна-->
+
+    <p class="Fmenu NB2_gradient_button d-flex flex-row align-items-center justify-content-center" data-modal="application">
+        Оставить заявку
+    </p>
+        <!--модальное окно-->
+        <section class="NB_modal d-flex flex-row align-items-center justify-content-center" id="application">
+            <div class="NB_modal_item d-flex flex-column align-items-center">
+                <img src="img/X.svg" alt="X" class="NB_modal_item_X" id="closeModal">
+                <div class="NB_modal_item_item flex-column align-items-center" id="survey" style="display: flex;">
+                    <h4>Заполните имя и контакт друга, чтобы мы могли учесть заявку</h4>
+                    <form action="#" method="post" class="NB_modal_form d-flex flex-column align-items-center">
+                        <div class="NB_modal_input_form_items d-flex flex-column align-items-center NB_modal_form_error">
+                            <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
+                            <p class="NB_modal_error">ошибка валидации</p>
+                        </div>
+                        <div class="NB_modal_input_form_items d-flex flex-column align-items-center NB_modal_form_error">
+                            <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
+                            <p class="NB_modal_error">ошибка валидации</p>
+                        </div>
+                        <div class="NB_modal_input_form_items d-flex flex-column align-items-center NB_modal_form_error">
+                            <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
+                            <p class="NB_modal_error">ошибка валидации</p>
+                        </div>
+                        <div class="NB_modal_input_form_items d-flex flex-column align-items-center NB_modal_form_error">
+                            <!-- Скрытый select для формы -->
+                            <select name="vacancy" required class="NB_hidden-select">
+                                <option value="" disabled selected></option>
+                                <option value="pm">Менеджер проекта</option>
+                                <option value="js">Разработчик JavaScript</option>
+                                <option value="uiux">Дизайнеров UI/UX</option>
+                                <option value="data">Аналитик данных</option>
+                                <option value="qa">Тестировщик</option>
+                            </select>
+
+                            <!-- Кастомный выпадающий список -->
+                            <div class="NB_modal_select Fmenu">
+                                <div class="NB_selected-option NB_placeholder">на какую вакансию</div>
+                                <div class="NB_options-container">
+                                    <div class="NB_option" data-value="pm">Менеджер проекта</div>
+                                    <div class="NB_option" data-value="js">Разработчик JavaScript</div>
+                                    <div class="NB_option" data-value="uiux">Дизайнеров UI/UX</div>
+                                    <div class="NB_option" data-value="data">Аналитик данных</div>
+                                    <div class="NB_option" data-value="qa">Тестировщик</div>
+                                </div>
+                            </div>
+
+                            <p class="NB_modal_error">ошибка валидации</p>
+                        </div>
+                        <div class="NB_modal_input_form_items d-flex flex-column align-items-center NB_modal_form_error">
+                            <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
+                            <p class="NB_modal_error">ошибка валидации</p>
+                        </div>
+                        <div class="NB_modal_gradient d-flex flex-row align-items-center justify-content-center">
+                            <input type="submit" value="Оставить заявку" class="NB_modal_input_form_button Fmenu d-flex flex-row align-items-center justify-content-center">
+                        </div>
+                    </form>
+                    <p class="Fa NB_modal_item_footer">Нажимая на кнопку «Отправить», вы даёте согласие на обработку персональных данных.</p>
+                </div>
+                <div class="NB_modal_item_item flex-column align-items-center" id="happyMonkey" style="display: none;">
+                    <h4>Заявка принята!</h4>
+                    <p class="Fbody NB_modal_item_p">Мы начислим 5 000 ₽ после выхода вашего друга на работу</p>
+                    <img src="img/monkey.png" alt="" class="NB_modal_monkey">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <script>
+        $(document).ready(function() {
+            // Инициализация кастомного селекта
+            $('.NB_modal_select .NB_selected-option').click(function() {
+                $('.NB_modal_select').toggleClass('NB_open');
+            });
+
+            // Обработка выбора опции
+            $('.NB_modal_select .NB_option').click(function() {
+                var value = $(this).data('value');
+                var text = $(this).text();
+
+                // Обновление отображения выбранной опции
+                $('.NB_modal_select .NB_selected-option').text(text).removeClass('NB_placeholder');
+
+                // Обновление значения в скрытом select
+                $('select.hidden-select').val(value);
+
+                // Закрытие выпадающего списка
+                $('.NB_modal_select').removeClass('NB_open');
+            });
+
+            // Закрытие выпадающего списка при клике вне его
+            $(document).mouseup(function(e) {
+                var container = $('.NB_modal_select');
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.removeClass('NB_open');
+                }
+            });
+
+        });
+    </script>
+
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
