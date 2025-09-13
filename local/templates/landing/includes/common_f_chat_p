@@ -1,1 +1,0 @@
-<span style="color: #ffffff;">Задать вопрос Екатерине Катковой</span>
