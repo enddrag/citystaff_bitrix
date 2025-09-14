@@ -3,11 +3,11 @@
 namespace Sprint\Migration;
 
 
-class Version20250911140351 extends Version
+class Version20250914194508 extends Version
 {
     protected $author = "admin";
 
-    protected $description = "инфоблоки на период 11.09.2025";
+    protected $description = "";
 
     protected $moduleVersion = "5.4.1";
 
@@ -47,10 +47,10 @@ class Version20250911140351 extends Version
   array (
     0 => 'CS',
   ),
-  'CODE' => 'about_us',
+  'CODE' => 'logotype',
   'API_CODE' => NULL,
   'REST_ON' => 'N',
-  'NAME' => 'о нас',
+  'NAME' => 'Логотипы',
   'ACTIVE' => 'Y',
   'SORT' => '500',
   'LIST_PAGE_URL' => '#SITE_DIR#/content/index.php?ID=#IBLOCK_ID#',
@@ -420,16 +420,7 @@ class Version20250911140351 extends Version
     array (
       'columns' => 
       array (
-        0 => 'NAME',
-        1 => 'ACTIVE',
-        2 => 'SORT',
-        3 => 'TIMESTAMP_X',
-        4 => 'CODE',
-        5 => 'PREVIEW_PICTURE',
-        6 => 'PREVIEW_TEXT',
-        7 => 'DETAIL_PICTURE',
-        8 => 'DETAIL_TEXT',
-        9 => 'ID',
+        0 => '',
       ),
       'columns_sizes' => 
       array (

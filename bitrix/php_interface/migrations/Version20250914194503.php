@@ -3,11 +3,11 @@
 namespace Sprint\Migration;
 
 
-class Version20250911140359 extends Version
+class Version20250914194503 extends Version
 {
     protected $author = "admin";
 
-    protected $description = "инфоблоки на период 11.09.2025";
+    protected $description = "";
 
     protected $moduleVersion = "5.4.1";
 
