@@ -3,7 +3,7 @@
 namespace Sprint\Migration;
 
 
-class Version20250914194512 extends Version
+class Version20250915211434 extends Version
 {
     protected $author = "admin";
 
@@ -47,10 +47,10 @@ class Version20250914194512 extends Version
   array (
     0 => 'CS',
   ),
-  'CODE' => 'sug',
+  'CODE' => 'gallery',
   'API_CODE' => NULL,
   'REST_ON' => 'N',
-  'NAME' => 'Подсказки',
+  'NAME' => 'галерея',
   'ACTIVE' => 'Y',
   'SORT' => '500',
   'LIST_PAGE_URL' => '#SITE_DIR#/content/index.php?ID=#IBLOCK_ID#',
@@ -413,55 +413,7 @@ class Version20250914194512 extends Version
     'TASK_ID' => 'iblock_full',
   ),
 ));
-        $helper->Iblock()->saveProperty($iblockId, array (
-  'NAME' => 'name',
-  'ACTIVE' => 'Y',
-  'SORT' => '500',
-  'CODE' => 'sug_name',
-  'DEFAULT_VALUE' => '',
-  'PROPERTY_TYPE' => 'S',
-  'ROW_COUNT' => '1',
-  'COL_COUNT' => '30',
-  'LIST_TYPE' => 'L',
-  'MULTIPLE' => 'N',
-  'XML_ID' => NULL,
-  'FILE_TYPE' => '',
-  'MULTIPLE_CNT' => '5',
-  'LINK_IBLOCK_ID' => '0',
-  'WITH_DESCRIPTION' => 'N',
-  'SEARCHABLE' => 'N',
-  'FILTRABLE' => 'N',
-  'IS_REQUIRED' => 'N',
-  'VERSION' => '1',
-  'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => 'a:0:{}',
-  'HINT' => '',
-));
-            $helper->Iblock()->saveProperty($iblockId, array (
-  'NAME' => 'link',
-  'ACTIVE' => 'Y',
-  'SORT' => '500',
-  'CODE' => 'sug_link',
-  'DEFAULT_VALUE' => '',
-  'PROPERTY_TYPE' => 'S',
-  'ROW_COUNT' => '1',
-  'COL_COUNT' => '30',
-  'LIST_TYPE' => 'L',
-  'MULTIPLE' => 'N',
-  'XML_ID' => NULL,
-  'FILE_TYPE' => '',
-  'MULTIPLE_CNT' => '5',
-  'LINK_IBLOCK_ID' => '0',
-  'WITH_DESCRIPTION' => 'N',
-  'SEARCHABLE' => 'N',
-  'FILTRABLE' => 'N',
-  'IS_REQUIRED' => 'N',
-  'VERSION' => '1',
-  'USER_TYPE' => NULL,
-  'USER_TYPE_SETTINGS' => 'a:0:{}',
-  'HINT' => '',
-));
-        $helper->UserOptions()->saveElementGrid($iblockId, array (
+    $helper->UserOptions()->saveElementGrid($iblockId, array (
   'views' => 
   array (
     'default' => 

@@ -56,8 +56,9 @@
     "WebServerToolWindowPanel.toolwindow.show.date": "false",
     "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "migrations",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/personal/Work/Citystaff единый портал/bitrix",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,6 +101,7 @@
       <workItem from="1757710507222" duration="448000" />
       <workItem from="1757710970561" duration="60000" />
       <workItem from="1757711042120" duration="34830000" />
+      <workItem from="1757936382498" duration="1793000" />
     </task>
     <task id="LOCAL-00001" summary="Интеграция четвертой страницы без обратной связи.">
       <option name="closed" value="true" />

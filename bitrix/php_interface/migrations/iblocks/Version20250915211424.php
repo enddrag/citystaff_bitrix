@@ -3,7 +3,7 @@
 namespace Sprint\Migration;
 
 
-class Version20250914194517 extends Version
+class Version20250915211424 extends Version
 {
     protected $author = "admin";
 
@@ -47,10 +47,10 @@ class Version20250914194517 extends Version
   array (
     0 => 'CS',
   ),
-  'CODE' => 'DetailInfo',
+  'CODE' => 'banner_title',
   'API_CODE' => NULL,
   'REST_ON' => 'N',
-  'NAME' => 'Подробности',
+  'NAME' => 'баннер приветствия',
   'ACTIVE' => 'Y',
   'SORT' => '500',
   'LIST_PAGE_URL' => '#SITE_DIR#/content/index.php?ID=#IBLOCK_ID#',
