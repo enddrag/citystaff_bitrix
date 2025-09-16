@@ -15,8 +15,8 @@ $this->setFrameMode(true);
 
 
 <?
-	//6 - контакты; 7 - социальные сети
-	$type = 7;
+
+	$type = 44;
 	$arSection = null;
 	foreach($arResult["ITEMS"] as $arItem){
 

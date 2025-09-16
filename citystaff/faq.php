@@ -4,7 +4,7 @@ $APPLICATION->SetTitle("помощь");
 ?>
 
     <!--баннер faq-->
-    <section data-nav-title="Ваше мнение важно" id="opinion" class="NB_banner d-flex flex-column align-items-center" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 100%), url('/upload/medialibrary/0dd/b7xl2ujmosumfht84vue53iqscd9lu3r.png'); background-size: cover; background-repeat: no-repeat; background-position-y: 20%">
+    <section data-nav-title="Ваше мнение важно" id="opinion" class="NB_banner d-flex flex-column align-items-center" style="background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 100%), url('/upload/medialibrary/428/6mrfhrzqrsxa4xowyueu5p7qutz4n2ju/faq.png'); background-size: cover; background-repeat: no-repeat; background-position-y: 20%">
         <!--навигационное меню сайта-->
         <nav class="NB_menu NB_menu_color NB_backdrop-blur NB_rounded-50 widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
             <div class="NB_left d-flex flex-row justify-content-around align-items-center">
@@ -37,7 +37,7 @@ $APPLICATION->SetTitle("помощь");
                         "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
                         "FIELD_CODE" => array(0=>"NAME",1=>"",),
                         "IBLOCK_ID" => "",
-                        "IBLOCK_TYPE" => "content",
+                        "IBLOCK_TYPE" => "CityStaffUIP",
                         "IBLOCK_URL" => "",
                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                         "MESSAGE_404" => "",
@@ -89,8 +89,8 @@ $APPLICATION->SetTitle("помощь");
                         "FIELD_CODE" => array(0=>"",1=>"",),
                         "FILTER_NAME" => "",
                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                        "IBLOCK_ID" => "17",
-                        "IBLOCK_TYPE" => "content",
+                        "IBLOCK_ID" => "38",
+                        "IBLOCK_TYPE" => "CityStaffUIP",
                         "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                         "INCLUDE_SUBSECTIONS" => "Y",
                         "MESSAGE_404" => "",
@@ -167,7 +167,7 @@ $APPLICATION->SetTitle("помощь");
                         "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
                         "FIELD_CODE" => array(0=>"NAME",1=>"",),
                         "IBLOCK_ID" => "",
-                        "IBLOCK_TYPE" => "content",
+                        "IBLOCK_TYPE" => "CityStaffUIP",
                         "IBLOCK_URL" => "",
                         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                         "MESSAGE_404" => "",
@@ -347,8 +347,8 @@ $APPLICATION->SetTitle("помощь");
         <?$APPLICATION->IncludeComponent(
             "bitrix:news.list", "common_f_questions", Array(
             "COMPONENT_TEMPLATE" => ".default",
-            "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
-            "IBLOCK_ID" => "21",	// Код информационного блока
+            "IBLOCK_TYPE" => "CityStaffUIP",	// Тип информационного блока (используется только для проверки)
+            "IBLOCK_ID" => "40",	// Код информационного блока
             "NEWS_COUNT" => "100",	// Количество новостей на странице
             "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
             "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
@@ -495,8 +495,8 @@ $APPLICATION->SetTitle("помощь");
                         0 => "link",
                         1 => "name",
                     ),
-                    "IBLOCK_ID" => "12",	// Код информационного блока
-                    "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+                    "IBLOCK_ID" => "",	// Код информационного блока
+                    "IBLOCK_TYPE" => "CityStaffUIP",	// Тип информационного блока (используется только для проверки)
                     "IBLOCK_URL" => "",	// URL страницы просмотра списка элементов (по умолчанию - из настроек инфоблока)
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
                     "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
@@ -585,8 +585,8 @@ $APPLICATION->SetTitle("помощь");
                     ),
                     "FILTER_NAME" => "",
                     "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                    "IBLOCK_ID" => "21",
-                    "IBLOCK_TYPE" => "content",
+                    "IBLOCK_ID" => "40",
+                    "IBLOCK_TYPE" => "CityStaffUIP",
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                     "INCLUDE_SUBSECTIONS" => "Y",
                     "MESSAGE_404" => "",
@@ -631,120 +631,138 @@ $APPLICATION->SetTitle("помощь");
 
     <section class="widthBase NB_content NB_bottomMenu d-flex flex-row flex-wrap align-items-center">
         <?php $APPLICATION->IncludeComponent(
-            "bitrix:news.detail",
-            "main_bottommenu_link1",
-            Array(
-                "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                "ADD_ELEMENT_CHAIN" => "N",
-                "ADD_SECTIONS_CHAIN" => "N",
-                "AJAX_MODE" => "N",
-                "AJAX_OPTION_ADDITIONAL" => "",
-                "AJAX_OPTION_HISTORY" => "N",
-                "AJAX_OPTION_JUMP" => "N",
-                "AJAX_OPTION_STYLE" => "N",
-                "BROWSER_TITLE" => "-",
-                "CACHE_GROUPS" => "Y",
-                "CACHE_TIME" => "36000000",
-                "CACHE_TYPE" => "A",
-                "CHECK_DATES" => "Y",
-                "COMPONENT_TEMPLATE" => "main_bottommenu_link1",
-                "DETAIL_URL" => "",
-                "DISPLAY_BOTTOM_PAGER" => "N",
-                "DISPLAY_DATE" => "N",
-                "DISPLAY_NAME" => "N",
-                "DISPLAY_PICTURE" => "N",
-                "DISPLAY_PREVIEW_TEXT" => "Y",
-                "DISPLAY_TOP_PAGER" => "N",
-                "ELEMENT_CODE" => "main_bottommenu_link1",
-                "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
-                "FIELD_CODE" => array(0=>"",1=>"",),
-                "IBLOCK_ID" => "12",
-                "IBLOCK_TYPE" => "content",
-                "IBLOCK_URL" => "",
-                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                "MESSAGE_404" => "",
-                "META_DESCRIPTION" => "-",
-                "META_KEYWORDS" => "-",
-                "PAGER_BASE_LINK_ENABLE" => "N",
-                "PAGER_SHOW_ALL" => "N",
-                "PAGER_TEMPLATE" => ".default",
-                "PAGER_TITLE" => "Страница",
-                "PROPERTY_CODE" => array(0=>"",1=>"link",2=>"name",3=>"",),
-                "SET_BROWSER_TITLE" => "N",
-                "SET_CANONICAL_URL" => "N",
-                "SET_LAST_MODIFIED" => "N",
-                "SET_META_DESCRIPTION" => "N",
-                "SET_META_KEYWORDS" => "N",
-                "SET_STATUS_404" => "N",
-                "SET_TITLE" => "N",
-                "SHOW_404" => "N",
-                "STRICT_SECTION_CHECK" => "N",
-                "USE_PERMISSIONS" => "N",
-                "USE_SHARE" => "N"
-            )
+                "bitrix:news.detail",
+                "main_bottommenu_link1",
+                array(
+                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                        "ADD_ELEMENT_CHAIN" => "N",
+                        "ADD_SECTIONS_CHAIN" => "N",
+                        "AJAX_MODE" => "N",
+                        "AJAX_OPTION_ADDITIONAL" => "",
+                        "AJAX_OPTION_HISTORY" => "N",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_STYLE" => "N",
+                        "BROWSER_TITLE" => "-",
+                        "CACHE_GROUPS" => "Y",
+                        "CACHE_TIME" => "36000000",
+                        "CACHE_TYPE" => "A",
+                        "CHECK_DATES" => "Y",
+                        "DETAIL_URL" => "",
+                        "DISPLAY_BOTTOM_PAGER" => "N",
+                        "DISPLAY_DATE" => "N",
+                        "DISPLAY_NAME" => "N",
+                        "DISPLAY_PICTURE" => "N",
+                        "DISPLAY_PREVIEW_TEXT" => "Y",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "ELEMENT_CODE" => "main_bottommenu_link1",
+                        "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+                        "FIELD_CODE" => array(
+                                0 => "",
+                                1 => "",
+                        ),
+                        "IBLOCK_ID" => "",
+                        "IBLOCK_TYPE" => "CityStaffUIP",
+                        "IBLOCK_URL" => "",
+                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                        "MESSAGE_404" => "",
+                        "META_DESCRIPTION" => "-",
+                        "META_KEYWORDS" => "-",
+                        "PAGER_BASE_LINK_ENABLE" => "N",
+                        "PAGER_SHOW_ALL" => "N",
+                        "PAGER_TEMPLATE" => ".default",
+                        "PAGER_TITLE" => "Страница",
+                        "PROPERTY_CODE" => array(
+                                0 => "",
+                                1 => "link",
+                                2 => "name",
+                                3 => "",
+                        ),
+                        "SET_BROWSER_TITLE" => "N",
+                        "SET_CANONICAL_URL" => "N",
+                        "SET_LAST_MODIFIED" => "N",
+                        "SET_META_DESCRIPTION" => "N",
+                        "SET_META_KEYWORDS" => "N",
+                        "SET_STATUS_404" => "N",
+                        "SET_TITLE" => "N",
+                        "SHOW_404" => "N",
+                        "STRICT_SECTION_CHECK" => "N",
+                        "USE_PERMISSIONS" => "N",
+                        "USE_SHARE" => "N",
+                        "COMPONENT_TEMPLATE" => "main_bottommenu_link1"
+                ),
+                false
         );?>
         <?php $APPLICATION->IncludeComponent(
-            "bitrix:main.include",
-            "",
-            Array(
-                "AREA_FILE_SHOW" => "file",
-                "AREA_FILE_SUFFIX" => "inc",
-                "EDIT_TEMPLATE" => "",
-                "PATH" => "/local/templates/landing/includes/main_bottommenu_arrow"
-            )
+                "bitrix:main.include",
+                "",
+                Array(
+                        "AREA_FILE_SHOW" => "file",
+                        "AREA_FILE_SUFFIX" => "inc",
+                        "EDIT_TEMPLATE" => "",
+                        "PATH" => "/local/templates/landing/includes/main_bottommenu_arrow"
+                )
         );?>
         <?php $APPLICATION->IncludeComponent(
-            "bitrix:news.detail",
-            "main_bottommenu_link1",
-            Array(
-                "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                "ADD_ELEMENT_CHAIN" => "N",
-                "ADD_SECTIONS_CHAIN" => "N",
-                "AJAX_MODE" => "N",
-                "AJAX_OPTION_ADDITIONAL" => "",
-                "AJAX_OPTION_HISTORY" => "N",
-                "AJAX_OPTION_JUMP" => "N",
-                "AJAX_OPTION_STYLE" => "N",
-                "BROWSER_TITLE" => "-",
-                "CACHE_GROUPS" => "Y",
-                "CACHE_TIME" => "36000000",
-                "CACHE_TYPE" => "A",
-                "CHECK_DATES" => "Y",
-                "COMPONENT_TEMPLATE" => "main_bottommenu_link1",
-                "DETAIL_URL" => "",
-                "DISPLAY_BOTTOM_PAGER" => "N",
-                "DISPLAY_DATE" => "N",
-                "DISPLAY_NAME" => "N",
-                "DISPLAY_PICTURE" => "N",
-                "DISPLAY_PREVIEW_TEXT" => "Y",
-                "DISPLAY_TOP_PAGER" => "N",
-                "ELEMENT_CODE" => "main_bottommenu_link2",
-                "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
-                "FIELD_CODE" => array(0=>"",1=>"",),
-                "IBLOCK_ID" => "12",
-                "IBLOCK_TYPE" => "content",
-                "IBLOCK_URL" => "",
-                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-                "MESSAGE_404" => "",
-                "META_DESCRIPTION" => "-",
-                "META_KEYWORDS" => "-",
-                "PAGER_BASE_LINK_ENABLE" => "N",
-                "PAGER_SHOW_ALL" => "N",
-                "PAGER_TEMPLATE" => ".default",
-                "PAGER_TITLE" => "Страница",
-                "PROPERTY_CODE" => array(0=>"",1=>"link",2=>"name",3=>"",),
-                "SET_BROWSER_TITLE" => "N",
-                "SET_CANONICAL_URL" => "N",
-                "SET_LAST_MODIFIED" => "N",
-                "SET_META_DESCRIPTION" => "N",
-                "SET_META_KEYWORDS" => "N",
-                "SET_STATUS_404" => "N",
-                "SET_TITLE" => "N",
-                "SHOW_404" => "N",
-                "STRICT_SECTION_CHECK" => "N",
-                "USE_PERMISSIONS" => "N",
-                "USE_SHARE" => "N"
-            )
+                "bitrix:news.detail",
+                "main_bottommenu_link1",
+                array(
+                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                        "ADD_ELEMENT_CHAIN" => "N",
+                        "ADD_SECTIONS_CHAIN" => "N",
+                        "AJAX_MODE" => "N",
+                        "AJAX_OPTION_ADDITIONAL" => "",
+                        "AJAX_OPTION_HISTORY" => "N",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_STYLE" => "N",
+                        "BROWSER_TITLE" => "-",
+                        "CACHE_GROUPS" => "Y",
+                        "CACHE_TIME" => "36000000",
+                        "CACHE_TYPE" => "A",
+                        "CHECK_DATES" => "Y",
+                        "DETAIL_URL" => "",
+                        "DISPLAY_BOTTOM_PAGER" => "N",
+                        "DISPLAY_DATE" => "N",
+                        "DISPLAY_NAME" => "N",
+                        "DISPLAY_PICTURE" => "N",
+                        "DISPLAY_PREVIEW_TEXT" => "Y",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "ELEMENT_CODE" => "main_bottommenu_link2",
+                        "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+                        "FIELD_CODE" => array(
+                                0 => "",
+                                1 => "",
+                        ),
+                        "IBLOCK_ID" => "",
+                        "IBLOCK_TYPE" => "CityStaffUIP",
+                        "IBLOCK_URL" => "",
+                        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                        "MESSAGE_404" => "",
+                        "META_DESCRIPTION" => "-",
+                        "META_KEYWORDS" => "-",
+                        "PAGER_BASE_LINK_ENABLE" => "N",
+                        "PAGER_SHOW_ALL" => "N",
+                        "PAGER_TEMPLATE" => ".default",
+                        "PAGER_TITLE" => "Страница",
+                        "PROPERTY_CODE" => array(
+                                0 => "",
+                                1 => "link",
+                                2 => "name",
+                                3 => "",
+                        ),
+                        "SET_BROWSER_TITLE" => "N",
+                        "SET_CANONICAL_URL" => "N",
+                        "SET_LAST_MODIFIED" => "N",
+                        "SET_META_DESCRIPTION" => "N",
+                        "SET_META_KEYWORDS" => "N",
+                        "SET_STATUS_404" => "N",
+                        "SET_TITLE" => "N",
+                        "SHOW_404" => "N",
+                        "STRICT_SECTION_CHECK" => "N",
+                        "USE_PERMISSIONS" => "N",
+                        "USE_SHARE" => "N",
+                        "COMPONENT_TEMPLATE" => "main_bottommenu_link1"
+                ),
+                false
         );?>
     </section>
 

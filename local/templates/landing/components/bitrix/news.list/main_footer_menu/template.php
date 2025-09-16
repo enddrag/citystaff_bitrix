@@ -15,17 +15,20 @@ $this->setFrameMode(true);
 
 
 <?
-	//6 - контакты; 7 - социальные сети
-	$type = 6;
+
+	$type = 43;
 	$arSection = null;
 	foreach($arResult["ITEMS"] as $arItem){
 
 		$selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
-		if($arSection = $selectSection->GetNext()) if($arItem['IBLOCK_SECTION_ID']==$type){
-			break;
-		}
-	}
-	if($arSection['ID']!=$type) $arSection = false;
+		if($arSection = $selectSection->GetNext()){ 
+
+            if($arItem['IBLOCK_SECTION_ID'] == $type) {
+                break;
+            }
+        }
+    }
+if ($arSection['ID']!=$type) $arSection = false;
 ?>
 <?if(!empty($arSection['NAME'])):?>
 <div class="NB_footer_content d-flex flex-column">

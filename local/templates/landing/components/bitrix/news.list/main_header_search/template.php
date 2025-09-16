@@ -71,7 +71,7 @@ foreach ($files as $file) {
                 1 => "",
             ),
             "IBLOCK_ID" => "",
-            "IBLOCK_TYPE" => "content",
+            "IBLOCK_TYPE" => "CityStaffUIP",
             "IBLOCK_URL" => "",
             "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
             "MESSAGE_404" => "",

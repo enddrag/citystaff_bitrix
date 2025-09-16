@@ -18,7 +18,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	"main_footer_logo", 
 	array(
 		"COMPONENT_TEMPLATE" => "main_footer_logo",
-		"IBLOCK_TYPE" => "content",
+		"IBLOCK_TYPE" => "CityStaffUIP",
 		"IBLOCK_ID" => "",
 		"ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
 		"ELEMENT_CODE" => "logo_footer",
@@ -120,8 +120,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 						"FIELD_CODE" => array(0=>"",1=>"",),
 						"FILTER_NAME" => "",
 						"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-						"IBLOCK_ID" => "7",
-						"IBLOCK_TYPE" => "content",
+						"IBLOCK_ID" => "30",
+						"IBLOCK_TYPE" => "CityStaffUIP",
 						"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 						"INCLUDE_SUBSECTIONS" => "N",
 						"MESSAGE_404" => "",
@@ -182,8 +182,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-		"IBLOCK_ID" => "7",
-		"IBLOCK_TYPE" => "content",
+		"IBLOCK_ID" => "30",
+		"IBLOCK_TYPE" => "CityStaffUIP",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "N",
 		"MESSAGE_404" => "",
@@ -222,8 +222,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         </div>
         <?$APPLICATION->IncludeComponent("bitrix:news.list", "main_footer_afterinfo", Array(
 	"COMPONENT_TEMPLATE" => ".default",
-		"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
-		"IBLOCK_ID" => "7",	// Код информационного блока
+		"IBLOCK_TYPE" => "CityStaffUIP",	// Тип информационного блока (используется только для проверки)
+		"IBLOCK_ID" => "30",	// Код информационного блока
 		"NEWS_COUNT" => "20",	// Количество новостей на странице
 		"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
 		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей

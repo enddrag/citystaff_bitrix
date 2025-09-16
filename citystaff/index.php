@@ -3,7 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 ?>
     <!----баннер лендинга---->
-    <section class="NB_banner d-flex flex-column align-items-center" style=" background: linear-gradient(#00000000 0%, black), url('/upload/medialibrary/51d/z2gbt5cen82s6udx66y1zmq2on7gcxhz.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+    <section class="NB_banner d-flex flex-column align-items-center" style=" background: linear-gradient(#00000000 0%, black), url('/upload/medialibrary/054/hwlf34kiu00grtity4g3aleu1siq0yqg/banner.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; ">
         <!--навигационное меню сайта-->
         <nav class="NB_menu NB_menu_color NB_backdrop-blur NB_rounded-50 widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
             <div class="NB_left d-flex flex-row justify-content-around align-items-center">
@@ -38,7 +38,7 @@ $APPLICATION->SetTitle("Главная");
 			1 => "",
 		),
 		"IBLOCK_ID" => "",
-		"IBLOCK_TYPE" => "content",
+		"IBLOCK_TYPE" => "CityStaffUIP",
 		"IBLOCK_URL" => "",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"MESSAGE_404" => "",
@@ -98,8 +98,8 @@ $APPLICATION->SetTitle("Главная");
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "17",
-		"IBLOCK_TYPE" => "content",
+		"IBLOCK_ID" => "38",
+		"IBLOCK_TYPE" => "CityStaffUIP",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
@@ -184,7 +184,7 @@ $APPLICATION->SetTitle("Главная");
 			1 => "",
 		),
 		"IBLOCK_ID" => "",
-		"IBLOCK_TYPE" => "content",
+		"IBLOCK_TYPE" => "CityStaffUIP",
 		"IBLOCK_URL" => "",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"MESSAGE_404" => "",
@@ -249,8 +249,8 @@ $APPLICATION->SetTitle("Главная");
             "ELEMENT_CODE" => "bt1",
             "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
             "FIELD_CODE" => array(0=>"NAME",1=>"",),
-            "IBLOCK_ID" => "4",
-            "IBLOCK_TYPE" => "content",
+            "IBLOCK_ID" => "",
+            "IBLOCK_TYPE" => "CityStaffUIP",
             "IBLOCK_URL" => "",
             "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
             "MESSAGE_404" => "",
@@ -334,8 +334,8 @@ $APPLICATION->SetTitle("Главная");
                                 "FIELD_CODE" => array(0=>"ID",1=>"IBLOCK_SECTION_ID",2=>"PREVIEW_PICTURE",),
                                 "FILTER_NAME" => "",
                                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                                "IBLOCK_ID" => "8",
-                                "IBLOCK_TYPE" => "content",
+                                "IBLOCK_ID" => "31",
+                                "IBLOCK_TYPE" => "CityStaffUIP",
                                 "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                                 "INCLUDE_SUBSECTIONS" => "Y",
                                 "MESSAGE_404" => "",
@@ -368,16 +368,17 @@ $APPLICATION->SetTitle("Главная");
                     </div>
                 </div>
                  <?php $APPLICATION->IncludeComponent(
-                    "bitrix:main.include",
-                    ".default",
-                    Array(
-                        "AREA_FILE_SHOW" => "file",
-                        "AREA_FILE_SUFFIX" => "inc",
-                        "COMPONENT_TEMPLATE" => ".default",
-                        "EDIT_TEMPLATE" => "",
-                        "PATH" => "/local/templates/landing/includes/main_about_img"
-                    )
-                );?>
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"COMPONENT_TEMPLATE" => ".default",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/local/templates/landing/includes/main_about_img"
+	),
+	false
+);?>
             </div>
              <?php $APPLICATION->IncludeComponent(
                 "bitrix:news.detail",
@@ -407,8 +408,8 @@ $APPLICATION->SetTitle("Главная");
                     "ELEMENT_CODE" => "about_footer",
                     "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
                     "FIELD_CODE" => array(0=>"",1=>"",),
-                    "IBLOCK_ID" => "8",
-                    "IBLOCK_TYPE" => "content",
+                    "IBLOCK_ID" => "",
+                    "IBLOCK_TYPE" => "CityStaffUIP",
                     "IBLOCK_URL" => "",
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                     "MESSAGE_404" => "",
@@ -474,8 +475,8 @@ $APPLICATION->SetTitle("Главная");
                 "FIELD_CODE" => array(0=>"",1=>"",),
                 "FILTER_NAME" => "",
                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                "IBLOCK_ID" => "9",
-                "IBLOCK_TYPE" => "content",
+                "IBLOCK_ID" => "32",
+                "IBLOCK_TYPE" => "CityStaffUIP",
                 "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                 "INCLUDE_SUBSECTIONS" => "Y",
                 "MESSAGE_404" => "",
@@ -543,8 +544,8 @@ $APPLICATION->SetTitle("Главная");
                 "FIELD_CODE" => array(0=>"CODE",1=>"NAME",2=>"PREVIEW_TEXT",3=>"",),
                 "FILTER_NAME" => "",
                 "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                "IBLOCK_ID" => "10",
-                "IBLOCK_TYPE" => "content",
+                "IBLOCK_ID" => "33",
+                "IBLOCK_TYPE" => "CityStaffUIP",
                 "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                 "INCLUDE_SUBSECTIONS" => "Y",
                 "MESSAGE_404" => "",
@@ -680,8 +681,8 @@ $APPLICATION->SetTitle("Главная");
                 "ELEMENT_SORT_ORDER" => "asc",
                 "FIELD_CODE" => array("NAME","PREVIEW_PICTURE",""),
                 "FILTER_NAME" => "arrFilter",
-                "IBLOCK_ID" => "11",
-                "IBLOCK_TYPE" => "content",
+                "IBLOCK_ID" => "34",
+                "IBLOCK_TYPE" => "CityStaffUIP",
                 "LINE_ELEMENT_COUNT" => "3",
                 "PROPERTY_CODE" => array("",""),
                 "SECTION_COUNT" => "20",
@@ -732,8 +733,8 @@ $APPLICATION->SetTitle("Главная");
                         0 => "",
                         1 => "",
                     ),
-                    "IBLOCK_ID" => "12",	// Код информационного блока
-                    "IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+                    "IBLOCK_ID" => "",	// Код информационного блока
+                    "IBLOCK_TYPE" => "CityStaffUIP",	// Тип информационного блока (используется только для проверки)
                     "IBLOCK_URL" => "",	// URL страницы просмотра списка элементов (по умолчанию - из настроек инфоблока)
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
                     "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
@@ -827,8 +828,8 @@ $APPLICATION->SetTitle("Главная");
                             "ELEMENT_CODE" => "button_community_2",
                             "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
                             "FIELD_CODE" => array(0=>"",1=>"",),
-                            "IBLOCK_ID" => "12",
-                            "IBLOCK_TYPE" => "content",
+                            "IBLOCK_ID" => "",
+                            "IBLOCK_TYPE" => "CityStaffUIP",
                             "IBLOCK_URL" => "",
                             "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                             "MESSAGE_404" => "",
@@ -911,8 +912,8 @@ $APPLICATION->SetTitle("Главная");
                             "ELEMENT_CODE" => "button_community_1",
                             "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
                             "FIELD_CODE" => array(0=>"",1=>"",),
-                            "IBLOCK_ID" => "12",
-                            "IBLOCK_TYPE" => "content",
+                            "IBLOCK_ID" => "",
+                            "IBLOCK_TYPE" => "CityStaffUIP",
                             "IBLOCK_URL" => "",
                             "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                             "MESSAGE_404" => "",
@@ -1025,8 +1026,8 @@ $APPLICATION->SetTitle("Главная");
                         "FIELD_CODE" => array("","PREVIEW_TEXT","PREVIEW_PICTURE","DETAIL_PICTURE",""),
                         "FILTER_NAME" => "",
                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                        "IBLOCK_ID" => "14",
-                        "IBLOCK_TYPE" => "content",
+                        "IBLOCK_ID" => "36",
+                        "IBLOCK_TYPE" => "CityStaffUIP",
                         "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                         "INCLUDE_SUBSECTIONS" => "Y",
                         "MESSAGE_404" => "",
@@ -1089,8 +1090,8 @@ $APPLICATION->SetTitle("Главная");
                 0 => "",
                 1 => "",
             ),
-            "IBLOCK_ID" => "12",
-            "IBLOCK_TYPE" => "content",
+            "IBLOCK_ID" => "",
+            "IBLOCK_TYPE" => "CityStaffUIP",
             "IBLOCK_URL" => "",
             "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
             "MESSAGE_404" => "",
@@ -1161,8 +1162,8 @@ $APPLICATION->SetTitle("Главная");
                     0 => "",
                     1 => "",
                 ),
-                "IBLOCK_ID" => "12",
-                "IBLOCK_TYPE" => "content",
+                "IBLOCK_ID" => "",
+                "IBLOCK_TYPE" => "CityStaffUIP",
                 "IBLOCK_URL" => "",
                 "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                 "MESSAGE_404" => "",

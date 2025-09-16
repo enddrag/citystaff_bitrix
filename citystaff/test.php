@@ -2,7 +2,16 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("test");
 ?>
-
+<?php
+global $USER;
+$user = CUser::GetByID($USER->GetID())->Fetch();
+$avatar = CFile::GetFileArray($user['PERSONAL_PHOTO']);
+?>
+    <div class="user-info">
+        <img src="<?= $avatar ? $avatar['SRC'] : '/default-avatar.png' ?>"
+             alt="<?= htmlspecialchars($user['NAME'] . ' ' . $user['LAST_NAME']) ?>">
+        <span><?= htmlspecialchars($user['NAME'] . ' ' . $user['LAST_NAME']) ?></span>
+    </div>
     <p class="Fmenu NB2_gradient_button d-flex flex-row align-items-center justify-content-center" data-modal="application">
         Оставить заявку
     </p>
@@ -99,5 +108,6 @@ $APPLICATION->SetTitle("test");
 
         });
     </script>
+
 
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
