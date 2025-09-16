@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8867f4d0-20e6-457e-80b1-b2046f0a23f8" name="Changes" comment="Первично структурировал main.css&#10;1. сделал первичную стилистику формы обратной связи с ошибками" />
+    <list default="true" id="8867f4d0-20e6-457e-80b1-b2046f0a23f8" name="Changes" comment="Первично структурировал main.css&#10;1. сделал первичную стилистику формы обратной связи с ошибками">
+      <change beforePath="$PROJECT_DIR$/citystaff.rar" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,12 +33,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="onto" value="1a0f57dfd2b25d2db288a67c6acae838307f626d" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/enddrag/citystaff_bitrix",
-    "accountId": "9555abf3-03fe-41cf-9a69-23deb11341d3"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/enddrag/citystaff_bitrix&quot;,
+    &quot;accountId&quot;: &quot;9555abf3-03fe-41cf-9a69-23deb11341d3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -105,6 +107,7 @@
       <workItem from="1757711042120" duration="34830000" />
       <workItem from="1757936382498" duration="1793000" />
       <workItem from="1757959790934" duration="3442000" />
+      <workItem from="1757989114558" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Интеграция четвертой страницы без обратной связи.">
       <option name="closed" value="true" />
