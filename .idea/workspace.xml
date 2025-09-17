@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8867f4d0-20e6-457e-80b1-b2046f0a23f8" name="Changes" comment="Первично структурировал main.css&#10;1. сделал первичную стилистику формы обратной связи с ошибками">
-      <change beforePath="$PROJECT_DIR$/citystaff.rar" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/citystaff/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;migrations&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bitrix24&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/personal/Work/Citystaff единый портал/bitrix&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -108,6 +109,10 @@
       <workItem from="1757936382498" duration="1793000" />
       <workItem from="1757959790934" duration="3442000" />
       <workItem from="1757989114558" duration="7000" />
+      <workItem from="1758087207452" duration="3000" />
+      <workItem from="1758087587033" duration="3000" />
+      <workItem from="1758091496137" duration="1000" />
+      <workItem from="1758091573764" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Интеграция четвертой страницы без обратной связи.">
       <option name="closed" value="true" />
