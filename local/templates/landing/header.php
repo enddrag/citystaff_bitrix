@@ -2,7 +2,9 @@
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <?$APPLICATION->ShowHead();?>
     <?php
           $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/bootstrap.min.css');
@@ -51,6 +53,9 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
             /*----------------------------------------------------------*/
         });
     </script>
-<div>
-	 <?$APPLICATION->ShowPanel();?>
-</div>
+</head>
+<body>
+    <div>
+        <?$APPLICATION->ShowPanel();?>
+    </div>
+</body>

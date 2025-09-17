@@ -1,8 +1,0 @@
-IE_XML_ID;IE_NAME;IE_ID;IE_ACTIVE;IE_ACTIVE_FROM;IE_ACTIVE_TO;IE_PREVIEW_PICTURE;IE_PREVIEW_TEXT;IE_PREVIEW_TEXT_TYPE;IE_DETAIL_PICTURE;IE_DETAIL_TEXT;IE_DETAIL_TEXT_TYPE;IE_CODE;IE_SORT;IE_TAGS;IP_PROP16;IP_PROP17;IC_GROUP0;IC_GROUP1;IC_GROUP2
-55;кнопка галереи;55;Y;;;;;text;/upload/medialibrary/1eb/5m0cixn57s4rpikyu2kq71b4t1hybyf1.png;;text;gallery_button;500;;/index.php;смотреть;;;
-56;кнопка комьюнити 1;56;Y;;;;;text;/upload/medialibrary/e36/vr6qa7583myu3jn9bvx7nk391zdm1yef.png;;text;button_community_1;500;;/index.php;;;;
-57;кнопка комьюнити 2;57;Y;;;;;text;/upload/medialibrary/e36/vr6qa7583myu3jn9bvx7nk391zdm1yef.png;;text;button_community_2;500;;/test.php;;;;
-58;main_bottommenu_link1;58;Y;;;;;text;;;text;main_bottommenu_link1;500;;indexx.php;Перейти в следующий раздел;;;
-59;main_bottommenu_link2;59;Y;;;;;text;;;text;main_bottommenu_link2;500;;index.php;База знаний;;;
-86;ссылка на hr;86;Y;;;;;text;;Не нашли нужного шаблона?;text;common_link_hr;500;;index.php;Напишите HR;;;
-95;ссылка на поддержку;95;Y;;;;;text;;;text;link_faq;500;;index.php;Перейти в чат;;;

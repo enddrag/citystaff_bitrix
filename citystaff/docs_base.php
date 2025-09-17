@@ -329,135 +329,14 @@ $APPLICATION->SetTitle("База знаний и документы");
 		"PATH" => "/local/templates/landing/includes/common_info_title2"
 	)
 );?>
-        <!--поиск-->
-        <div class="NB_search NB1_docs_item_size NB1_search_color NB_backdrop-blur NB_rounded-30 search-box d-flex me-3 align-items-center justify-content-around">
-         <input type="search" placeholder="Найти" class="NB_search_input form-control Fmenu" id="search_documents">
-            <div class="NB_search_ico NB1_search_ico_color NB_rounded-circle" id="search_documents_ico">
-            </div>
-        </div>
-        <div class="NB1_docs_items" id="documents">
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Длинные Документикиииииииииииииииииииииииииииииииииииииииииииииииииииииииииииии
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-            <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Что-нибудь
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Итак, вы решили стать пилотом
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Миграции пингвинов
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Воронка
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Тумблер пылесоса
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Бухгалтерия
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 От винта
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Скрипт для рекрутеров
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Скрипт для рекрутеров
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Скрипт для рекрутеров
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Скрипт для рекрутеров
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Скрипт для рекрутеров
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Скрипт для рекрутеров
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-	<div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-		<p class="Fa">
-			 Скрипт для рекрутеров
-		</p>
-		<div class="NB1_docs_item_right d-flex flex-row justify-content-between">
- <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-		</div>
-	</div>
-</div>
-        <h4 class="NB1_docs_items_empty" id="nodocuments">-----------документов нет----------- </h4>
+        <?$APPLICATION->IncludeComponent("bitrix:main.include", "common_sharedFiles", Array(
+                "AREA_FILE_SHOW" => "file",	// Показывать включаемую область
+                "AREA_FILE_SUFFIX" => "inc",
+                "EDIT_TEMPLATE" => "",	// Шаблон области по умолчанию
+                "PATH" => "/local/templates/landing/includes/common_sharedFiles",	// Путь к файлу области
+        ),
+                false
+        );?>
     </section>
     <!--баннер шаблонов-->
     <section class="NB1_bannerT d-flex flex-row justify-content-between NB_content widthBase">
@@ -511,56 +390,17 @@ $APPLICATION->SetTitle("База знаний и документы");
                 "PATH" => "/local/templates/landing/includes/common_docs_h4"
             )
         );?>
-                <div class="NB1_docs_items d-flex flex-row flex-wrap">
-                    <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-                        <p class="Fa">
-                             Скрипт для рекрутеров
-                        </p>
-                        <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-         <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-                        </div>
-                    </div>
-                    <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-                        <p class="Fa">
-                             Скрипт для рекрутеров
-                        </p>
-                        <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-         <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-                        </div>
-                    </div>
-                    <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-                        <p class="Fa">
-                             Скрипт для рекрутеров
-                        </p>
-                        <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-         <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-                        </div>
-                    </div>
-                    <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-                        <p class="Fa">
-                             Скрипт для рекрутеров
-                        </p>
-                        <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-         <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-                        </div>
-                    </div>
-                    <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-                        <p class="Fa">
-                             Скрипт для рекрутеров
-                        </p>
-                        <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-         <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-                        </div>
-                    </div>
-                    <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center" style="display: flex;">
-                        <p class="Fa">
-                             Скрипт для рекрутеров
-                        </p>
-                        <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-         <a href="#" class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a> <a href="#" class="NB1_docs_item_right_download d-flex" style="background-image: url('img/download.svg');"></a>
-                        </div>
-                    </div>
-                </div>
+
+                 <?$APPLICATION->IncludeComponent(
+                         "bitrix:main.include",
+                         "common_sharedTemplates",
+                         Array(
+                                 "AREA_FILE_SHOW" => "file",
+                                 "AREA_FILE_SUFFIX" => "inc",
+                                 "EDIT_TEMPLATE" => "",
+                                 "PATH" => "/local/templates/landing/includes/common_sharedFiles"
+                         )
+                 );?>
                 <?php $APPLICATION->IncludeComponent("bitrix:news.detail", "common_link_hr", Array(
             "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
                 "ADD_ELEMENT_CHAIN" => "N",	// Включать название элемента в цепочку навигации
