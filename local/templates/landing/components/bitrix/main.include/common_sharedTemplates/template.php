@@ -38,12 +38,10 @@ $strignore = "анкета";
     if (Loader::includeModule('disk')) {
         // Загружаем расширение для просмотрщика
         \Bitrix\Main\UI\Extension::load("ui.viewer");
-        //для понимания буду комментировать
         //запрашиваем список всех папок из корня
         $storage = Storage::loadById($storageId);
         $securityContext = $storage->getCurrentUserSecurityContext();
         $urlManager = Driver::getInstance()->getUrlManager();
-        //$urlManager уже готов
         $folderList = ObjectTable::getList([
             'filter' => [
                 'STORAGE_ID' => $storageId,

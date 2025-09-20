@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items exchangeVersion="2" >
+<item>
+ <field name="NAME">
+  <value>logo_header.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="logo_header.png" type="file">medialibrary/a71/jid8bykbv0nem8e6cy33y4wjtm6cjm87/logo_header.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_Логотипы</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>logo_header_black.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="logo_header_black.png" type="file">medialibrary/6d4/qd9zxmkfq5bimkk04xeiveuvmpc814kb/logo_header_black.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_Логотипы</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>banner.gif</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="banner.gif" type="file">medialibrary/054/hwlf34kiu00grtity4g3aleu1siq0yqg/banner.gif</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_Логотипы</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>faq.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="faq.png" type="file">medialibrary/428/6mrfhrzqrsxa4xowyueu5p7qutz4n2ju/faq.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_Логотипы</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>logo_about.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="logo_about.png" type="file">medialibrary/eae/499k2uwr262wigtdp3uepps3a2bzmykw/logo_about.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_Логотипы</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>logo_footer.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="logo_footer.png" type="file">medialibrary/217/jun9p8exioopqce31hg85v7husaya079/logo_footer.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_Логотипы</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>market.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="market.png" type="file">medialibrary/d95/uvspod2vqovgno7bkq7011pzvwmjlhcw/market.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>pig.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="pig.png" type="file">medialibrary/719/fp6jark6w82w0cgi3814c9vuoca8ug76/pig.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>search.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="search.png" type="file">medialibrary/6f2/1ptuv47h04cnm2cn0yow5n0otlv92ivl/search.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>search_green.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="search_green.png" type="file">medialibrary/5ca/brzprjejmzpbwsg3pqunesm4rofejvrj/search_green.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>календарь  копия.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x43A;&#x430;&#x43B;&#x435;&#x43D;&#x434;&#x430;&#x440;&#x44C; &#x2014; &#x43A;&#x43E;&#x43F;&#x438;&#x44F;.png" type="file">medialibrary/9d7/yxn2zc2jhwdil4c96n4t70p96lopt7td/календарь — копия.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>стрелочка.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x441;&#x442;&#x440;&#x435;&#x43B;&#x43E;&#x447;&#x43A;&#x430;.png" type="file">medialibrary/8ad/je8vr95a2zfcq6366zghddp5nn1f8imd/стрелочка.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>coin.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="coin.png" type="file">medialibrary/6d9/7qolbaqeqzja1kyygwlobffnekjzs2a0/coin.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>community_arrow.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="community_arrow.png" type="file">medialibrary/b77/s691qc7cghn0aga1s5blizpzbb7cks1x/community_arrow.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>community_message.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="community_message.png" type="file">medialibrary/9c4/vn19fjwcum4s2ajzmfidrswtq7h64j63/community_message.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>community_news.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="community_news.png" type="file">medialibrary/442/dg2ab6g4eqr4tu86cwc2e72yzsryds1t/community_news.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>file.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="file.png" type="file">medialibrary/719/ub4fgkrma6jjedvi3sgnz03h02czjc6j/file.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>finger.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="finger.png" type="file">medialibrary/99f/1tac1x5tw00nq1pvvd2joiezaebo9g3i/finger.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>gift.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="gift.png" type="file">medialibrary/b5c/t510unlxqjaq2alivqw2kcco06s2pna4/gift.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>heard.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="heard.png" type="file">medialibrary/49e/obipkjfj9i3m7j7qm0tt6e6j0bcslz79/heard.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+
+<item>
+ <field name="NAME">
+  <value>high_five 1.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="high_five 1.png" type="file">medialibrary/61a/99bh9p65uy1wmbptk01fij2vaz92u1p3/high_five 1.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>tg_logo.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="tg_logo.png" type="file">medialibrary/a0c/5rgo776tqzqme8wsvm3w55fx49uroy27/tg_logo.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_сообщества</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>vk.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="vk.png" type="file">medialibrary/9e6/pot0n7ub7qyzuobr981dr3f20rle4nrs/vk.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_сообщества</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>vk_logo.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="vk_logo.png" type="file">medialibrary/df5/6hu4aoz2bs2jcjcwko5008i1nte5zunf/vk_logo.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_сообщества</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>tg.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="tg.png" type="file">medialibrary/56d/pwjmlczwm8jqs2oue254ippvg1rowmcj/tg.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_сообщества</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>bonus.jpg</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="bonus.jpg" type="file">medialibrary/04c/4sdx07nvgeqjv3s670hs10gefe9o2tlu/bonus.jpg</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>littleellips.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="littleellips.png" type="file">medialibrary/168/5dygkrg8s4k7z7b868xv224boz2bng5v/littleellips.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>sport.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="sport.png" type="file">medialibrary/21b/rfx4mp1tur6z52abzjbimi6rle0tegmp/sport.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>каткова2.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x43A;&#x430;&#x442;&#x43A;&#x43E;&#x432;&#x430;2.png" type="file">medialibrary/e00/texptyeovau3pjm6owl1n8m4vwtbp1cy/каткова2.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>опыт.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x43E;&#x43F;&#x44B;&#x442;.png" type="file">medialibrary/7ac/0ircf7kncs57imwt29gfgnkcl0gsqrnu/опыт.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>офисы.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x43E;&#x444;&#x438;&#x441;&#x44B;.png" type="file">medialibrary/5d1/tk0erinxz83npyw0o034iifbs7f3jq0q/офисы.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>рабочие.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x440;&#x430;&#x431;&#x43E;&#x447;&#x438;&#x435;.png" type="file">medialibrary/9f1/rc3bwnz7c3x2eex0ezc4my8bag6dn2hz/рабочие.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>фото_о_нас.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x444;&#x43E;&#x442;&#x43E;_&#x43E;_&#x43D;&#x430;&#x441;.png" type="file">medialibrary/a40/77o6ky4zbgas25r62mfc782zcyszfv6a/фото_о_нас.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>эллипс.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="&#x44D;&#x43B;&#x43B;&#x438;&#x43F;&#x441;.png" type="file">medialibrary/741/95z78i8j1q4th2ieuqlvcsxqrbb1s4h6/эллипс.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (7).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (7).png" type="file">medialibrary/63c/f4wyo32kxiq71j92zd1m8wo7bbqsrnj2/comp (7).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (8).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (8).png" type="file">medialibrary/151/ei5lomyq24f5f2wk4c213l0uc50x8uhs/comp (8).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (9).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (9).png" type="file">medialibrary/cd8/2irl5u90dtt8i3ttea76q6djcn2nabzi/comp (9).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (10).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (10).png" type="file">medialibrary/e67/zwyevtm8l20k5m87kmh0343qb5yzrijo/comp (10).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (11).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (11).png" type="file">medialibrary/130/gccsqckhapaci7hd3ye68yc0rjm0beu9/comp (11).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (12).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (12).png" type="file">medialibrary/166/aue9mly6vnjeg9q55ly1za0q73414t3e/comp (12).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+
+<item>
+ <field name="NAME">
+  <value>comp.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp.png" type="file">medialibrary/f0d/a57h2xia6rnkgvcx3ax4ze2a5n1mgd5k/comp.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (1).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (1).png" type="file">medialibrary/627/w6n069q2tj1q5vx2rfqt2e0pytiaurq0/comp (1).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (2).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (2).png" type="file">medialibrary/a01/703mv7yxg33q7ic6ar1yro6y66t16tt0/comp (2).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (3).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (3).png" type="file">medialibrary/034/g6u39euw361fj11iz42h5tdit8q51spp/comp (3).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (4).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (4).png" type="file">medialibrary/83b/jcaizuq7ev6ho85hduuiqb11s39yebp7/comp (4).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (5).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (5).png" type="file">medialibrary/959/oa0pj044ilw37gahwl13t02g77zjt9l2/comp (5).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>comp (6).png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="comp (6).png" type="file">medialibrary/f45/3mczryxvqof89st96hwaotj0p4lvxy1h/comp (6).png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_клиенты</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>imgexample.png</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="imgexample.png" type="file">medialibrary/62a/ihj14fz5a5636u7qfc8ds72enacf5rvi/imgexample.png</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_общее</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>officestaff_123.jpg</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="officestaff_123.jpg" type="file">medialibrary/fc9/kjk1vfzswx7efk6d592zj2380ij3vubb/officestaff_123.jpg</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_о нас</value>
+ </field>
+</item>
+<item>
+ <field name="NAME">
+  <value>newArrow.svg</value>
+ </field>
+ <field name="DESCRIPTION"/>
+ <field name="KEYWORDS"/>
+ <field name="FILE">
+  <value name="newArrow.svg" type="file">medialibrary/4d4/136h3auyoa65zaizabxu6fc17yozd8co/newArrow.svg</value>
+ </field>
+ <field name="COLLECTION_PATH">
+  <value>UIP_прочее</value>
+ </field>
+</item>
+
+</items>

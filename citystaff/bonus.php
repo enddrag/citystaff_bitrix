@@ -910,6 +910,4 @@ $APPLICATION->SetTitle("бонус");
                 ),
                 false
         );?>
-    </section>
-
-<?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+    </section><?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

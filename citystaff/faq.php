@@ -223,22 +223,7 @@ $APPLICATION->SetTitle("помощь");
                 );?>
             </div>
             <div class="NB3_banner_form d-flex flex-column align-items-center justify-content-between NB_rounded-20">
-                <input type="text" placeholder="Имя" class="NB3_banner_form_input form-control NB_rounded-20 Fmenu" name="">
-                <textarea name="" class="NB3_banner_form_text form-control NB_rounded-20 Fmenu" placeholder="Напишите здесь свою идею, предложение или комментарий"></textarea>
-                <p class="NB3_banner_form_p text-white">
-                    <?php $APPLICATION->IncludeComponent(
-                        "bitrix:main.include", "common_f_b_form_footer", Array(
-                        "AREA_FILE_SHOW" => "file",	// Показывать включаемую область
-                        "AREA_FILE_SUFFIX" => "inc",
-                        "EDIT_TEMPLATE" => "",	// Шаблон области по умолчанию
-                        "PATH" => "/local/templates/landing/includes/common_f_b_form_footer",	// Путь к файлу области
-                    ),
-                        false
-                    );?>
-                </p>
-                <div class="NB_modal_gradient d-flex flex-row align-items-center justify-content-center">
-                    <input type="submit" value="отправить сообщение" class="NB3_banner_form_button Fmenu">
-                </div>
+                <script data-b24-form="inline/25/5wmkc3" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_25_5wmkc3.js');</script>
             </div>
         </div>
     </section>

@@ -37,29 +37,34 @@ foreach($arResult['PROPERTIES'] as $arProp){
         <?endif?>
     </div>
 </div>
-
-<!--модальное окно-->
-    <section class="NB_modal d-flex flex-row align-items-center justify-content-center" id="<?=$id?>">
+<?php
+    $showClass = '';
+    $showMonkey = 'display: none;';
+    $showRequest = 'display: flex;';
+    if(isset($_GET['ref_sent'])) {
+        if (strip_tags($_GET['ref_sent']) == "success") {
+            $showClass = "NB_active";
+            $showRequest = 'display: none;';
+            $showMonkey = 'display: flex;';
+        }
+        else if (strip_tags($_GET['ref_sent']) == "fail") {
+            $showClass = "NB_active";
+        }
+    }
+?>
+		<!--модальное окно-->
+    <section class="NB_modal d-flex flex-row align-items-center justify-content-center <?=$showClass?>" id="<?=$id?>">
         <div class="NB_modal_item d-flex flex-column align-items-center">
             <img alt="X" src="<?=SITE_TEMPLATE_PATH?>/assets/img/X.svg" class="NB_modal_item_X close_modal">
-            <div class="NB_modal_item_item flex-column align-items-center" id="survey" style="display: flex;">
+            <div class="NB_modal_item_item flex-column align-items-center" id="survey" style="<?=$showRequest?>">
                 <h4>Заполните имя и контакт друга, чтобы мы могли учесть заявку</h4>
-                <form action="#" method="post" class="NB_modal_form d-flex flex-column align-items-center">
-                    <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
-                    <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
-                    <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
-                    <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
-                    <input type="text" class="NB_modal_input_form_input form-control Fmenu" placeholder="Заполните">
-                    <div class="NB_modal_gradient d-flex flex-row align-items-center justify-content-center">
-                        <input type="button" value="Оставить заявку" class="NB_modal_input_form_button Fmenu d-flex flex-row align-items-center justify-content-center">
-                    </div>
-                </form>
+                <script data-b24-form="inline/25/5wmkc3" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_25_5wmkc3.js');</script>
                 <p class="Fa NB_modal_item_footer">Нажимая на кнопку «Отправить», вы даёте согласие на обработку персональных данных.</p>
             </div>
-            <div class="NB_modal_item_item flex-column align-items-center" id="happyMonkey" style="display: none;">
+            <div class="NB_modal_item_item flex-column align-items-center" id="happyMonkey" style="<?=$showMonkey?>">
                 <h4>Заявка принята!</h4>
                 <p class="Fbody NB_modal_item_p">Мы начислим 5 000 ₽ после выхода вашего друга на работу</p>
-                <img src="img/monkey.png" alt="" class="NB_modal_monkey">
+                <img src="<?=SITE_TEMPLATE_PATH?>/assets/img/monkey.png" alt="" class="NB_modal_monkey">
             </div>
         </div>
     </section>

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "disk";
+$arDirProperties = Array(
+
+);
+?>

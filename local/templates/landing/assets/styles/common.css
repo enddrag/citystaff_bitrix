@@ -116,7 +116,7 @@
     height: 135px;
     border-radius: 10px;
     object-fit: cover;
-    
+
 }
 .NB1_info_item h4{
     margin-top: 24px;
@@ -176,15 +176,15 @@
     margin-top: 50px;
     max-height: 300px;
     overflow: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .NB1_docs_item .Fa{
     max-width: 450px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    
+
 }
 
 .NB1_docs_items::-webkit-scrollbar {
@@ -356,7 +356,7 @@
     width: 100%;
 }
 .NB2_bonusInfo_left_item_white .NB1_info_item_a_p{
-    
+
 }
 .NB2_bonusInfo_left_item_black_item {
     padding-left: 80px;
@@ -486,8 +486,8 @@
     z-index: 1;
     max-height: 400px;
     overflow: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .NB2_stafcoin_item {
     height: 60px;
@@ -570,7 +570,7 @@
     margin-left: 1%;
     object-fit: cover;
     z-index: 1;
-    
+
 }
 .NB2_sport_left_links .NB1_info_item_a_arrow{
     max-width: 85px;
@@ -621,12 +621,12 @@
     border-radius: 20px;
     z-index: -2;
 }
-.NB3_banner_form_input, .NB3_banner_form_text, .NB3_banner_form_input:focus, .NB3_banner_form_text:focus{
+.NB3_banner_form_input, .NB3_banner_form_text, .NB3_banner_form  textarea.b24-form-control, .NB3_banner_form_input:focus, .NB3_banner_form_text:focus, .NB3_banner_form .b24-form-control{
     background: rgba(255, 255, 255, 0.24);
     color: white;
     width: 100%;
-    padding-left: 50px;
-    padding-right: 150px;
+    padding-left: 40px !important;
+    padding-right: 150px !important;
 
 }
 .NB3_banner_form_input::placeholder, .NB3_banner_form_text::placeholder{
@@ -639,17 +639,17 @@
 .NB3_banner_form_input:hover, .NB3_banner_form_text:hover{
     box-shadow: 0px 0px 12px 0px rgba(255, 255, 255, 0.7);
 }
-.NB3_banner_form_input {
-    height: 52px;
-    margin-bottom: 15px;
+.NB3_banner_form_input, .NB3_banner_form .b24-form-control{
+    height: 52px !important;
+    margin-bottom: 15px !important;
 }
-.NB3_banner_form_text {
-    padding-top: 40px;
-    resize: none;
-    height: 220px;
+.NB3_banner_form_text, .NB3_banner_form  textarea.b24-form-control{
+    padding-top: 35px !important;
+    resize: none !important;
+    height: 220px !important;
     overflow: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .NB3_banner_form_text::-webkit-scrollbar {
     width: 0;
@@ -657,7 +657,7 @@
     background: transparent;
     display: none;
 }
-.NB3_banner_form_p {
+.NB3_banner_form_p{
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
@@ -673,6 +673,40 @@
     color: white;
 }
 /*---------------------*/
+
+/*Битриксное дополнительно модальное окно*/
+.NB3_banner_form  textarea.b24-form-control{
+    max-width: none !important;
+    min-width: auto !important;
+    width: 95% !important;
+}
+.NB3_banner_form .b24-form-control-label{
+    margin: 0 !important;
+}
+.NB3_banner_form textarea.b24-form-control + .b24-form-control-label{
+    top: 35px !important;
+}
+.NB3_banner_form .b24-form-control-container{
+    position: relative !important;
+}
+.NB3_banner_form .b24-form-control-container:has(textarea)::before{
+    position: absolute;
+    content: '*Можно написать об улучшениях, внутренних процессах, идеях, атмосфере и т.д.';
+    top: 100% !important;
+    font-family: 'circe', serif !important;
+    font-size: 15px;
+    color: #ffffff;
+    width: 95%;
+
+}
+.NB3_banner_form .b24-form-btn-block{
+    margin-top: 50px;
+}
+.NB3_banner_form .b24-form-btn{
+    font-family: 'circe', serif !important;
+    font-weight: 400 !important;
+}
+/*-----------------------*/
 
 
 /*---Как мы работаем---*/
@@ -697,7 +731,7 @@
     z-index: -100;
 }
 .NB3_info1_62 {
-    
+
     width: 62%;
     height: 100%;
 }
@@ -727,7 +761,7 @@
 .NB3_info2 .NB3_info1_38_img {
     min-width: 1000px;
     object-position: 0% 60%;
-    
+
 }
 
 /*---------------------*/
@@ -744,8 +778,8 @@
     gap: 20px;
     max-height: 660px;
     overflow: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     transition: 0.3s;
 }
 .NB3_q_items::-webkit-scrollbar {
@@ -781,7 +815,7 @@
     justify-content: center;
 }
 .NB3_q_X:hover{
-   background-color:rgba(53, 53, 54, 1); 
+    background-color:rgba(53, 53, 54, 1);
 }
 .NB3_q_X::before,
 .NB3_q_X::after {
@@ -793,7 +827,7 @@
     z-index: 2;
     transition: background-color 0.4s, transform 0.4s;
     top: 50%;
-    left: 50%; 
+    left: 50%;
 }
 .NB3_q_X::after{
     transform: translate(-50%, -50%);
@@ -843,7 +877,7 @@
     top: 50%;
     left: 50%;
     transform: translate(0%, -25%);
-    
+
 }
 .NB3_info3 .NB3_info1_38 {
     padding-left: 145px;
@@ -950,7 +984,7 @@
     height: 80vh;
     z-index: -2;
     filter: blur(200px);
-    }
+}
 .NB3_WH_circle_first{
     left: 50%;
     transform: translate(-50%);
@@ -1013,11 +1047,22 @@
     .NB3_banner_form{
         padding: 50px;
     }
-    .NB3_banner_form_p{
-        font-size: 15px;
+    .NB3_banner_form .b24-form-control-label{
+        top: 40% !important;
+        transform: translateY(-50%) !important;
+    }
+    .NB3_banner_form textarea.b24-form-control + .b24-form-control-label{
+        top: 35px !important;
+        transform: none !important;
+    }
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
+        font-size: 14px;
     }
     .NB3_banner_form_text{
         padding-right: 120px;
+    }
+    .NB3_banner_form_text, .NB3_banner_form  textarea.b24-form-control{
+        height: 180px !important;
     }
     .NB3_info1{
         height: 500px;
@@ -1063,23 +1108,23 @@
     }
     .NB1_banner{
         height: 325px;
-     }
-     .NB1_banner_left{
+    }
+    .NB1_banner_left{
         padding-left: 50px;
-     }
-     .NB1_banner_left_item, .NB1_banner_left_item mark{
+    }
+    .NB1_banner_left_item, .NB1_banner_left_item mark{
         max-width: 300px;
-     }
+    }
     .NB1_banner_left_img{
         max-width: 320px;
         max-height: 320px;
         right: -60px;
         bottom: -60px;
-     }
+    }
     .NB1_banner_right{
         padding-right: 70px;
         padding-left: 130px;
-     }
+    }
     .NB1_info{
         min-height: 650px;
     }
@@ -1161,7 +1206,7 @@
         padding: 40px;
         min-width: 610px;
     }
-    .NB3_banner_form_input, .NB3_banner_form_input:focus{
+    .NB3_banner_form_input, .NB3_banner_form_input:focus, .NB3_banner_form .b24-form-control{
         padding-top: 3px;
         padding-bottom: 3px;
         padding-left: 35px;
@@ -1177,7 +1222,23 @@
     .NB3_banner_form .NB_modal_gradient::before{
         border-radius: 15px;
     }
-    
+    .NB3_banner_form  .b24-form-control{
+        height: 46px !important;
+    }
+    .NB3_banner_form_text, .NB3_banner_form  textarea.b24-form-control, .NB3_banner_form  textarea.b24-form-control:focus, .NB3_banner_form_text:focus{
+        height: 150px !important;
+        padding-top: 20px !important;
+        padding-left: 25px !important;
+    }
+    .NB3_banner_form_input, .NB3_banner_form .b24-form-control, .NB3_banner_form .b24-form-control:focus, .NB3_banner_form_input:focus{
+        padding-left: 25px !important;
+    }
+    .NB3_banner_form textarea.b24-form-control + .b24-form-control-label{
+        top: 20px !important;
+    }
+    .NB3_banner_form .b24-form-control + .b24-form-control-label{
+        padding-left: 40px !important;
+    }
     .NB3_banner_form_text{
         border-radius: 15px;
         padding-left: 35px;
@@ -1189,9 +1250,12 @@
         padding-left: 35px;
         padding-top: 20px;
     }
-    .NB3_banner_form_p{
-        font-size: 14px;
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
+        font-size: 13px;
         margin-bottom: 0px;
+    }
+    .NB3_banner_form .b24-form-btn-block{
+        margin-top: 40px;
     }
     .NB3_info1{
         height: 450px;
@@ -1332,8 +1396,8 @@
     .NB2_sport_left{
         width: 35%;
     }
-    .NB3_banner_form_p{
-        font-size: 12px;
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
+        font-size: 11px;
     }
     .NB3_banner_form_text{
         height: 150px;
@@ -1341,6 +1405,13 @@
     }
     .NB3_banner_form{
         min-width: 520px;
+    }
+    .NB3_banner_form .b24-form-control{
+        height: 40px !important;
+        border-radius: 15px !important;
+    }
+    .NB3_banner_form textarea.b24-form-control{
+        height: 125px !important;
     }
     .NB3_info1{
         height: 450px;
@@ -1440,7 +1511,7 @@
     .NB2_banner_info, .NB2_banner_info_item_right{
         height: 300px;
     }
-    
+
     .NB2_banner_footer{
         height: 100px;
     }
@@ -1462,7 +1533,7 @@
     .NB3_banner_form{
         min-width: auto;
     }
-    .NB3_banner_form_p{
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
         font-size: 10px;
     }
     .NB3_info1{

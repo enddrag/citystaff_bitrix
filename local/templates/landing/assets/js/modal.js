@@ -47,4 +47,40 @@ $(document).ready(function() {
     });
 
     /*----------------------------------------------------------*/
+
+
+    /*--------------------Помощь в валидации--------------------*/
+    //проверка видимости
+    function isVisible(element) {
+        return $(element).is(':visible');
+    }
+    //изменения
+    function changes() {
+        $('.b24-form-control-alert-message').each(function() {
+            var $alert = $(this);
+            var $container = $alert.closest('.b24-form-control-container');
+
+            if (isVisible($alert)) {
+                $container.addClass('NB_modal_form_error');
+            } else {
+                $container.removeClass('NB_modal_form_error');
+            }
+        });
+    }
+    // наблюдатель изменения DOM
+    var obs = new MutationObserver(function(){
+        changes();
+    });
+
+    obs.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['style', 'class']
+    });
+    changes();
+
+
+
+    /*----------------------------------------------------------*/
 });
