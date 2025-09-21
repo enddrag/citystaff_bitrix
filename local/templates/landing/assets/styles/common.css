@@ -302,6 +302,10 @@
     height: 560px;
     padding: 20px;
 }
+.NB2_banner_info_item_right > div{
+    height: 100%;
+    width: 100%;
+}
 .NB2_banner_info_item_left p{
     margin-bottom: 0px;
 }
@@ -1517,6 +1521,9 @@
     }
     .NB2_bonusInfo_left_item_white, .NB2_bonusInfo_left_item_black{
         height: 240px;
+    }
+    .NB2_bonusInfo_right{
+        width: 33%;
     }
     .NB2_bonusInfo_right_item:nth-child(1){
         height: 60%;
