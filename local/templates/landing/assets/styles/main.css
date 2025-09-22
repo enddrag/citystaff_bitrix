@@ -277,7 +277,8 @@ body:has(section.NB_modal.NB_active){overflow: hidden}
 .b24-form-control-alert-message::after,
 .b24-form-control-alert-message::before{display: none !important; content: none !important; position: unset !important;}
 .NB_modal_form_error input,
-.NB_modal_form_error .NB_selected-option{border: 1px solid rgba(210, 0, 3, 1) !important;}
+.NB_modal_form_error .NB_selected-option,
+.NB_modal_form_error textarea{border: 1px solid rgba(210, 0, 3, 1) !important;}
 .NB_modal_form_error:before{content: '!'; position: absolute; right: 0; top: 0px; transform: rotate(180deg) translateY(-12px) translateX(100%); display: flex; flex-direction: row; justify-content: center; color: white; font-size: 20px; background-color: rgba(210, 0, 3, 1); border-radius: 100%; width: 28px; height: 28px; z-index: 1}
 .NB_modal_select{height: 52px !important; padding-left: 45px !important; appearance: none; -moz-appearance: none; -webkit-appearance: none;}
 .NB_modal_input_form_input,

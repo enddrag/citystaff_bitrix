@@ -693,7 +693,7 @@
 .NB3_banner_form .b24-form-control-container{
     position: relative !important;
 }
-.NB3_banner_form .b24-form-control-container:has(textarea)::before{
+.NB3_banner_form .b24-form-control-container:has(textarea)::after{
     position: absolute;
     content: '*Можно написать об улучшениях, внутренних процессах, идеях, атмосфере и т.д.';
     top: 100% !important;
@@ -1059,7 +1059,7 @@
         top: 35px !important;
         transform: none !important;
     }
-    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after{
         font-size: 14px;
     }
     .NB3_banner_form_text{
@@ -1254,7 +1254,7 @@
         padding-left: 35px;
         padding-top: 20px;
     }
-    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after{
         font-size: 13px;
         margin-bottom: 0px;
     }
@@ -1400,7 +1400,7 @@
     .NB2_sport_left{
         width: 35%;
     }
-    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after{
         font-size: 11px;
     }
     .NB3_banner_form_text{
@@ -1540,7 +1540,7 @@
     .NB3_banner_form{
         min-width: auto;
     }
-    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::before{
+    .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after{
         font-size: 10px;
     }
     .NB3_info1{
