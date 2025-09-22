@@ -408,7 +408,9 @@ body:has(section.NB_modal.NB_active){overflow: hidden}
 .b24-form-control:-webkit-autofill:active {-webkit-text-fill-color: #fff !important; caret-color: #fff !important;}
 .b24-form-control:-moz-autofill,
 .b24-form-control:-moz-autofill:focus{color:#fff !important; caret-color: #fff !important;}
-
+.b24-form-state-container{
+    opacity: 0 !important;
+}
 /*селектор*/
 .b24-form-control-list .b24-form-control-container:after{
     content: unset !important;
