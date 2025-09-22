@@ -1,6 +1,8 @@
 <?
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
+
+use Bitrix\Main\UI\Extension;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +12,10 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
           $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/bootstrap.min.css');
           $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/main.css');
           $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/common.css');
-          $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/assets/js/jquery.min.js');
           $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/assets/js/search.js');
           $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/assets/js/modal.js');
+
+          Extension::load(['jquery3']);
      ?>
     <script type="text/javascript">
         $(document).ready(function(){
