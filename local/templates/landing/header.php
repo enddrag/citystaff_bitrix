@@ -1,41 +1,46 @@
-<?
-if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
-	die();
+<?php
 
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+    die();
+}
+use Bitrix\Main\Page\Asset;
 use Bitrix\Main\UI\Extension;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?$APPLICATION->ShowHead();?>
     <?php
-          $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/bootstrap.min.css');
-          $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/main.css');
-          $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/common.css');
-          $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/assets/js/search.js');
-          $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/assets/js/modal.js');
+    $APPLICATION->ShowHead(); ?>
+    <?php
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/main.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/common.css');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/search.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/modal.js');
 
-          Extension::load(['jquery3']);
-     ?>
+    Extension::load(['jquery3']);
+    Extension::load(['ui.bootstrap4']);
+    ?>
     <script type="text/javascript">
-        $(document).ready(function(){
+        $(document).ready(function () {
 
 
             /*----------------------галерея-------------------------*/
+
             // Функция для фильтрации галереи
             function filterGallery(sectionClass) {
-                $('.NB_content_tradition_gallery_item').each(function() {
+                $('.NB_content_tradition_gallery_item').each(function () {
                     if ($(this).hasClass(sectionClass)) {
-                        $(this).css('display', 'block').animate({ opacity: 1 }, 250);
+                        $(this).css('display', 'block').animate({opacity: 1}, 250);
                     } else {
                         $(this).css('display', 'none');
-                            $(this).css('opacity', '0');
+                        $(this).css('opacity', '0');
                     }
                 });
             }
 
             // Обработчик клика на элементы меню
-            $('.NB_content_tradition_menu_item').click(function() {
+            $('.NB_content_tradition_menu_item').click(function () {
                 // Удаляем активные классы у всех элементов меню
                 $('.NB_content_tradition_menu_item').removeClass('NB_menu_active NB_backdrop-blur');
 
@@ -58,7 +63,8 @@ use Bitrix\Main\UI\Extension;
     </script>
 </head>
 <body>
-    <div>
-        <?$APPLICATION->ShowPanel();?>
-    </div>
+<div>
+    <?php
+    $APPLICATION->ShowPanel(); ?>
+</div>
 </body>
