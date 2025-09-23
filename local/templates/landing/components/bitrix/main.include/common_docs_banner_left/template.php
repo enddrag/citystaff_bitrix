@@ -1,5 +1,7 @@
 <?php
 
+use Bitrix\Intranet\CurrentUser;
+
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -15,11 +17,13 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
+$currentUser = CurrentUser::get();
+$firstName = $currentUser->GetFirstName();
 if ($arResult['FILE'] <> '') :?>
     <h3 class="NB1_banner_left_item d-flex flex-column align-items-start justify-content-center">
         <?php
         include($arResult['FILE']); ?>
+        <mark><?=$firstName?></mark>
     </h3>
     <?php
 endif; ?>

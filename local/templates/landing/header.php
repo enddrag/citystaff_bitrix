@@ -1,14 +1,37 @@
 <?php
 
-global $APPLICATION;
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 
+global $APPLICATION;
+
+use Bitrix\Intranet\CurrentUser;
+use Bitrix\Main\Context;
 use Bitrix\Main\Page\Asset;
 use Bitrix\Main\UI\Extension;
 
+if ($_SERVER['PHP_SELF'] != Context::getCurrent()->getRequest()->getRequestedPage()) {
+    LocalRedirect($_SERVER['PHP_SELF']);
+}
 
+\CModule::IncludeModule('iblock');
+
+$IB_ID = [];
+$res = \CIBlock::GetList(
+    ['SORT' => 'ASC', 'NAME' => 'ASC'],
+    ['ACTIVE' => 'Y', 'TYPE' => 'CityStaffUIP']
+);
+
+while ($iblock_list = $res->Fetch()) {
+    if (!empty($iblock_list['CODE'])) {
+        $IB_ID[$iblock_list['CODE']] = $iblock_list['ID'];
+    }
+}
+
+if (!CurrentUser::get()->isAuthorized()) {
+    LocalRedirect('/');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

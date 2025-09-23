@@ -1,5 +1,5 @@
 <?php
-global $APPLICATION;
+global $APPLICATION, $IB_ID;
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -120,7 +120,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                     'FIELD_CODE' => [0 => '', 1 => ''],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                    'IBLOCK_ID' => '30',
+                    'IBLOCK_ID' => $IB_ID["footer_content"],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
                     'INCLUDE_SUBSECTIONS' => 'N',
@@ -183,7 +183,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                     ],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'Y',
-                    'IBLOCK_ID' => '30',
+                    'IBLOCK_ID' => $IB_ID["footer_content"],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
                     'INCLUDE_SUBSECTIONS' => 'N',
@@ -228,7 +228,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
         [
             'COMPONENT_TEMPLATE' => '.default',
             'IBLOCK_TYPE' => 'CityStaffUIP',    // Тип информационного блока (используется только для проверки)
-            'IBLOCK_ID' => '30',    // Код информационного блока
+            'IBLOCK_ID' => $IB_ID["footer_content"],    // Код информационного блока
             'NEWS_COUNT' => '20',    // Количество новостей на странице
             'SORT_BY1' => 'ACTIVE_FROM',    // Поле для первой сортировки новостей
             'SORT_ORDER1' => 'DESC',    // Направление для первой сортировки новостей

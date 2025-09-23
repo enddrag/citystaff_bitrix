@@ -1,1 +1,1 @@
-<img alt="file.png" src="/upload/medialibrary/719/ub4fgkrma6jjedvi3sgnz03h02czjc6j/file.png" title="file.png"><br>
+<img alt="file.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/file.png" title="file.png"><br>

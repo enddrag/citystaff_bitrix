@@ -1,1 +1,1 @@
-<img alt="календарь.png" src="/upload/medialibrary/9d7/yxn2zc2jhwdil4c96n4t70p96lopt7td/календарь — копия.png" title="календарь.png" class="NB3_WH_item_img">
+<img alt="календарь.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/date.png" title="календарь.png" class="NB3_WH_item_img">

@@ -1,1 +1,1 @@
-<img alt="newArrow.svg" src="/upload/medialibrary/4d4/136h3auyoa65zaizabxu6fc17yozd8co/newArrow.svg" title="newArrow.svg"><br>
+<img alt="newArrow.svg" src="<?=SITE_TEMPLATE_PATH?>/assets/img/newArrow.svg" title="newArrow.svg"><br>

@@ -1,11 +1,11 @@
 <?php
-global $APPLICATION;
+global $APPLICATION, $IB_ID;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('помощь');
 ?>
     <!--баннер faq-->
     <section data-nav-title="Ваше мнение важно" id="opinion" class="NB_banner d-flex flex-column align-items-center"
-             style="background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 100%), url('/upload/medialibrary/428/6mrfhrzqrsxa4xowyueu5p7qutz4n2ju/faq.png'); background-size: cover; background-repeat: no-repeat; background-position-y: 20%">
+             style="background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.37) 100%), url('<?=SITE_TEMPLATE_PATH?>/assets/img/faq.png'); background-size: cover; background-repeat: no-repeat; background-position-y: 20%">
         <!--навигационное меню сайта-->
         <nav class="NB_menu NB_menu_color NB_backdrop-blur NB_rounded-50 widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
             <div class="NB_left d-flex flex-row justify-content-around align-items-center">
@@ -92,7 +92,7 @@ $APPLICATION->SetTitle('помощь');
                         'FIELD_CODE' => [0 => '', 1 => ''],
                         'FILTER_NAME' => '',
                         'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                        'IBLOCK_ID' => '38',
+                        'IBLOCK_ID' => $IB_ID["sug"],
                         'IBLOCK_TYPE' => 'CityStaffUIP',
                         'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                         'INCLUDE_SUBSECTIONS' => 'Y',
@@ -364,7 +364,7 @@ $APPLICATION->SetTitle('помощь');
                 'COMPONENT_TEMPLATE' => '.default',
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 // Тип информационного блока (используется только для проверки)
-                'IBLOCK_ID' => '40',
+                'IBLOCK_ID' => $IB_ID["DetailInfo"],
                 // Код информационного блока
                 'NEWS_COUNT' => '100',
                 // Количество новостей на странице
@@ -701,7 +701,7 @@ $APPLICATION->SetTitle('помощь');
                     ],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                    'IBLOCK_ID' => '40',
+                    'IBLOCK_ID' => $IB_ID["DetailInfo"],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                     'INCLUDE_SUBSECTIONS' => 'Y',

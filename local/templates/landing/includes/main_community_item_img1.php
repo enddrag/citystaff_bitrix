@@ -1,1 +1,1 @@
-<img alt="community_message.png" src="/upload/medialibrary/9c4/vn19fjwcum4s2ajzmfidrswtq7h64j63/community_message.png" class="NB_content_community_img_left">
+<img alt="community_message.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/community_message.png" class="NB_content_community_img_left">

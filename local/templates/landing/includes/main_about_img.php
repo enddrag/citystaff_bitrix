@@ -1,1 +1,1 @@
-<img alt="фото_о_нас.png" src="/upload/medialibrary/a40/77o6ky4zbgas25r62mfc782zcyszfv6a/фото_о_нас.png" title="фото_о_нас.png" class="NB_about_right">
+<img alt="фото_о_нас.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/about.png" title="фото_о_нас.png" class="NB_about_right">

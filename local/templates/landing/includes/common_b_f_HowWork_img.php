@@ -1,1 +1,1 @@
-<img alt="эллипс.png" src="/upload/medialibrary/741/95z78i8j1q4th2ieuqlvcsxqrbb1s4h6/эллипс.png" title="эллипс.png" class="NB3_info1_38_img">
+<img alt="эллипс.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/ellips.svg" title="эллипс.png" class="NB3_info1_38_img">

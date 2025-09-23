@@ -1,2 +1,2 @@
-<img alt="bonus.jpg" src="/upload/medialibrary/04c/4sdx07nvgeqjv3s670hs10gefe9o2tlu/bonus.jpg" title="bonus.jpg" 
+<img alt="bonus.jpg" src="<?=SITE_TEMPLATE_PATH?>/assets/img/bonus.jpg" title="bonus.jpg"
 class="NB_rounded-20 NB2_banner_info_item_right_img">

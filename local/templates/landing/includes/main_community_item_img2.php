@@ -1,1 +1,1 @@
-<img alt="community_news.png" src="/upload/medialibrary/442/dg2ab6g4eqr4tu86cwc2e72yzsryds1t/community_news.png" class="NB_content_community_img_left">
+<img alt="community_news.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/community_news.png" class="NB_content_community_img_left">

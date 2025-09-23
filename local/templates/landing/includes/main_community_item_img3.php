@@ -1,1 +1,1 @@
-<img alt="heard.png" src="/upload/medialibrary/49e/obipkjfj9i3m7j7qm0tt6e6j0bcslz79/heard.png" title="heard.png" class="NB_content_community_img_right">
+<img alt="heard.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/heard.png" title="heard.png" class="NB_content_community_img_right">

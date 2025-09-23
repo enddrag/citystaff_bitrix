@@ -1,1 +1,1 @@
-<img alt="каткова2.png" src="/upload/medialibrary/e00/texptyeovau3pjm6owl1n8m4vwtbp1cy/каткова2.png" title="каткова2.png" class="NB3_info1_img NB_rounded-circle">
+<img alt="каткова2.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/katkova.png" title="каткова2.png" class="NB3_info1_img NB_rounded-circle">

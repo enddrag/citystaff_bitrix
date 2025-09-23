@@ -1,5 +1,5 @@
 <?php
-global $APPLICATION;
+global $APPLICATION, $IB_ID;
 use Bitrix\Main\Page\Asset;
 
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
@@ -91,7 +91,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                     'FIELD_CODE' => [0 => '', 1 => ''],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                    'IBLOCK_ID' => '38',
+                    'IBLOCK_ID' => $IB_ID["sug"],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                     'INCLUDE_SUBSECTIONS' => 'Y',
@@ -300,7 +300,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'FIELD_CODE' => [0 => '', 1 => ''],
                 'FILTER_NAME' => '',
                 'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                'IBLOCK_ID' => '39',
+                'IBLOCK_ID' => $IB_ID["docsInfo"],
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                 'INCLUDE_SUBSECTIONS' => 'Y',

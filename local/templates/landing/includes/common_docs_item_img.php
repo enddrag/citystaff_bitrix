@@ -1,2 +1,2 @@
-<img src="/upload/medialibrary/61a/99bh9p65uy1wmbptk01fij2vaz92u1p3/high_five 1.png" title="high_five 1.png"
+<img src="<?=SITE_TEMPLATE_PATH?>/assets/img/high_five.png" title="high_five 1.png"
      alt="приветствие" class="NB1_banner_left_img">

@@ -1,12 +1,12 @@
 <?php
+global $APPLICATION, $IB_ID;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
-global $APPLICATION;
 $APPLICATION->SetTitle('Главная', true);
 
 ?>
     <!----баннер лендинга---->
     <section class="NB_banner d-flex flex-column align-items-center"
-             style=" background: linear-gradient(#00000000 0%, black), url('/upload/medialibrary/054/hwlf34kiu00grtity4g3aleu1siq0yqg/banner.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+             style=" background: linear-gradient(#00000000 0%, black), url('<?=SITE_TEMPLATE_PATH?>/assets/img/banner.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; ">
         <!--навигационное меню сайта-->
         <nav class="NB_menu NB_menu_color NB_backdrop-blur NB_rounded-50 widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
             <div class="NB_left d-flex flex-row justify-content-around align-items-center">
@@ -103,7 +103,7 @@ $APPLICATION->SetTitle('Главная', true);
                         ],
                         'FILTER_NAME' => '',
                         'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                        'IBLOCK_ID' => '38',
+                        'IBLOCK_ID' => $IB_ID["sug"],
                         'IBLOCK_TYPE' => 'CityStaffUIP',
                         'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                         'INCLUDE_SUBSECTIONS' => 'Y',
@@ -346,7 +346,7 @@ $APPLICATION->SetTitle('Главная', true);
                                 'FIELD_CODE' => [0 => 'ID', 1 => 'IBLOCK_SECTION_ID', 2 => 'PREVIEW_PICTURE'],
                                 'FILTER_NAME' => '',
                                 'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                                'IBLOCK_ID' => '31',
+                                'IBLOCK_ID' => $IB_ID["about_us"],
                                 'IBLOCK_TYPE' => 'CityStaffUIP',
                                 'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                                 'INCLUDE_SUBSECTIONS' => 'Y',
@@ -490,7 +490,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'FIELD_CODE' => [0 => '', 1 => ''],
                 'FILTER_NAME' => '',
                 'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                'IBLOCK_ID' => '32',
+                'IBLOCK_ID' => $IB_ID["clients"],
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                 'INCLUDE_SUBSECTIONS' => 'Y',
@@ -563,7 +563,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'FIELD_CODE' => [0 => 'CODE', 1 => 'NAME', 2 => 'PREVIEW_TEXT', 3 => ''],
                 'FILTER_NAME' => '',
                 'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                'IBLOCK_ID' => '33',
+                'IBLOCK_ID' => $IB_ID["uniting"],
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                 'INCLUDE_SUBSECTIONS' => 'Y',
@@ -708,7 +708,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'ELEMENT_SORT_ORDER' => 'asc',
                 'FIELD_CODE' => ['NAME', 'PREVIEW_PICTURE', ''],
                 'FILTER_NAME' => 'arrFilter',
-                'IBLOCK_ID' => '34',
+                'IBLOCK_ID' => $IB_ID['gallery'],
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 'LINE_ELEMENT_COUNT' => '3',
                 'PROPERTY_CODE' => ['', ''],
@@ -1112,7 +1112,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'FIELD_CODE' => ['', 'PREVIEW_TEXT', 'PREVIEW_PICTURE', 'DETAIL_PICTURE', ''],
                 'FILTER_NAME' => '',
                 'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                'IBLOCK_ID' => '36',
+                'IBLOCK_ID' => $IB_ID['subscribes'],
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                 'INCLUDE_SUBSECTIONS' => 'Y',

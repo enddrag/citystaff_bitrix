@@ -1,5 +1,5 @@
 <?php
-global $APPLICATION;
+global $APPLICATION, $IB_ID;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('бонус');
 ?>
@@ -120,7 +120,7 @@ $APPLICATION->SetTitle('бонус');
                     // Фильтр
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
                     // Скрывать ссылку, если нет детального описания
-                    'IBLOCK_ID' => '38',
+                    'IBLOCK_ID' => $IB_ID["sug"],
                     // Код информационного блока
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     // Тип информационного блока (используется только для проверки)
@@ -483,7 +483,7 @@ $APPLICATION->SetTitle('бонус');
                         // Фильтр
                         'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
                         // Скрывать ссылку, если нет детального описания
-                        'IBLOCK_ID' => '39',
+                        'IBLOCK_ID' => $IB_ID["docsInfo"],
                         // Код информационного блока
                         'IBLOCK_TYPE' => 'CityStaffUIP',
                         // Тип информационного блока (используется только для проверки)
@@ -822,7 +822,7 @@ if (isset($_GET['ref_sent'])) {
                 ],
                 'FILTER_NAME' => '',
                 'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                'IBLOCK_ID' => '39',
+                'IBLOCK_ID' => $IB_ID["docsInfo"],
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                 'INCLUDE_SUBSECTIONS' => 'Y',
@@ -969,7 +969,7 @@ $APPLICATION->IncludeComponent(
                 'COMPONENT_TEMPLATE' => '.default',
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 // Тип информационного блока (используется только для проверки)
-                'IBLOCK_ID' => '34',
+                'IBLOCK_ID' => $IB_ID["gallery"],
                 // Код информационного блока
                 'NEWS_COUNT' => '20',
                 // Количество новостей на странице

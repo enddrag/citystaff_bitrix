@@ -3,116 +3,65 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
-/** @var array $arParams */
-/** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
-$this->setFrameMode(true);
 
 use Bitrix\Disk\Driver;
-use Bitrix\Disk\Folder;
 use Bitrix\Disk\Internals\ObjectTable;
-use Bitrix\Disk\Storage;
 use Bitrix\Main\Loader;
+use Bitrix\Main\UI\Extension;
 use Bitrix\Main\UI\Viewer\ItemAttributes;
 
-//идентификатор диска
-$storageId = 0;
-if ($arResult['FILE'] <> '') {
-    ob_start();
-    include($arResult['FILE']);
-    $storageId = strip_tags((int)trim(ob_get_clean()));
-    if (empty($storageId)) {
-        $storageId = 3;
-    }
-}
+/** @var array $arParams */
+/** @var array $arResult */
+/** @var CBitrixComponentTemplate $this */
 
-//игнорируемое слово
-$strignore = 'анкета';
+$this->setFrameMode(true);
+Extension::load('ui.viewer');
 
+$contextIgnore = 'шаблон';
+$extension = [
+    '.docx',
+    '.doc',
+    '.xlsx',
+    '.xls',
+    '.pptx',
+    '.ppt',
+    '.pdf',
+];
 $fileList = [];
 
-if (Loader::includeModule('disk')) {
-    // Загружаем расширение для просмотрщика
-    \Bitrix\Main\UI\Extension::load('ui.viewer');
-    //для понимания буду комментировать
-    //запрашиваем список всех папок из корня
-    $storage = Storage::loadById($storageId);
+if (
+    Loader::includeModule('disk')
+    && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')
+) {
     $securityContext = $storage->getCurrentUserSecurityContext();
     $urlManager = Driver::getInstance()->getUrlManager();
-    //$urlManager уже готов
-    $folderList = ObjectTable::getList([
+
+    $folderObjectList = $storage->getChildren($securityContext, [
         'filter' => [
-            'STORAGE_ID' => $storageId,
+            'TYPE' => ObjectTable::TYPE_FOLDER,
+        ],
+        'order' => [
+            'ID' => 'DESC',
         ],
     ]);
-    //проходимся по всему списку
-    while ($folderItem = $folderList->fetch()) {
-        //загружаем директорию
-        $item = Folder::loadById($folderItem['ID']);
-        if (!$item) {
-            continue;
-        }
-        //получаем все документы из директории
-        $ChildrenList = $item->getChildren($securityContext, [
+
+    foreach ($folderObjectList as $folder) {
+        $fileObjectList = $folder->getChildren($securityContext, [
             'filter' => [
                 'TYPE' => ObjectTable::TYPE_FILE,
+                '%NAME' => $extension,
+                '!%NAME' => $contextIgnore,
+            ],
+            'order' => [
+                'ID' => 'DESC',
             ],
         ]);
-        foreach ($ChildrenList as $Child) {
-            $filename = $Child->getName();
-            //получаем расширения файлов
-            $extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
-            //массив дозволенных расширений
-            $allowedExtensions = [
-                'doc',
-                'docx',
-                'dot',
-                'dotx',
-                'docm',
-                'dotm',
-                'xls',
-                'xlsx',
-                'xlsm',
-                'xlt',
-                'xltx',
-                'xltm',
-                'xlsb',
-                'xlw',
-                'ppt',
-                'pptx',
-                'pptm',
-                'pps',
-                'ppsx',
-                'ppsm',
-                'pot',
-                'potx',
-                'potm',
-                'pdf',
-            ];
-            //игнорируем неподходящие файлы
-            if (!in_array($extension, $allowedExtensions)) {
-                continue;
-            }
-            //игнорируем все шаблоны
-            if (str_contains(mb_strtolower($filename), mb_strtolower($strignore))) {
-                continue;
-            }
 
-            //вырезаем постфикс для отображения
-            $filename = basename($filename, '.' . $extension);
+        foreach ($fileObjectList as $file) {
             $fileList[] = [
-                'id' => $Child->getId(),
-                'name' => $filename,
-                'show' => $urlManager->getUrlForShowFile($Child),
-                'download' => $urlManager->getUrlForDownloadFile($Child),
+                'id' => $file->getId(),
+                'name' => str_replace($extension, '', $file->getName()),
+                'download' => $urlManager->getUrlForDownloadFile($file),
             ];
         }
     }
@@ -146,7 +95,7 @@ if (Loader::includeModule('disk')) {
                         смотреть
                     </span>
                 <a href="<?= $file['download'] ?>" class="NB1_docs_item_right_download d-flex"
-                   style="background-image: url('/upload/medialibrary/28a/polug4h6bqgq5qm33m8m9kpv5tg5nchz/download.svg');"></a>
+                   style="background-image: url('<?=SITE_TEMPLATE_PATH?>/assets/img/download.svg');"></a>
             </div>
         </div>
         <?php

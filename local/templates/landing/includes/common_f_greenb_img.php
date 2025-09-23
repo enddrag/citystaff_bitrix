@@ -1,1 +1,1 @@
-<img alt="finger.png" src="/upload/medialibrary/99f/1tac1x5tw00nq1pvvd2joiezaebo9g3i/finger.png" title="finger.png" class="NB3_info1_38_img">
+<img alt="finger.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/finger.png" title="finger.png" class="NB3_info1_38_img">

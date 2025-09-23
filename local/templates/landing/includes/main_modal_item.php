@@ -1,1 +1,1 @@
-<img src="/upload/medialibrary/fc9/kjk1vfzswx7efk6d592zj2380ij3vubb/officestaff_123.jpg">
+<img src="<?=SITE_TEMPLATE_PATH?>/assets/img/structure.jpg">
