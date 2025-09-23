@@ -1,5 +1,5 @@
 <?php
-
+global $APPLICATION;
 use Bitrix\Main\Page\Asset;
 
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
@@ -108,12 +108,12 @@ $APPLICATION->SetTitle('База знаний и документы');
                     'PARENT_SECTION_CODE' => '',
                     'PREVIEW_TRUNCATE_LEN' => '',
                     'PROPERTY_CODE' => [0 => 'sug_link', 1 => 'sug_name', 2 => ''],
-                    'SET_BROWSER_TITLE' => 'Y',
+                    'SET_BROWSER_TITLE' => 'N',
                     'SET_LAST_MODIFIED' => 'N',
                     'SET_META_DESCRIPTION' => 'Y',
                     'SET_META_KEYWORDS' => 'Y',
                     'SET_STATUS_404' => 'N',
-                    'SET_TITLE' => 'Y',
+                    'SET_TITLE' => 'N',
                     'SHOW_404' => 'N',
                     'SORT_BY1' => 'ACTIVE_FROM',
                     'SORT_BY2' => 'SORT',
@@ -202,8 +202,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'bitrix:system.auth.form',
                 'common_header_avatar',
                 []
-            );
-            ?>
+            ); ?>
         </div>
     </nav>
     <!--баннер-->
@@ -214,25 +213,23 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'bitrix:main.include',
                 'common_docs_banner_left',
                 [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_docs_banner_item1.php',
+                    'AREA_FILE_SHOW' => 'file',
+                    'AREA_FILE_SUFFIX' => 'inc',
+                    'EDIT_TEMPLATE' => '',
+                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item1.php',
                 ]
-            );
-            ?>
+            ); ?>
             <?php
             $APPLICATION->IncludeComponent(
                 'bitrix:main.include',
                 '',
                 [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_docs_item_img.php',
+                    'AREA_FILE_SHOW' => 'file',
+                    'AREA_FILE_SUFFIX' => 'inc',
+                    'EDIT_TEMPLATE' => '',
+                    'PATH' => '/local/templates/landing/includes/common_docs_item_img.php',
                 ]
-            );
-            ?>
+            ); ?>
         </div>
         <div class="NB1_banner_right d-flex flex-column align-items-center justify-content-center">
             <?php
@@ -240,11 +237,11 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'bitrix:main.include',
                 'main_community_item_title3',
                 [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => 'main_community_item_title3',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_docs_banner_item2.php',
+                    'AREA_FILE_SHOW' => 'file',
+                    'AREA_FILE_SUFFIX' => 'inc',
+                    'COMPONENT_TEMPLATE' => 'main_community_item_title3',
+                    'EDIT_TEMPLATE' => '',
+                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item2.php',
                 ]
             );
             ?>
@@ -253,14 +250,13 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'bitrix:main.include',
                 'main_about_p',
                 [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => 'main_about_p',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_docs_banner_item3.php',
+                    'AREA_FILE_SHOW' => 'file',
+                    'AREA_FILE_SUFFIX' => 'inc',
+                    'COMPONENT_TEMPLATE' => 'main_about_p',
+                    'EDIT_TEMPLATE' => '',
+                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item3.php',
                 ]
-            );
-            ?>
+            ); ?>
         </div>
     </section>
     <!--общее-->
@@ -276,64 +272,63 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'EDIT_TEMPLATE' => '',
                 'PATH' => '/local/templates/landing/includes/common_info_title1.php',
             ]
-        );
-        ?>
+        ); ?>
         <?php
         $APPLICATION->IncludeComponent(
             'bitrix:news.list',
             'common_docs_info',
             [
-            'ACTIVE_DATE_FORMAT' => 'd.m.Y',
-            'ADD_SECTIONS_CHAIN' => 'Y',
-            'AJAX_MODE' => 'N',
-            'AJAX_OPTION_ADDITIONAL' => '',
-            'AJAX_OPTION_HISTORY' => 'N',
-            'AJAX_OPTION_JUMP' => 'N',
-            'AJAX_OPTION_STYLE' => 'Y',
-            'CACHE_FILTER' => 'N',
-            'CACHE_GROUPS' => 'Y',
-            'CACHE_TIME' => '36000000',
-            'CACHE_TYPE' => 'A',
-            'CHECK_DATES' => 'Y',
-            'DETAIL_URL' => '',
-            'DISPLAY_BOTTOM_PAGER' => 'Y',
-            'DISPLAY_DATE' => 'Y',
-            'DISPLAY_NAME' => 'Y',
-            'DISPLAY_PICTURE' => 'Y',
-            'DISPLAY_PREVIEW_TEXT' => 'Y',
-            'DISPLAY_TOP_PAGER' => 'N',
-            'FIELD_CODE' => [0 => '', 1 => ''],
-            'FILTER_NAME' => '',
-            'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-            'IBLOCK_ID' => '39',
-            'IBLOCK_TYPE' => 'CityStaffUIP',
-            'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
-            'INCLUDE_SUBSECTIONS' => 'Y',
-            'MESSAGE_404' => '',
-            'NEWS_COUNT' => '20',
-            'PAGER_BASE_LINK_ENABLE' => 'N',
-            'PAGER_DESC_NUMBERING' => 'N',
-            'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
-            'PAGER_SHOW_ALL' => 'N',
-            'PAGER_SHOW_ALWAYS' => 'N',
-            'PAGER_TEMPLATE' => '.default',
-            'PAGER_TITLE' => 'Новости',
-            'PARENT_SECTION' => '',
-            'PARENT_SECTION_CODE' => '',
-            'PREVIEW_TRUNCATE_LEN' => '',
-            'PROPERTY_CODE' => [0 => 'link_name', 1 => 'link_href'],
-            'SET_BROWSER_TITLE' => 'Y',
-            'SET_LAST_MODIFIED' => 'N',
-            'SET_META_DESCRIPTION' => 'Y',
-            'SET_META_KEYWORDS' => 'Y',
-            'SET_STATUS_404' => 'N',
-            'SET_TITLE' => 'Y',
-            'SHOW_404' => 'N',
-            'SORT_BY1' => 'ACTIVE_FROM',
-            'SORT_BY2' => 'SORT',
-            'SORT_ORDER1' => 'DESC',
-            'SORT_ORDER2' => 'ASC',
-            'STRICT_SECTION_CHECK' => 'N',
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_SECTIONS_CHAIN' => 'Y',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'Y',
+                'CACHE_FILTER' => 'N',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'Y',
+                'DISPLAY_DATE' => 'Y',
+                'DISPLAY_NAME' => 'Y',
+                'DISPLAY_PICTURE' => 'Y',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'FIELD_CODE' => [0 => '', 1 => ''],
+                'FILTER_NAME' => '',
+                'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
+                'IBLOCK_ID' => '39',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
+                'INCLUDE_SUBSECTIONS' => 'Y',
+                'MESSAGE_404' => '',
+                'NEWS_COUNT' => '20',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_DESC_NUMBERING' => 'N',
+                'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_SHOW_ALWAYS' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Новости',
+                'PARENT_SECTION' => '',
+                'PARENT_SECTION_CODE' => '',
+                'PREVIEW_TRUNCATE_LEN' => '',
+                'PROPERTY_CODE' => [0 => 'link_name', 1 => 'link_href'],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'Y',
+                'SET_META_KEYWORDS' => 'Y',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'SORT_BY1' => 'ACTIVE_FROM',
+                'SORT_BY2' => 'SORT',
+                'SORT_ORDER1' => 'DESC',
+                'SORT_ORDER2' => 'ASC',
+                'STRICT_SECTION_CHECK' => 'N',
             ]
         ); ?>
         <div class="NB1_info_circle NB1_info_circle_green">
@@ -348,10 +343,10 @@ $APPLICATION->SetTitle('База знаний и документы');
             'bitrix:main.include',
             'main_union_title',
             [
-            'AREA_FILE_SHOW' => 'file',
-            'AREA_FILE_SUFFIX' => 'inc',
-            'EDIT_TEMPLATE' => '',
-            'PATH' => '/local/templates/landing/includes/common_info_title2.php',
+                'AREA_FILE_SHOW' => 'file',
+                'AREA_FILE_SUFFIX' => 'inc',
+                'EDIT_TEMPLATE' => '',
+                'PATH' => '/local/templates/landing/includes/common_info_title2.php',
             ]
         ); ?>
         <?php
@@ -359,10 +354,10 @@ $APPLICATION->SetTitle('База знаний и документы');
             'bitrix:main.include',
             'common_sharedFiles',
             [
-            'AREA_FILE_SHOW' => 'file',    // Показывать включаемую область
-            'AREA_FILE_SUFFIX' => 'inc',
-            'EDIT_TEMPLATE' => '',    // Шаблон области по умолчанию
-            'PATH' => '/local/templates/landing/includes/common_sharedFiles.php',    // Путь к файлу области
+                'AREA_FILE_SHOW' => 'file',    // Показывать включаемую область
+                'AREA_FILE_SUFFIX' => 'inc',
+                'EDIT_TEMPLATE' => '',    // Шаблон области по умолчанию
+                'PATH' => '/local/templates/landing/includes/common_sharedFiles.php',    // Путь к файлу области
             ],
             false
         ); ?>
@@ -375,11 +370,11 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'bitrix:main.include',
                 'main_community_item_title3',
                 [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => 'main_community_item_title3',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_docs_banner_item4.php',
+                    'AREA_FILE_SHOW' => 'file',
+                    'AREA_FILE_SUFFIX' => 'inc',
+                    'COMPONENT_TEMPLATE' => 'main_community_item_title3',
+                    'EDIT_TEMPLATE' => '',
+                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item4.php',
                 ]
             ); ?>
             <?php
@@ -387,11 +382,11 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'bitrix:main.include',
                 'main_about_p',
                 [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => 'main_about_p',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_docs_banner_item5.php',
+                    'AREA_FILE_SHOW' => 'file',
+                    'AREA_FILE_SUFFIX' => 'inc',
+                    'COMPONENT_TEMPLATE' => 'main_about_p',
+                    'EDIT_TEMPLATE' => '',
+                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item5.php',
                 ]
             ); ?>
         </div>
@@ -424,7 +419,6 @@ $APPLICATION->SetTitle('База знаний и документы');
                         'PATH' => '/local/templates/landing/includes/common_docs_h4.php',
                     ]
                 ); ?>
-
                 <?php
                 $APPLICATION->IncludeComponent(
                     'bitrix:main.include',
@@ -515,7 +509,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                             0 => 'name',
                             1 => 'link',
                         ],
-                        'SET_BROWSER_TITLE' => 'Y',
+                        'SET_BROWSER_TITLE' => 'N',
                         // Устанавливать заголовок окна браузера
                         'SET_CANONICAL_URL' => 'N',
                         // Устанавливать канонический URL
@@ -527,7 +521,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                         // Устанавливать ключевые слова страницы
                         'SET_STATUS_404' => 'N',
                         // Устанавливать статус 404
-                        'SET_TITLE' => 'Y',
+                        'SET_TITLE' => 'N',
                         // Устанавливать заголовок страницы
                         'SHOW_404' => 'N',
                         // Показ специальной страницы
@@ -544,7 +538,6 @@ $APPLICATION->SetTitle('База знаний и документы');
             </div>
         </div>
     </section>
-
     <section class="widthBase NB_content NB_bottomMenu d-flex flex-row flex-wrap align-items-center">
         <?php
         $APPLICATION->IncludeComponent(
@@ -687,6 +680,5 @@ $APPLICATION->SetTitle('База знаний и документы');
 
 <?php
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/docsBase.js');
-?><?php
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>

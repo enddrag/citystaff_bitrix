@@ -1,18 +1,21 @@
 <?php
 
+global $APPLICATION;
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
+
 use Bitrix\Main\Page\Asset;
 use Bitrix\Main\UI\Extension;
+
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title><?php $APPLICATION->ShowTitle(); ?></title>
     <?php
-    $APPLICATION->ShowHead(); ?>
-    <?php
+    $APPLICATION->ShowHead();
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/main.css');
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/styles/common.css');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/search.js');

@@ -1,4 +1,5 @@
 <?php
+global $APPLICATION;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('помощь');
 ?>
@@ -108,12 +109,12 @@ $APPLICATION->SetTitle('помощь');
                         'PARENT_SECTION_CODE' => '',
                         'PREVIEW_TRUNCATE_LEN' => '',
                         'PROPERTY_CODE' => [0 => 'sug_link', 1 => 'sug_name', 2 => ''],
-                        'SET_BROWSER_TITLE' => 'Y',
+                        'SET_BROWSER_TITLE' => 'N',
                         'SET_LAST_MODIFIED' => 'N',
                         'SET_META_DESCRIPTION' => 'Y',
                         'SET_META_KEYWORDS' => 'Y',
                         'SET_STATUS_404' => 'N',
-                        'SET_TITLE' => 'Y',
+                        'SET_TITLE' => 'N',
                         'SHOW_404' => 'N',
                         'SORT_BY1' => 'ACTIVE_FROM',
                         'SORT_BY2' => 'SORT',
@@ -211,10 +212,13 @@ $APPLICATION->SetTitle('помощь');
                     'bitrix:main.include',
                     'common_f_b_t',
                     [
-                        'AREA_FILE_SHOW' => 'file',    // Показывать включаемую область
+                        'AREA_FILE_SHOW' => 'file',
+                        // Показывать включаемую область
                         'AREA_FILE_SUFFIX' => 'inc',
-                        'EDIT_TEMPLATE' => '',    // Шаблон области по умолчанию
-                        'PATH' => '/local/templates/landing/includes/common_f_b_t.php',    // Путь к файлу области
+                        'EDIT_TEMPLATE' => '',
+                        // Шаблон области по умолчанию
+                        'PATH' => '/local/templates/landing/includes/common_f_b_t.php',
+                        // Путь к файлу области
                     ],
                     false
                 ); ?>
@@ -233,13 +237,14 @@ $APPLICATION->SetTitle('помощь');
                 ); ?>
             </div>
             <div class="NB3_banner_form d-flex flex-column align-items-center justify-content-between NB_rounded-20">
-                <script data-b24-form="inline/26/ydymm1" data-skip-moving="true">(function (w, d, u) {
+                <script data-b24-form="inline/27/ptwyaz" data-skip-moving="true">(function (w, d, u) {
                         var s = d.createElement('script');
                         s.async = true;
                         s.src = u + '?' + (Date.now() / 180000 | 0);
                         var h = d.getElementsByTagName('script')[0];
                         h.parentNode.insertBefore(s, h);
-                    })(window, document, 'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_26_ydymm1.js');</script>
+                    })(window, document, 'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_27_ptwyaz.js');
+                </script>
             </div>
         </div>
     </section>
@@ -407,9 +412,9 @@ $APPLICATION->SetTitle('помощь');
                 // Максимальная длина анонса для вывода (только для типа текст)
                 'ACTIVE_DATE_FORMAT' => 'd.m.Y',
                 // Формат показа даты
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 // Устанавливать заголовок страницы
-                'SET_BROWSER_TITLE' => 'Y',
+                'SET_BROWSER_TITLE' => 'N',
                 // Устанавливать заголовок окна браузера
                 'SET_META_KEYWORDS' => 'Y',
                 // Устанавливать ключевые слова страницы
@@ -607,7 +612,7 @@ $APPLICATION->SetTitle('помощь');
                             0 => 'link',
                             1 => 'name',
                         ],
-                        'SET_BROWSER_TITLE' => 'Y',
+                        'SET_BROWSER_TITLE' => 'N',
                         // Устанавливать заголовок окна браузера
                         'SET_CANONICAL_URL' => 'N',
                         // Устанавливать канонический URL
@@ -619,7 +624,7 @@ $APPLICATION->SetTitle('помощь');
                         // Устанавливать ключевые слова страницы
                         'SET_STATUS_404' => 'N',
                         // Устанавливать статус 404
-                        'SET_TITLE' => 'Y',
+                        'SET_TITLE' => 'N',
                         // Устанавливать заголовок страницы
                         'SHOW_404' => 'N',
                         // Показ специальной страницы
@@ -716,12 +721,12 @@ $APPLICATION->SetTitle('помощь');
                         0 => '',
                         1 => '',
                     ],
-                    'SET_BROWSER_TITLE' => 'Y',
+                    'SET_BROWSER_TITLE' => 'N',
                     'SET_LAST_MODIFIED' => 'N',
                     'SET_META_DESCRIPTION' => 'Y',
                     'SET_META_KEYWORDS' => 'Y',
                     'SET_STATUS_404' => 'N',
-                    'SET_TITLE' => 'Y',
+                    'SET_TITLE' => 'N',
                     'SHOW_404' => 'N',
                     'SORT_BY1' => 'ID',
                     'SORT_BY2' => 'SORT',
@@ -877,5 +882,4 @@ $APPLICATION->SetTitle('помощь');
             false
         ); ?>
     </section>
-<?php
-require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>

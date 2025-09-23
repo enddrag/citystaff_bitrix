@@ -1,5 +1,5 @@
 <?php
-
+global $APPLICATION;
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -39,9 +39,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                 'CACHE_TYPE' => 'A',
                 'CACHE_TIME' => '36000000',
                 'CACHE_GROUPS' => 'Y',
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 'SET_CANONICAL_URL' => 'N',
-                'SET_BROWSER_TITLE' => 'Y',
+                'SET_BROWSER_TITLE' => 'N',
                 'BROWSER_TITLE' => '-',
                 'SET_META_KEYWORDS' => 'Y',
                 'META_KEYWORDS' => '-',
@@ -256,8 +256,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
             'CACHE_GROUPS' => 'Y',    // Учитывать права доступа
             'PREVIEW_TRUNCATE_LEN' => '',    // Максимальная длина анонса для вывода (только для типа текст)
             'ACTIVE_DATE_FORMAT' => 'd.m.Y',    // Формат показа даты
-            'SET_TITLE' => 'Y',    // Устанавливать заголовок страницы
-            'SET_BROWSER_TITLE' => 'Y',    // Устанавливать заголовок окна браузера
+            'SET_TITLE' => 'N',    // Устанавливать заголовок страницы
+            'SET_BROWSER_TITLE' => 'N',    // Устанавливать заголовок окна браузера
             'SET_META_KEYWORDS' => 'Y',    // Устанавливать ключевые слова страницы
             'SET_META_DESCRIPTION' => 'Y',    // Устанавливать описание страницы
             'SET_LAST_MODIFIED' => 'N',    // Устанавливать в заголовках ответа время модификации страницы

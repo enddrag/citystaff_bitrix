@@ -1,10 +1,9 @@
 <?php
-
-require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
-
 global $APPLICATION;
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('бонус');
-?>     <!--навигационное меню сайта-->
+?>
+    <!--навигационное меню сайта-->
     <nav class="NB_menu NB1_menu_color widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
         <div class="NB_left d-flex flex-row justify-content-around align-items-center">
             <?php
@@ -168,7 +167,7 @@ $APPLICATION->SetTitle('бонус');
                     // Устанавливать ключевые слова страницы
                     'SET_STATUS_404' => 'N',
                     // Устанавливать статус 404
-                    'SET_TITLE' => 'Y',
+                    'SET_TITLE' => 'N',
                     // Устанавливать заголовок страницы
                     'SHOW_404' => 'N',
                     // Показ специальной страницы
@@ -280,8 +279,6 @@ $APPLICATION->SetTitle('бонус');
             ); ?>
         </div>
     </nav>
-
-
     <!--баннер бонусов-->
     <section data-nav-title="Бонусы" id="bonus" class="widthBase NB2_banner d-flex flex-column justify-content-between">
         <div class="NB2_banner_info NB_rounded-20 d-flex flex-row justify-content-between">
@@ -416,7 +413,7 @@ $APPLICATION->SetTitle('бонус');
                 // Устанавливать ключевые слова страницы
                 'SET_STATUS_404' => 'N',
                 // Устанавливать статус 404
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 // Устанавливать заголовок страницы
                 'SHOW_404' => 'N',
                 // Показ специальной страницы
@@ -431,7 +428,6 @@ $APPLICATION->SetTitle('бонус');
             false
         ); ?>
     </section>
-
     <!--бонусы инфо-->
     <section class="widthBase NB_content NB1_section_info NB_content widthBase d-flex flex-row justify-content-between">
         <div class="NB2_bonusInfo_left d-flex flex-column justify-content-between">
@@ -533,7 +529,7 @@ $APPLICATION->SetTitle('бонус');
                         // Устанавливать ключевые слова страницы
                         'SET_STATUS_404' => 'N',
                         // Устанавливать статус 404
-                        'SET_TITLE' => 'Y',
+                        'SET_TITLE' => 'N',
                         // Устанавливать заголовок страницы
                         'SHOW_404' => 'N',
                         // Показ специальной страницы
@@ -643,7 +639,7 @@ $APPLICATION->SetTitle('бонус');
                         // Устанавливать ключевые слова страницы
                         'SET_STATUS_404' => 'N',
                         // Устанавливать статус 404
-                        'SET_TITLE' => 'Y',
+                        'SET_TITLE' => 'N',
                         // Устанавливать заголовок страницы
                         'SHOW_404' => 'N',
                         // Показ специальной страницы
@@ -716,7 +712,7 @@ $APPLICATION->SetTitle('бонус');
                     'SET_META_DESCRIPTION' => 'Y',
                     'SET_META_KEYWORDS' => 'Y',
                     'SET_STATUS_404' => 'N',
-                    'SET_TITLE' => 'Y',
+                    'SET_TITLE' => 'N',
                     'SHOW_404' => 'N',
                     'STRICT_SECTION_CHECK' => 'N',
                     'USE_PERMISSIONS' => 'N',
@@ -727,7 +723,6 @@ $APPLICATION->SetTitle('бонус');
             ); ?>
         </div>
     </section>
-
 <?php
 $showClass = '';
 $showMonkey = 'display: none;';
@@ -757,7 +752,8 @@ if (isset($_GET['ref_sent'])) {
                         s.src = u + '?' + (Date.now() / 180000 | 0);
                         var h = d.getElementsByTagName('script')[0];
                         h.parentNode.insertBefore(s, h);
-                    })(window, document, 'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_25_5wmkc3.js');</script>
+                    })(window, document, 'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_25_5wmkc3.js');
+                </script>
                 <p class="Fa NB_modal_item_footer">Нажимая на кнопку «Отправить», вы даёте согласие на обработку
                     персональных данных.</p>
             </div>
@@ -768,8 +764,6 @@ if (isset($_GET['ref_sent'])) {
             </div>
         </div>
     </section>
-
-
     <!--стаффлики-->
     <section data-nav-title="Как заработать стаффлики?" id="staffcoinList"
              class="widthBase NB_content NB2_stafcoin d-flex flex-column">
@@ -854,7 +848,7 @@ if (isset($_GET['ref_sent'])) {
                 'SET_META_DESCRIPTION' => 'Y',
                 'SET_META_KEYWORDS' => 'Y',
                 'SET_STATUS_404' => 'N',
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 'SHOW_404' => 'N',
                 'SORT_BY1' => 'ACTIVE_FROM',
                 'SORT_BY2' => 'SORT',
@@ -879,7 +873,6 @@ if (isset($_GET['ref_sent'])) {
             </div>
         </div>
     </section>
-
 <?php
 $APPLICATION->IncludeComponent(
     'bitrix:news.detail',
@@ -934,7 +927,7 @@ $APPLICATION->IncludeComponent(
         'SET_META_DESCRIPTION' => 'Y',    // Устанавливать описание страницы
         'SET_META_KEYWORDS' => 'Y',    // Устанавливать ключевые слова страницы
         'SET_STATUS_404' => 'N',    // Устанавливать статус 404
-        'SET_TITLE' => 'Y',    // Устанавливать заголовок страницы
+        'SET_TITLE' => 'N',    // Устанавливать заголовок страницы
         'SHOW_404' => 'N',    // Показ специальной страницы
         'STRICT_SECTION_CHECK' => 'N',    // Строгая проверка раздела для показа элемента
         'USE_PERMISSIONS' => 'N',    // Использовать дополнительное ограничение доступа
@@ -943,7 +936,6 @@ $APPLICATION->IncludeComponent(
     ],
     false
 ); ?>
-
     <!--здоровье-->
     <section data-nav-title="Поддержка здоровья" id="health" class="widthBase NB_content NB2_health d-flex flex-column">
         <?php
@@ -1025,7 +1017,7 @@ $APPLICATION->IncludeComponent(
                 // Максимальная длина анонса для вывода (только для типа текст)
                 'ACTIVE_DATE_FORMAT' => 'd.m.Y',
                 // Формат показа даты
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 // Устанавливать заголовок страницы
                 'SET_BROWSER_TITLE' => 'Y',
                 // Устанавливать заголовок окна браузера
@@ -1085,145 +1077,143 @@ $APPLICATION->IncludeComponent(
             false
         ); ?>
     </section>
-
-
     <section class="widthBase NB_content NB_bottomMenu d-flex flex-row flex-wrap align-items-center">
-<?php
-$APPLICATION->IncludeComponent(
-    'bitrix:news.detail',
-    'main_bottommenu_link1',
-    [
-        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
-        'ADD_ELEMENT_CHAIN' => 'N',
-        'ADD_SECTIONS_CHAIN' => 'N',
-        'AJAX_MODE' => 'N',
-        'AJAX_OPTION_ADDITIONAL' => '',
-        'AJAX_OPTION_HISTORY' => 'N',
-        'AJAX_OPTION_JUMP' => 'N',
-        'AJAX_OPTION_STYLE' => 'N',
-        'BROWSER_TITLE' => '-',
-        'CACHE_GROUPS' => 'Y',
-        'CACHE_TIME' => '36000000',
-        'CACHE_TYPE' => 'A',
-        'CHECK_DATES' => 'Y',
-        'DETAIL_URL' => '',
-        'DISPLAY_BOTTOM_PAGER' => 'N',
-        'DISPLAY_DATE' => 'N',
-        'DISPLAY_NAME' => 'N',
-        'DISPLAY_PICTURE' => 'N',
-        'DISPLAY_PREVIEW_TEXT' => 'Y',
-        'DISPLAY_TOP_PAGER' => 'N',
-        'ELEMENT_CODE' => 'main_bottommenu_link1',
-        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
-        'FIELD_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'IBLOCK_ID' => '',
-        'IBLOCK_TYPE' => 'CityStaffUIP',
-        'IBLOCK_URL' => '',
-        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
-        'MESSAGE_404' => '',
-        'META_DESCRIPTION' => '-',
-        'META_KEYWORDS' => '-',
-        'PAGER_BASE_LINK_ENABLE' => 'N',
-        'PAGER_SHOW_ALL' => 'N',
-        'PAGER_TEMPLATE' => '.default',
-        'PAGER_TITLE' => 'Страница',
-        'PROPERTY_CODE' => [
-            0 => '',
-            1 => 'link',
-            2 => 'name',
-            3 => '',
-        ],
-        'SET_BROWSER_TITLE' => 'N',
-        'SET_CANONICAL_URL' => 'N',
-        'SET_LAST_MODIFIED' => 'N',
-        'SET_META_DESCRIPTION' => 'N',
-        'SET_META_KEYWORDS' => 'N',
-        'SET_STATUS_404' => 'N',
-        'SET_TITLE' => 'N',
-        'SHOW_404' => 'N',
-        'STRICT_SECTION_CHECK' => 'N',
-        'USE_PERMISSIONS' => 'N',
-        'USE_SHARE' => 'N',
-        'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
-    ],
-    false
-); ?>
-<?php
-$APPLICATION->IncludeComponent(
-    'bitrix:main.include',
-    '',
-    [
-        'AREA_FILE_SHOW' => 'file',
-        'AREA_FILE_SUFFIX' => 'inc',
-        'EDIT_TEMPLATE' => '',
-        'PATH' => '/local/templates/landing/includes/main_bottommenu_arrow.php',
-    ]
-); ?>
-<?php
-$APPLICATION->IncludeComponent(
-    'bitrix:news.detail',
-    'main_bottommenu_link1',
-    [
-        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
-        'ADD_ELEMENT_CHAIN' => 'N',
-        'ADD_SECTIONS_CHAIN' => 'N',
-        'AJAX_MODE' => 'N',
-        'AJAX_OPTION_ADDITIONAL' => '',
-        'AJAX_OPTION_HISTORY' => 'N',
-        'AJAX_OPTION_JUMP' => 'N',
-        'AJAX_OPTION_STYLE' => 'N',
-        'BROWSER_TITLE' => '-',
-        'CACHE_GROUPS' => 'Y',
-        'CACHE_TIME' => '36000000',
-        'CACHE_TYPE' => 'A',
-        'CHECK_DATES' => 'Y',
-        'DETAIL_URL' => '',
-        'DISPLAY_BOTTOM_PAGER' => 'N',
-        'DISPLAY_DATE' => 'N',
-        'DISPLAY_NAME' => 'N',
-        'DISPLAY_PICTURE' => 'N',
-        'DISPLAY_PREVIEW_TEXT' => 'Y',
-        'DISPLAY_TOP_PAGER' => 'N',
-        'ELEMENT_CODE' => 'main_bottommenu_link2',
-        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
-        'FIELD_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'IBLOCK_ID' => '',
-        'IBLOCK_TYPE' => 'CityStaffUIP',
-        'IBLOCK_URL' => '',
-        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
-        'MESSAGE_404' => '',
-        'META_DESCRIPTION' => '-',
-        'META_KEYWORDS' => '-',
-        'PAGER_BASE_LINK_ENABLE' => 'N',
-        'PAGER_SHOW_ALL' => 'N',
-        'PAGER_TEMPLATE' => '.default',
-        'PAGER_TITLE' => 'Страница',
-        'PROPERTY_CODE' => [
-            0 => '',
-            1 => 'link',
-            2 => 'name',
-            3 => '',
-        ],
-        'SET_BROWSER_TITLE' => 'N',
-        'SET_CANONICAL_URL' => 'N',
-        'SET_LAST_MODIFIED' => 'N',
-        'SET_META_DESCRIPTION' => 'N',
-        'SET_META_KEYWORDS' => 'N',
-        'SET_STATUS_404' => 'N',
-        'SET_TITLE' => 'N',
-        'SHOW_404' => 'N',
-        'STRICT_SECTION_CHECK' => 'N',
-        'USE_PERMISSIONS' => 'N',
-        'USE_SHARE' => 'N',
-        'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
-    ],
-    false
-); ?>
-    </section><?php
-require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
+        <?php
+        $APPLICATION->IncludeComponent(
+            'bitrix:news.detail',
+            'main_bottommenu_link1',
+            [
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'main_bottommenu_link1',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                    0 => '',
+                    1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                    0 => '',
+                    1 => 'link',
+                    2 => 'name',
+                    3 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
+                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+            ],
+            false
+        ); ?>
+        <?php
+        $APPLICATION->IncludeComponent(
+            'bitrix:main.include',
+            '',
+            [
+                'AREA_FILE_SHOW' => 'file',
+                'AREA_FILE_SUFFIX' => 'inc',
+                'EDIT_TEMPLATE' => '',
+                'PATH' => '/local/templates/landing/includes/main_bottommenu_arrow.php',
+            ]
+        ); ?>
+        <?php
+        $APPLICATION->IncludeComponent(
+            'bitrix:news.detail',
+            'main_bottommenu_link1',
+            [
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'main_bottommenu_link2',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                    0 => '',
+                    1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                    0 => '',
+                    1 => 'link',
+                    2 => 'name',
+                    3 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
+                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+            ],
+            false
+        ); ?>
+    </section>
+<?php require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>

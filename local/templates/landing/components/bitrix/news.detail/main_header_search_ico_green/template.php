@@ -1,4 +1,7 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+    die();
+}
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -14,9 +17,9 @@ $this->setFrameMode(true);
 ?>
 
 
-	<?if((!isset($arParams["DISPLAY_PICTURE"]) || $arParams["DISPLAY_PICTURE"]!="N") && is_array($arResult["DETAIL_PICTURE"])):?>
-<div class="NB_search_ico NB1_search_ico_color NB_rounded-circle" style="background-image: url('<?=$arResult["DETAIL_PICTURE"]["SRC"]?>')"  id="search_ico">
-</div>
-	
-
-<?endif?>
+<?php
+if ((!isset($arParams['DISPLAY_PICTURE']) || $arParams['DISPLAY_PICTURE'] != 'N') && is_array($arResult['DETAIL_PICTURE'])) : ?>
+    <div class="NB_search_ico NB1_search_ico_color NB_rounded-circle"
+         style="background-image: url('<?= $arResult['DETAIL_PICTURE']['SRC'] ?>')" id="search_ico">
+    </div>
+<?php endif ?>

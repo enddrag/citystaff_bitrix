@@ -1,7 +1,8 @@
 <?php
-
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
-$APPLICATION->SetTitle('Главная');
+global $APPLICATION;
+$APPLICATION->SetTitle('Главная', true);
+
 ?>
     <!----баннер лендинга---->
     <section class="NB_banner d-flex flex-column align-items-center"
@@ -123,12 +124,12 @@ $APPLICATION->SetTitle('Главная');
                             1 => 'sug_name',
                             2 => '',
                         ],
-                        'SET_BROWSER_TITLE' => 'Y',
+                        'SET_BROWSER_TITLE' => 'N',
                         'SET_LAST_MODIFIED' => 'N',
                         'SET_META_DESCRIPTION' => 'Y',
                         'SET_META_KEYWORDS' => 'Y',
                         'SET_STATUS_404' => 'N',
-                        'SET_TITLE' => 'Y',
+                        'SET_TITLE' => 'N',
                         'SHOW_404' => 'N',
                         'SORT_BY1' => 'ACTIVE_FROM',
                         'SORT_BY2' => 'SORT',
@@ -362,12 +363,12 @@ $APPLICATION->SetTitle('Главная');
                                 'PARENT_SECTION_CODE' => '',
                                 'PREVIEW_TRUNCATE_LEN' => '',
                                 'PROPERTY_CODE' => [0 => '', 1 => ''],
-                                'SET_BROWSER_TITLE' => 'Y',
+                                'SET_BROWSER_TITLE' => 'N',
                                 'SET_LAST_MODIFIED' => 'N',
                                 'SET_META_DESCRIPTION' => 'Y',
                                 'SET_META_KEYWORDS' => 'Y',
                                 'SET_STATUS_404' => 'N',
-                                'SET_TITLE' => 'Y',
+                                'SET_TITLE' => 'N',
                                 'SHOW_404' => 'N',
                                 'SORT_BY1' => 'ACTIVE_FROM',
                                 'SORT_BY2' => 'SORT',
@@ -448,7 +449,6 @@ $APPLICATION->SetTitle('Главная');
             ); ?>
         </div>
     </section>
-
     <!--карусель клиентов-->
     <section data-nav-title="Наши партнеры" id="partners" class="NB_content">
         <?php
@@ -507,12 +507,12 @@ $APPLICATION->SetTitle('Главная');
                 'PARENT_SECTION_CODE' => '',
                 'PREVIEW_TRUNCATE_LEN' => '',
                 'PROPERTY_CODE' => [0 => '', 1 => ''],
-                'SET_BROWSER_TITLE' => 'Y',
+                'SET_BROWSER_TITLE' => 'N',
                 'SET_LAST_MODIFIED' => 'N',
                 'SET_META_DESCRIPTION' => 'Y',
                 'SET_META_KEYWORDS' => 'Y',
                 'SET_STATUS_404' => 'N',
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 'SHOW_404' => 'N',
                 'SORT_BY1' => 'ACTIVE_FROM',
                 'SORT_BY2' => 'SORT',
@@ -522,8 +522,8 @@ $APPLICATION->SetTitle('Главная');
             ]
         ); ?>
     </section>
-    <!--Что нас обьединяет-->
-    <section data-nav-title="Что нас обьединяет?" id="union" class="NB_content">
+    <!--Что нас объединяет-->
+    <section data-nav-title="Что нас объединяет?" id="union" class="NB_content">
         <?php
         $APPLICATION->IncludeComponent(
             'bitrix:main.include',
@@ -580,12 +580,12 @@ $APPLICATION->SetTitle('Главная');
                 'PARENT_SECTION_CODE' => '',
                 'PREVIEW_TRUNCATE_LEN' => '',
                 'PROPERTY_CODE' => [0 => '', 1 => ''],
-                'SET_BROWSER_TITLE' => 'Y',
+                'SET_BROWSER_TITLE' => 'N',
                 'SET_LAST_MODIFIED' => 'N',
                 'SET_META_DESCRIPTION' => 'Y',
                 'SET_META_KEYWORDS' => 'Y',
                 'SET_STATUS_404' => 'N',
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 'SHOW_404' => 'N',
                 'SORT_BY1' => 'ACTIVE_FROM',
                 'SORT_BY2' => 'SORT',
@@ -595,10 +595,9 @@ $APPLICATION->SetTitle('Главная');
             ]
         ); ?>
     </section>
-
     <!--Отделы-->
     <section data-nav-title="Структура" id="struct"
-             class="NB_content NB_content_department NB_rounded-20 widthBase d-flex flex-column align-items-center justify-content-center">
+             class="NB_content NB_content_department widthBase flex-column align-items-center justify-content-center">
         <?php
         $APPLICATION->IncludeComponent(
             'bitrix:main.include',
@@ -667,7 +666,6 @@ $APPLICATION->SetTitle('Главная');
             </div>
         </div>
     </section>
-
     <!--Традиции-->
     <section data-nav-title="Наши традиции" id="tradition"
              class="NB_content NB_content_tradition widthBase d-flex flex-column">
@@ -814,7 +812,7 @@ $APPLICATION->SetTitle('Главная');
                         0 => 'link',
                         1 => 'name',
                     ],
-                    'SET_BROWSER_TITLE' => 'Y',
+                    'SET_BROWSER_TITLE' => 'N',
                     // Устанавливать заголовок окна браузера
                     'SET_CANONICAL_URL' => 'N',
                     // Устанавливать канонический URL
@@ -826,7 +824,7 @@ $APPLICATION->SetTitle('Главная');
                     // Устанавливать ключевые слова страницы
                     'SET_STATUS_404' => 'N',
                     // Устанавливать статус 404
-                    'SET_TITLE' => 'Y',
+                    'SET_TITLE' => 'N',
                     // Устанавливать заголовок страницы
                     'SHOW_404' => 'N',
                     // Показ специальной страницы
@@ -841,7 +839,6 @@ $APPLICATION->SetTitle('Главная');
             ); ?>
         </div>
     </section>
-
     <!--где и как мы общаемся-->
     <section data-nav-title="Где и как мы общаемся" id="chats"
              class="NB_content NB_content_community d-flex flex-column widthBase">
@@ -922,13 +919,13 @@ $APPLICATION->SetTitle('Главная');
                             'PAGER_TEMPLATE' => '.default',
                             'PAGER_TITLE' => 'Страница',
                             'PROPERTY_CODE' => [0 => 'link', 1 => ''],
-                            'SET_BROWSER_TITLE' => 'Y',
+                            'SET_BROWSER_TITLE' => 'N',
                             'SET_CANONICAL_URL' => 'N',
                             'SET_LAST_MODIFIED' => 'N',
                             'SET_META_DESCRIPTION' => 'Y',
                             'SET_META_KEYWORDS' => 'Y',
                             'SET_STATUS_404' => 'N',
-                            'SET_TITLE' => 'Y',
+                            'SET_TITLE' => 'N',
                             'SHOW_404' => 'N',
                             'STRICT_SECTION_CHECK' => 'N',
                             'USE_PERMISSIONS' => 'N',
@@ -1010,20 +1007,19 @@ $APPLICATION->SetTitle('Главная');
                             'PAGER_TEMPLATE' => '.default',
                             'PAGER_TITLE' => 'Страница',
                             'PROPERTY_CODE' => [0 => 'link', 1 => ''],
-                            'SET_BROWSER_TITLE' => 'Y',
+                            'SET_BROWSER_TITLE' => 'N',
                             'SET_CANONICAL_URL' => 'N',
                             'SET_LAST_MODIFIED' => 'N',
                             'SET_META_DESCRIPTION' => 'Y',
                             'SET_META_KEYWORDS' => 'Y',
                             'SET_STATUS_404' => 'N',
-                            'SET_TITLE' => 'Y',
+                            'SET_TITLE' => 'N',
                             'SHOW_404' => 'N',
                             'STRICT_SECTION_CHECK' => 'N',
                             'USE_PERMISSIONS' => 'N',
                             'USE_SHARE' => 'N',
                         ]
                     ); ?>
-
                     <?php
                     $APPLICATION->IncludeComponent(
                         'bitrix:main.include',
@@ -1076,8 +1072,6 @@ $APPLICATION->SetTitle('Главная');
             </div>
         </div>
     </section>
-
-
     <!--подписчики-->
     <section data-nav-title="За нами интересно наблюдать" id="social" class="NB_content d-flex flex-column widthBase">
         <?php
@@ -1135,12 +1129,12 @@ $APPLICATION->SetTitle('Главная');
                 'PARENT_SECTION_CODE' => '',
                 'PREVIEW_TRUNCATE_LEN' => '',
                 'PROPERTY_CODE' => ['link', 'link_text', 'link_api'],
-                'SET_BROWSER_TITLE' => 'Y',
+                'SET_BROWSER_TITLE' => 'N',
                 'SET_LAST_MODIFIED' => 'N',
                 'SET_META_DESCRIPTION' => 'Y',
                 'SET_META_KEYWORDS' => 'Y',
                 'SET_STATUS_404' => 'N',
-                'SET_TITLE' => 'Y',
+                'SET_TITLE' => 'N',
                 'SHOW_404' => 'N',
                 'SORT_BY1' => 'ACTIVE_FROM',
                 'SORT_BY2' => 'SORT',
@@ -1150,7 +1144,6 @@ $APPLICATION->SetTitle('Главная');
             ]
         ); ?>
     </section>
-
     <section class="widthBase NB_content NB_bottomMenu d-flex flex-row flex-wrap align-items-center">
         <?php
         $APPLICATION->IncludeComponent(
@@ -1290,8 +1283,6 @@ $APPLICATION->SetTitle('Главная');
             false
         ); ?>
     </section>
-
-
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php');
 ?>

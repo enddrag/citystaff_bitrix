@@ -1,5 +1,7 @@
-<?
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+    die();
+}
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -13,7 +15,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-if($arResult["FILE"] <> ''):?>
-<h3><?include($arResult["FILE"]);?></h3>
-<?endif;?>
+if ($arResult['FILE'] <> '') :?>
+<h3><?php include($arResult['FILE']);?></h3>
+<?php endif;?>
 

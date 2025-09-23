@@ -1,4 +1,8 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php
+
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+    die();
+}
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -13,93 +17,142 @@
 $this->setFrameMode(true);
 
 // Подготовка данных для каруселей
-$allItems = $arResult["ITEMS"];
+$allItems = $arResult['ITEMS'];
 $itemsCount = count($allItems);
 $items1 = 0;//количество элементов в первой карусели
 $items2 = 0;//количество элементов в первой карусели
-if($itemsCount == 1){
-	$items1 = 1;
-	$items2 = 0;
+if ($itemsCount == 1) {
+    $items1 = 1;
+    $items2 = 0;
+} else {
+    if ($itemsCount == 0) {
+        $items1 = 0;
+        $items2 = 0;
+    } else {
+        $items1 = floor($itemsCount / 2);
+        $items2 = $itemsCount - $items1;
+    }
 }
-else if($itemsCount == 0){
-	$items1 = 0;
-	$items2 = 0;
-}
-else{
-	$items1 = floor($itemsCount / 2);
-	$items2 = $itemsCount-$items1;
-}
-$i=0;
+$i = 0;
 ?>
 <div class="NB_content_corusel ontheleft">
-<!--логотипы-->
-	<?foreach($arResult["ITEMS"] as $arItem):?>
-		<?if($i<$items1):?>
-		<?
-		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-		?>
-		<div class="NB_content_corusel_item d-flex align-items-center justify-content-center" style="flex: 0 0 calc(100% / <?=$items1?>);" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-			<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-				<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
-			<?endif?>
-		</div>
-		<? $i+=1;
-		else:?>
-		<?break;?>
-		<?endif;?>
-	<?endforeach;?>
+    <!--логотипы-->
+    <?php
+    foreach ($arResult['ITEMS'] as $arItem) : ?>
+        <?php
+        if ($i < $items1) : ?>
+            <?php
+            $this->AddEditAction(
+                $arItem['ID'],
+                $arItem['EDIT_LINK'],
+                CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT')
+            );
+            $this->AddDeleteAction(
+                $arItem['ID'],
+                $arItem['DELETE_LINK'],
+                CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),
+                ['CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')]
+            );
+            ?>
+            <div class="NB_content_corusel_item d-flex align-items-center justify-content-center"
+                 style="flex: 0 0 calc(100% / <?= $items1 ?>);" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <?php
+                if ($arParams['DISPLAY_PICTURE'] != 'N' && is_array($arItem['PREVIEW_PICTURE'])) : ?>
+                    <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>">
+                    <?php
+                endif ?>
+            </div>
+            <?php
+            $i += 1;
+        else :?>
+            <?php break; ?>
+        <?php endif; ?>
 
-<?$i=0;//чтобы пройти мимо лишних элементов?>
-<!--дубликаты-->
-	<?foreach($arResult["ITEMS"] as $arItem):?>
-		<?if($i<$items1):?>
-		<div class="NB_content_corusel_item d-flex align-items-center justify-content-center" style="flex: 0 0 calc(100% / <?=$items1?>);" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-			<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-				<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
-			<?endif?>
-		</div>
-		<? $i+=1;
-		else:?>
-		<?break;?>
-		<?endif;?>
-	<?endforeach;?>
+    <?php endforeach; ?>
+
+    <?php
+    $i = 0;//чтобы пройти мимо лишних элементов?>
+    <!--дубликаты-->
+    <?php
+    foreach ($arResult['ITEMS'] as $arItem) : ?>
+        <?php
+        if ($i < $items1) : ?>
+            <div class="NB_content_corusel_item d-flex align-items-center justify-content-center"
+                 style="flex: 0 0 calc(100% / <?= $items1 ?>);" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <?php
+                if ($arParams['DISPLAY_PICTURE'] != 'N' && is_array($arItem['PREVIEW_PICTURE'])) : ?>
+                    <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>">
+                <?php endif ?>
+            </div>
+            <?php
+            $i += 1;
+        else :?>
+            <?php break; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
 </div>
 <div class="NB_content_corusel d-flex flex-row ontheright">
-<?$i=0;//чтобы пройти мимо лишних элементов?>
-<!--логотипы-->
-	<?foreach($arResult["ITEMS"] as $arItem):?>
-		<?if($i>=$items1):?>
-			<?if($i<$itemsCount):?>
-			<?
-			$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-			$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-			?>
-			<div class="NB_content_corusel_item d-flex align-items-center justify-content-center" style="flex: 0 0 calc(100% / <?=$items2?>);" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-				<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-					<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
-				<?endif?>
-			</div>
-			<?endif;?>
-			<?$i+=1;?>
-		<?else:?>
-		<?$i+=1;?>
-		<?endif;?>
-	<?endforeach;?>
-<?$i=0;//чтобы пройти мимо лишних элементов?>
-<!--дубликаты-->
-	<?foreach($arResult["ITEMS"] as $arItem):?>
-		<?if($i>=$items1):?>
-			<?if($i<$itemsCount):?>
-			<div class="NB_content_corusel_item d-flex align-items-center justify-content-center" style="flex: 0 0 calc(100% / <?=$items2?>);" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-				<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-					<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
-				<?endif?>
-			</div>
-			<?endif;?>
-			<?$i+=1;?>
-		<?else:?>
-		<?$i+=1;?>
-		<?endif;?>
-	<?endforeach;?>
+    <?php
+    $i = 0;//чтобы пройти мимо лишних элементов?>
+    <!--логотипы-->
+    <?php
+    foreach ($arResult['ITEMS'] as $arItem) : ?>
+        <?php
+        if ($i >= $items1) : ?>
+            <?php
+            if ($i < $itemsCount) : ?>
+                <?php
+                $this->AddEditAction(
+                    $arItem['ID'],
+                    $arItem['EDIT_LINK'],
+                    CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT')
+                );
+                $this->AddDeleteAction(
+                    $arItem['ID'],
+                    $arItem['DELETE_LINK'],
+                    CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),
+                    ['CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')]
+                );
+                ?>
+                <div class="NB_content_corusel_item d-flex align-items-center justify-content-center"
+                     style="flex: 0 0 calc(100% / <?= $items2 ?>);" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                    <?php
+                    if ($arParams['DISPLAY_PICTURE'] != 'N' && is_array($arItem['PREVIEW_PICTURE'])) : ?>
+                        <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                             alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>">
+                    <?php endif ?>
+                </div>
+            <?php endif; ?>
+            <?php
+            $i += 1; ?>
+        <?php else : ?>
+            <?php
+            $i += 1; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    <?php
+    $i = 0;//чтобы пройти мимо лишних элементов?>
+    <!--дубликаты-->
+    <?php
+    foreach ($arResult['ITEMS'] as $arItem) : ?>
+        <?php
+        if ($i >= $items1) : ?>
+            <?php
+            if ($i < $itemsCount) : ?>
+                <div class="NB_content_corusel_item d-flex align-items-center justify-content-center"
+                     style="flex: 0 0 calc(100% / <?= $items2 ?>);" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                    <?php
+                    if ($arParams['DISPLAY_PICTURE'] != 'N' && is_array($arItem['PREVIEW_PICTURE'])) : ?>
+                        <img src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                             alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>">
+                    <?php endif ?>
+                </div>
+            <?php endif; ?>
+            <?php
+            $i += 1; ?>
+        <?php else : ?>
+            <?php
+            $i += 1; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
 </div>
