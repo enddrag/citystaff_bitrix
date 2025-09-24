@@ -20,25 +20,27 @@ $this->setFrameMode(true);
     <?php
     foreach ($arResult["ITEMS"] as $arItem) : ?>
         <?php
-        $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
-        if ($arSection = $selectSection->GetNext()) {
-            if ($arSection['NAME'] !== 'о нас пункты') {
-                continue;
-            }
-        }
-        ?>
-        <?php
         $this->AddEditAction(
-                $arItem['ID'],
-                $arItem['EDIT_LINK'],
-                CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT")
+            $arItem['ID'],
+            $arItem['EDIT_LINK'],
+            CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT")
         );
         $this->AddDeleteAction(
-                $arItem['ID'],
-                $arItem['DELETE_LINK'],
-                CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"),
-                array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))
+            $arItem['ID'],
+            $arItem['DELETE_LINK'],
+            CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"),
+            array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))
         );
+        ?>
+        <?php
+        $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
+        if ($arSection = $selectSection->GetNext()) {
+            if (mb_strtolower($arSection['NAME']) != 'о нас пункты') {
+                continue;
+            }
+        } else {
+            continue;
+        }
         ?>
         <div class="NB_about_content_wrap_item d-flex flex-column justify-content-end"
              id="<?= $this->GetEditAreaId($arItem['ID']); ?>">

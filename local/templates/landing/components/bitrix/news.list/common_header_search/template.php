@@ -20,12 +20,16 @@ $this->setFrameMode(true);
 $arr = [];
 $dir = $_SERVER['DOCUMENT_ROOT'] . '/citystaff';
 
-// Получаем все PHP-файлы в текущей директории
-$files = glob($dir . '/*.php');
+$files = [];
+$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS));
+foreach ($iterator as $file) {
+    if ($file->isFile() && $file->getExtension() === 'php') {
+        $files[] = $file->getPathname();
+    }
+}
 
 foreach ($files as $file) {
     $content = file_get_contents($file);
-
     // Ищем все секции с атрибутами data-nav-title и id
     preg_match_all(
         '/<section\s+[^>]*data-nav-title="([^"]*)"[^>]*id="([^"]*)"[^>]*>/i',
@@ -37,12 +41,11 @@ foreach ($files as $file) {
     foreach ($matches as $match) {
         $arr[] = [
             'title' => $match[1],
-            'url' => basename($file) . '#' . $match[2],
+            'url' => strstr($file, '/citystaff') . '#' . $match[2],
         ];
     }
 }
 ?>
-<!--поиск-->
 <!--поиск-->
 <div class="NB_search NB1_search_color NB_search_size NB_backdrop-blur NB_rounded-30 search-box d-flex me-3 align-items-center justify-content-around">
     <input type="search" placeholder="Найти" class="NB_search_input form-control Fmenu" id="search_input">

@@ -6,7 +6,10 @@ $APPLICATION->SetTitle('Главная', true);
 ?>
     <!----баннер лендинга---->
     <section class="NB_banner d-flex flex-column align-items-center"
-             style=" background: linear-gradient(#00000000 0%, black), url('<?=SITE_TEMPLATE_PATH?>/assets/img/banner.gif'); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+             style=" background: linear-gradient(#00000000 0%, black)">
+        <video autoplay loop muted playsinline class="NB_banner_preview">
+            <source src="<?=SITE_TEMPLATE_PATH?>/assets/img/banner.mp4" type="video/mp4">
+        </video>
         <!--навигационное меню сайта-->
         <nav class="NB_menu NB_menu_color NB_backdrop-blur NB_rounded-50 widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
             <div class="NB_left d-flex flex-row justify-content-around align-items-center">

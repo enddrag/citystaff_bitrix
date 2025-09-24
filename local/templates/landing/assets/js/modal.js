@@ -50,6 +50,13 @@ $(document).ready(function() {
 
 
     /*--------------------Помощь в валидации--------------------*/
+
+    //прячем информацию об отправке формы
+    function hideAlertMessages(){
+        $('.NB_modal .b24-form-state').each(function (){
+            $(this).css('display', 'none');
+        });
+    }
     //проверка видимости
     function isVisible(element) {
         return $(element).is(':visible');
@@ -66,6 +73,17 @@ $(document).ready(function() {
                 $container.removeClass('NB_modal_form_error');
             }
         });
+        //при успешной отправке формы получаем веселую обезьянку (либо грустную)
+        if($('.NB_modal .b24-form-state.b24-form-success').css('display') === 'flex'){
+            hideAlertMessages();
+            $('#survey').css('display', 'none');
+            $('#happyMonkey').css('display', 'flex');
+        }
+        else if($('.NB_modal .b24-form-state.b24-form-error').css('display') === 'flex' || $('.NB_modal .b24-form-state.b24-form-warning').css('display') === 'flex'){
+            hideAlertMessages();
+            $('#survey').css('display', 'none');
+            $('#sadMonkey').css('display', 'flex');
+        }
     }
     // наблюдатель изменения DOM
     var obs = new MutationObserver(function(){

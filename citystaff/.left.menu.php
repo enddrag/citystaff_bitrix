@@ -1,46 +1,46 @@
-<?
-$aMenuLinks = Array(
-	Array(
-		"О компании", 
-		"index.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"База знаний", 
-		"docs_base.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Шаблоны", 
-		"index.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Помощь", 
-		"faq.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Персонал", 
-		"index.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Плюшки", 
-		"bonus.php", 
-		Array(), 
-		Array(), 
-		"" 
-	)
+<?php
+
+$aMenuLinks = array(
+    array(
+        "О компании",
+        "/citystaff/index.php#about",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "База знаний",
+        "/citystaff/docs_base/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Шаблоны",
+        "/citystaff/docs_base/index.php#templates",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Помощь",
+        "/citystaff/faq/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Персонал",
+        "/company/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Плюшки",
+        "/citystaff/bonus/",
+        array(),
+        array(),
+        ""
+    )
 );
-?>

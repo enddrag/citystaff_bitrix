@@ -109,7 +109,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 800px;
     gap: 20px;
 }
 
@@ -162,18 +161,17 @@
     filter: blur(200px);
 
     position: absolute;
-    z-index: 0;
+    z-index: -1;
 }
-
 .NB1_info_circle_green {
     background-color: rgba(0, 245, 159, 0.6);
     left: 12%;
-    bottom: 28%;
+    top: 10%;
 }
 
 .NB1_info_circle_blue {
     right: 17%;
-    bottom: 13%;
+    top: 40%;
     background-color: rgba(0, 217, 245, 0.6);
 }
 
@@ -189,7 +187,7 @@
 }
 
 .NB1_docs_item_size {
-    width: 864px;
+    width: 850px;
 }
 
 .NB1_docs_items {
@@ -200,8 +198,7 @@
     margin-top: 50px;
     max-height: 300px;
     overflow: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+
 }
 
 .NB1_docs_item .Fa {
@@ -213,10 +210,27 @@
 }
 
 .NB1_docs_items::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    background: transparent;
-    display: none;
+    width: 10px;
+}
+
+.NB1_docs_items::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.NB1_docs_items::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #6c757d, #495057);
+    border-radius: 5px;
+    border: 1px solid #adb5bd;
+}
+
+.NB1_docs_items::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #5a6268, #343a40);
+}
+
+.NB1_docs_items::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(to bottom, #495057, #212529);
 }
 
 .NB1_docs_item {
@@ -806,7 +820,7 @@
 .NB3_banner_form .b24-form-control-container:has(textarea)::after {
     position: absolute;
     content: '*Можно написать об улучшениях, внутренних процессах, идеях, атмосфере и т.д.';
-    top: 100% !important;
+    top: 102% !important;
     font-family: 'circe', serif !important;
     font-size: 15px;
     color: #ffffff;
@@ -1186,24 +1200,20 @@
         height: 450px;
     }
 
-    .NB1_info_circle_green {
-        bottom: 35%
-    }
-
     .NB1_info_circle_blue {
         right: 10%;
         bottom: 14%;
     }
 
     .NB1_docs_item_size {
-        width: 765px;
+        width: 755px;
     }
 
     .NB1_docs_item_right {
         width: 140px;
     }
 
-    .NB1_bannerT img {
+    .NB1_bannerT img, .NB2_banner_info_item_left{
         max-width: 550px;
     }
 
@@ -1311,9 +1321,6 @@
         padding-left: 130px;
     }
 
-    .NB1_info {
-        min-height: 650px;
-    }
 
     .NB1_info_item {
         width: 420px;
@@ -1330,7 +1337,7 @@
     }
 
     .NB1_docs_item_size {
-        width: 640px;
+        width: 630px;
     }
 
     .NB1_docs_items {
@@ -1355,9 +1362,10 @@
         height: 325px;
         padding-left: 100px;
     }
-
-    .NB1_bannerT img {
+    .NB1_bannerT img, .NB2_banner_info_item_left{
         max-width: 500px;
+    }
+    .NB1_bannerT img {
         right: 50px;
     }
 
@@ -1447,6 +1455,9 @@
 
     .NB3_banner_form textarea.b24-form-control + .b24-form-control-label {
         top: 20px !important;
+    }
+    .NB3_banner_form .b24-form-control-alert-message{
+        transform: translateY(30%) !important;
     }
 
     .NB3_banner_form .b24-form-control + .b24-form-control-label {
@@ -1567,12 +1578,8 @@
         height: 370px;
     }
 
-    .NB1_info_circle_green {
-        bottom: 40%;
-    }
-
     .NB1_docs_item_size {
-        width: 600px;
+        width: 590px;
     }
 
     .NB1_docs_items {
@@ -1653,7 +1660,6 @@
     .NB2_sport_left {
         width: 35%;
     }
-
     .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after {
         font-size: 11px;
     }
@@ -1662,7 +1668,9 @@
         height: 150px;
         padding-right: 90px;
     }
-
+    .NB3_banner_form .b24-form-control-alert-message{
+        transform: translateY(0%) !important;
+    }
     .NB3_banner_form {
         min-width: 520px;
     }
@@ -1672,7 +1680,7 @@
         border-radius: 15px !important;
     }
 
-    .NB3_banner_form textarea.b24-form-control {
+    .NB3_banner_form textarea.b24-form-control, .NB3_banner_form textarea.b24-form-control:focus {
         height: 125px !important;
     }
 
@@ -1753,9 +1761,6 @@
         font-size: 12px;
     }
 
-    .NB1_info {
-        min-height: 500px;
-    }
 
     .NB1_nav_item a {
         padding-left: 10px;
@@ -1776,7 +1781,7 @@
     }
 
     .NB1_docs_item_size {
-        width: 550px;
+        width: 555px;
         height: 30px;
     }
 
@@ -1788,6 +1793,9 @@
         width: 25px;
         height: 25px;
         border-radius: 5px;
+    }
+    .NB2_banner_info_item_left{
+        max-width: 400px;
     }
 
     .NB2_banner_info, .NB2_banner_info_item_right {

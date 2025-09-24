@@ -23,7 +23,7 @@ if ($arResult['FILE'] <> '') :?>
     <h3 class="NB1_banner_left_item d-flex flex-column align-items-start justify-content-center">
         <?php
         include($arResult['FILE']); ?>
-        <mark><?=$firstName?></mark>
+        <mark><?=$firstName?>!</mark>
     </h3>
     <?php
 endif; ?>

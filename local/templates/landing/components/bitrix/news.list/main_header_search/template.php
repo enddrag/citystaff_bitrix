@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -19,8 +20,13 @@ $this->setFrameMode(true);
 $arr = [];
 $dir = $_SERVER['DOCUMENT_ROOT'] . '/citystaff';
 
-// Получаем все PHP-файлы в текущей директории
-$files = glob($dir . '/*.php');
+$files = [];
+$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS));
+foreach ($iterator as $file) {
+    if ($file->isFile() && $file->getExtension() === 'php') {
+        $files[] = $file->getPathname();
+    }
+}
 
 foreach ($files as $file) {
     $content = file_get_contents($file);
@@ -35,7 +41,7 @@ foreach ($files as $file) {
     foreach ($matches as $match) {
         $arr[] = [
             'title' => $match[1],
-            'url' => basename($file) . '#' . $match[2],
+            'url' => strstr($file, '/citystaff') . '#' . $match[2],
         ];
     }
 }

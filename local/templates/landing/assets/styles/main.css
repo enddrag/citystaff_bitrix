@@ -131,8 +131,19 @@ body {
 /*---------баннер--------*/
 /*левая часть*/
 .NB_banner {
+    position: relative;
     overflow: hidden;
     padding-top: 33px;
+}
+.NB_banner_preview{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    object-fit: cover;
 }
 
 .NB_left {
@@ -528,12 +539,23 @@ mark {
 }
 
 .NB_about_content_wrap {
+    position: relative;
     max-width: 700px;
     height: auto;
-    background: url("../img/эллипс.svg");
+    padding-bottom: 60px;
+    overflow: visible;
+}
+.NB_about_content_wrap::after{
+    position: absolute;
+    content: '';
+    background: url("../img/ellips.svg");
     background-size: cover;
     background-position-x: center;
-    padding-bottom: 60px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    top: 0;
+    left: 0;
+
 }
 
 .NB_about_content_wrap_item {
@@ -1049,8 +1071,7 @@ mark {
 
 .NB_footer_logo {
     width: 430px;
-    height: 180px;
-    margin-right: 200px;
+    height: -webkit-min-content;
 }
 
 .NB_footer_content {
@@ -1158,7 +1179,7 @@ body:has(section.NB_modal.NB_active) {
 .NB_modal_item {
     position: relative;
     width: 950px;
-    max-height: 90vh;
+    max-height: 95vh;
     border: 1px solid white;
     border-radius: 10px;
     background: radial-gradient(2503.08% 1878.38% at 66.9% -14.61%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
@@ -1241,9 +1262,9 @@ body:has(section.NB_modal.NB_active) {
     color: rgba(210, 0, 3, 1) !important;
     background: none !important;
     position: absolute;
-    top: 100%;
+    bottom: 0;
     left: 2.5%;
-    transform: translateY(-90%);
+    transform: translateY(20%);
     padding: 0 !important;
 }
 
@@ -1253,7 +1274,9 @@ body:has(section.NB_modal.NB_active) {
     content: none !important;
     position: unset !important;
 }
-
+.b24-form-control-required{
+    display: none;
+}
 .NB_modal_form_error input,
 .NB_modal_form_error .NB_selected-option,
 .NB_modal_form_error textarea {
@@ -1492,7 +1515,6 @@ body:has(section.NB_modal.NB_active) {
 
 .b24-form-btn,
 .b24-form-btn-block,
-.b24-form-control-container,
 .b24-form-btn-container {
     -webkit-box-pack: center !important;
     -ms-flex-pack: center !important;
@@ -1513,7 +1535,6 @@ body:has(section.NB_modal.NB_active) {
     -ms-flex-direction: row !important;
     flex-direction: row !important;
 }
-
 .b24-form-field div,
 .b24-form-control {
     transition: none !important;
@@ -1554,13 +1575,11 @@ body:has(section.NB_modal.NB_active) {
 .b24-form-content {
     padding: 0 !important;
 }
-
-.b24-form-content, form div .b24-form-control-alert {
-    margin-bottom: 0 !important;
+.b24-form-content .b24-form-control-alert{
+    margin-bottom: 10px !important;
 }
-
-.b24-form-field {
-    margin: 0 !important;
+.b24-form-field, .b24-form-control-alert {
+    margin: 0 0 10px 0 !important;
     transition: 0s !important;
 }
 
@@ -1829,9 +1848,7 @@ body:has(section.NB_modal.NB_active) {
     }
 
     .NB_footer_logo {
-        margin-right: 100px;
         width: 340px;
-        height: fit-content;
     }
 
     .NB_footer_content {
@@ -1881,7 +1898,9 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_select .NB_options-container {
         max-height: 175px
     }
-
+    .b24-form-control-alert-message{
+        transform: translateY(30%);
+    }
     .b24-form-control-list .b24-form-icon-remove {
         height: 45px !important;
     }
@@ -1898,9 +1917,6 @@ body:has(section.NB_modal.NB_active) {
         margin-bottom: 15px !important;
     }
 
-    .b24-form-control-alert-message {
-        transform: translateY(-80%) !important;
-    }
 }
 
 @media screen and (max-width: 1650px) {
@@ -1930,7 +1946,7 @@ body:has(section.NB_modal.NB_active) {
     }
 
     .Fbody {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .NB_menu,
@@ -1956,12 +1972,11 @@ body:has(section.NB_modal.NB_active) {
     }
 
     .NB_logo {
-        margin-left: 15px;
         margin-right: 5px;
     }
 
     .NB_logo_img {
-        width: 75px;
+        width: 90px;
     }
 
     .NB_search {
@@ -2255,7 +2270,6 @@ body:has(section.NB_modal.NB_active) {
     }
 
     .NB_footer_logo {
-        margin-right: 80px;
         width: 300px;
     }
 
@@ -2293,7 +2307,7 @@ body:has(section.NB_modal.NB_active) {
 
     .NB_modal_error, .b24-form-control-alert-message {
         font-size: 14px !important;
-        transform: translateY(-100%);
+        transform: translateY(40%);
     }
 
     .NB_modal_select {
@@ -2315,7 +2329,6 @@ body:has(section.NB_modal.NB_active) {
         transform: rotate(180deg) translateY(-10px) translateX(100%);
         font-size: 16px;
     }
-
     .b24-form-control-list .b24-form-icon-remove {
         height: 40px !important;
         right: 15px !important
@@ -2331,10 +2344,6 @@ body:has(section.NB_modal.NB_active) {
 
     .b24-form-control {
         margin-bottom: 10px !important;
-    }
-
-    .b24-form-control-alert-message {
-        transform: translateY(-60%) !important;
     }
 
 }
@@ -2355,6 +2364,7 @@ body:has(section.NB_modal.NB_active) {
 
     .NB_logo_img {
         margin-right: 25px;
+        width: 80px;
     }
 
     .NB_search {
@@ -2473,7 +2483,6 @@ body:has(section.NB_modal.NB_active) {
     }
 
     .NB_footer_logo {
-        margin-right: 60px;
         width: 280px;
     }
 
@@ -2513,7 +2522,7 @@ body:has(section.NB_modal.NB_active) {
 
     .NB_modal_error, .b24-form-control-alert-message {
         font-size: 12px !important;
-        transform: translateY(-90%);
+        transform: translateY(45%);
     }
 
     .NB_modal_select .NB_options-container {
@@ -2523,11 +2532,6 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_select .NB_option {
         padding: 7px 45px
     }
-
-    .b24-form-control-alert-message {
-        top: 90%;
-    }
-
     .b24-form-control-list .b24-form-icon-remove {
         height: 35px !important;
         right: 15px !important
@@ -2543,10 +2547,6 @@ body:has(section.NB_modal.NB_active) {
 
     .b24-form-control {
         margin-bottom: 8px !important;
-    }
-
-    .b24-form-control-alert-message {
-        transform: translateY(-30%) !important;
     }
 }
 
@@ -2798,7 +2798,7 @@ body:has(section.NB_modal.NB_active) {
 
     .NB_modal_error, .b24-form-control-alert-message {
         font-size: 11px !important;
-        transform: translateY(-77%);
+        transform: translateY(50%);
     }
 
     .b24-form-control-list-selector-item {
