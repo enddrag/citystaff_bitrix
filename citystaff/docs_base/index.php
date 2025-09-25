@@ -363,7 +363,8 @@ $APPLICATION->SetTitle('База знаний и документы');
         ); ?>
     </section>
     <!--баннер шаблонов-->
-    <section class="NB1_bannerT d-flex flex-row justify-content-between NB_content widthBase">
+    <section data-nav-title="Шаблоны" id="templates"
+             class="NB1_bannerT d-flex flex-row justify-content-between NB_content widthBase">
         <div class="NB1_bannerT_content d-flex flex-column justify-content-center">
             <?php
             $APPLICATION->IncludeComponent(
@@ -403,8 +404,7 @@ $APPLICATION->SetTitle('База знаний и документы');
         ); ?>
     </section>
     <!--шаблоны-->
-    <section data-nav-title="Шаблоны" id="templates"
-             class="NB1_temp d-flex flex-row justify-content-between NB_content widthBase">
+    <section class="NB1_temp d-flex flex-row justify-content-between NB_content widthBase">
         <div class="NB1_temp_item d-flex flex-row justify-content-between">
             <div class="NB1_docs_content">
                 <?php

@@ -742,9 +742,15 @@
     width: 100%;
     padding-left: 40px !important;
     padding-right: 150px !important;
-
 }
-
+.b24-form-control-container:has(textarea) .b24-form-control-label{
+    padding-right: 150px !important;
+    white-space: normal;
+    word-wrap: normal;
+    word-break: normal;
+    height: auto;
+    line-height: 1.15;
+}
 .NB3_banner_form_input::placeholder, .NB3_banner_form_text::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }

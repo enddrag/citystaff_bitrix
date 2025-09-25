@@ -16,6 +16,11 @@ $(document).ready(function() {
         if ($('.NB_active').length === 0) {
             $('body').css('overflow', 'auto');
         }
+
+        //сбрасываем значения (показываем форму, прячем обезьянок)
+        $('#survey').css('display', 'flex');
+        $('#happyMonkey').css('display', 'none');
+        $('#sadMonkey').css('display', 'none');
     }
 
     // Открытие модального окна по клику на кнопку с атрибутом data-modal

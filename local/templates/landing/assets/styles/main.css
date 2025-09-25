@@ -1263,7 +1263,7 @@ body:has(section.NB_modal.NB_active) {
     background: none !important;
     position: absolute;
     bottom: 0;
-    left: 2.5%;
+    left: 23px !important;
     transform: translateY(20%);
     padding: 0 !important;
 }

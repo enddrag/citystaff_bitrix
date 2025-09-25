@@ -25,10 +25,6 @@ $avatar = CFile::GetFileArray($user['PERSONAL_PHOTO']);
         <span class="NB1_avatar_name me-2 Fmenu"><?= $firstName . ' ' . mb_substr($lastName, 0, 1, 'UTF-8') . '.' ?></span>
         <img src="<?= $avatar ? $avatar['SRC'] : SITE_TEMPLATE_PATH . '/assets/img/avatar.jpg' ?>" alt="фото профиля"
              class="user-avatar NB_avatar_photo NB_rounded-circle">
-    <?php else : ?>
-        <?php
-        header('location: ../bitrix');
-        exit(); ?>
     <?php endif ?>
 
 </div>

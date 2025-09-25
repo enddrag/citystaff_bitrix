@@ -1,7 +1,7 @@
 <?php
 global $APPLICATION, $IB_ID;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
-$APPLICATION->SetTitle('помощь');
+$APPLICATION->SetTitle('Помощь');
 ?>
     <!--баннер faq-->
     <section data-nav-title="Ваше мнение важно" id="opinion" class="NB_banner d-flex flex-column align-items-center"
@@ -237,13 +237,13 @@ $APPLICATION->SetTitle('помощь');
                 ); ?>
             </div>
             <div class="NB3_banner_form d-flex flex-column align-items-center justify-content-between NB_rounded-20">
-                <script data-b24-form="inline/27/ptwyaz" data-skip-moving="true">(function (w, d, u) {
-                        var s = d.createElement('script');
-                        s.async = true;
-                        s.src = u + '?' + (Date.now() / 180000 | 0);
-                        var h = d.getElementsByTagName('script')[0];
-                        h.parentNode.insertBefore(s, h);
-                    })(window, document, 'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_27_ptwyaz.js');
+                <script data-b24-form="inline/31/yd4byk" data-skip-moving="true">(function(w,d,u){
+                    var s=d.createElement('script');
+                    s.async=true;
+                    s.src=u+'?'+(Date.now()/180000|0);
+                    var h=d.getElementsByTagName('script')[0];
+                    h.parentNode.insertBefore(s,h);
+                })(window,document,'https://demo.citystaff.ru/upload/crm/form/loader_31_yd4byk.js');
                 </script>
             </div>
         </div>

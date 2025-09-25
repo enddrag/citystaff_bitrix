@@ -1,7 +1,7 @@
 <?php
 global $APPLICATION, $IB_ID;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
-$APPLICATION->SetTitle('бонус');
+$APPLICATION->SetTitle('Бонус');
 ?>
     <!--навигационное меню сайта-->
     <nav class="NB_menu NB1_menu_color widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
