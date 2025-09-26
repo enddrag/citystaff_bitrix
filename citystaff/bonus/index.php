@@ -731,14 +731,13 @@ $APPLICATION->SetTitle('Бонус');
             <img alt="X" src="<?= SITE_TEMPLATE_PATH ?>/assets/img/X.svg" class="NB_modal_item_X close_modal">
             <div class="NB_modal_item_item flex-column align-items-center" id="survey" style="display: flex">
                 <h4>Заполните имя и контакт друга, чтобы мы могли учесть заявку</h4>
-                <script data-b24-form="inline/25/5wmkc3" data-skip-moving="true">(function (w, d, u) {
-                        var s = d.createElement('script');
-                        s.async = true;
-                        s.src = u + '?' + (Date.now() / 180000 | 0);
-                        var h = d.getElementsByTagName('script')[0];
-                        h.parentNode.insertBefore(s, h);
-                    })(window, document, 'https://stage.citystaff.asgardd.tech/upload/crm/form/loader_25_5wmkc3.js');
-                </script>
+                <script data-b24-form="inline/32/5el74s" data-skip-moving="true">(function(w,d,u){
+                        var s=d.createElement('script');
+                        s.async=true;
+                        s.src=u+'?'+(Date.now()/180000|0);
+                        var h=d.getElementsByTagName('script')[0];
+                        h.parentNode.insertBefore(s,h);
+                    })(window,document,'https://demo.citystaff.ru/upload/crm/form/loader_32_5el74s.js');</script>
                 <p class="Fa NB_modal_item_footer">Нажимая на кнопку «Отправить», вы даёте согласие на обработку
                     персональных данных.</p>
             </div>

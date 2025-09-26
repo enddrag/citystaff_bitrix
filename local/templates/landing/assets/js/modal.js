@@ -21,6 +21,11 @@ $(document).ready(function() {
         $('#survey').css('display', 'flex');
         $('#happyMonkey').css('display', 'none');
         $('#sadMonkey').css('display', 'none');
+        $('.b24-form-wrapper').removeClass('b24-from-state-on');
+        $('.b24-form-wrapper .b24-form-control').each(function (){
+            $(this).val('');
+            $(this).removeClass('b24-form-control-not-empty');
+        });
     }
 
     // Открытие модального окна по клику на кнопку с атрибутом data-modal
