@@ -29,6 +29,8 @@ $this->setFrameMode(true);
                 if ($arSection['NAME'] !== 'Контакты') {
                     continue;
                 }
+            } else {
+                continue;
             }
             ?>
             <?php

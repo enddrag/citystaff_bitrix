@@ -1,9 +1,80 @@
 <?php
 global $APPLICATION, $IB_ID;
-use Bitrix\Main\Page\Asset;
-
+//use Bitrix\Main\Page\Asset;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('База знаний и документы');
+use Bitrix\Main\UI\Extension;
+use Bitrix\Disk\Driver;
+use Bitrix\Disk\Internals\ObjectTable;
+use Bitrix\Main\Loader;
+use Bitrix\Main\UI\Viewer\ItemAttributes;
+
+Extension::load('ui.viewer');
+
+$contextIgnore = 'шаблон';
+$extension = [
+    '.docx',
+    '.doc',
+    '.xlsx',
+    '.xls',
+    '.pptx',
+    '.ppt',
+    '.pdf',
+];
+$fileList = [];
+$templateList = [];
+if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')) {
+    $securityContext = $storage->getCurrentUserSecurityContext();
+    $urlManager = Driver::getInstance()->getUrlManager();
+    $folderObjectList = $storage->getChildren($securityContext, [
+            'filter' => [
+                    'TYPE' => ObjectTable::TYPE_FOLDER,
+            ],
+            'order' => [
+                    'ID' => 'DESC',
+            ],
+    ]);
+    foreach ($folderObjectList as $folder) {
+        $fileObjectList = $folder->getChildren($securityContext, [
+                'filter' => [
+                        'TYPE' => ObjectTable::TYPE_FILE,
+                        '%NAME' => $extension,
+                        '!%NAME' => $contextIgnore,
+                ],
+                'order' => [
+                        'ID' => 'DESC',
+                ],
+        ]);
+        foreach ($fileObjectList as $file) {
+            $fileList[] = [
+                    'id' => $file->getId(),
+                    'name' => str_replace($extension, '', $file->getName()),
+                    'download' => $urlManager->getUrlForDownloadFile($file),
+            ];
+        }
+    }
+    foreach ($folderObjectList as $folder) {
+        $fileObjectList = $folder->getChildren($securityContext, [
+                'filter' => [
+                        'TYPE' => ObjectTable::TYPE_FILE,
+                        '%NAME' => $extension,
+                        '%NAME' => $contextIgnore,
+                ],
+                'order' => [
+                        'ID' => 'DESC',
+                ],
+        ]);
+
+        foreach ($fileObjectList as $file) {
+            $templateList[] = [
+                    'id' => $file->getId(),
+                    'name' => str_replace($extension, '', $file->getName()),
+                    'download' => $urlManager->getUrlForDownloadFile($file),
+            ];
+        }
+    }
+}
+?>
 ?>
     <!--навигационное меню сайта-->
     <nav class="NB_menu NB1_menu_color widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
@@ -26,7 +97,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                     'CACHE_TIME' => '36000000',
                     'CACHE_TYPE' => 'A',
                     'CHECK_DATES' => 'Y',
-                    'COMPONENT_TEMPLATE' => 'main_header_logotype',
+
                     'DETAIL_URL' => '',
                     'DISPLAY_BOTTOM_PAGER' => 'Y',
                     'DISPLAY_DATE' => 'N',
@@ -80,7 +151,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                     'CACHE_TIME' => '36000000',
                     'CACHE_TYPE' => 'A',
                     'CHECK_DATES' => 'Y',
-                    'COMPONENT_TEMPLATE' => 'main_header_search',
+
                     'DETAIL_URL' => '',
                     'DISPLAY_BOTTOM_PAGER' => 'Y',
                     'DISPLAY_DATE' => 'Y',
@@ -91,7 +162,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                     'FIELD_CODE' => [0 => '', 1 => ''],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                    'IBLOCK_ID' => $IB_ID["sug"],
+                    'IBLOCK_ID' => $IB_ID['sug'],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                     'INCLUDE_SUBSECTIONS' => 'Y',
@@ -160,7 +231,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                     'CACHE_TIME' => '36000000',
                     'CACHE_TYPE' => 'A',
                     'CHECK_DATES' => 'Y',
-                    'COMPONENT_TEMPLATE' => 'main_header_aftermenu',
+
                     'DETAIL_URL' => '',
                     'DISPLAY_BOTTOM_PAGER' => 'N',
                     'DISPLAY_DATE' => 'N',
@@ -196,82 +267,323 @@ $APPLICATION->SetTitle('База знаний и документы');
                     'USE_SHARE' => 'N',
                 ]
             );
-            ?>
+?>
             <?php
-            $APPLICATION->IncludeComponent(
-                'bitrix:system.auth.form',
-                'common_header_avatar',
-                []
-            ); ?>
+$APPLICATION->IncludeComponent(
+    'bitrix:system.auth.form',
+    'common_header_avatar',
+    []
+); ?>
         </div>
     </nav>
     <!--баннер-->
     <section class="NB1_banner d-flex flex-row widthBase">
         <div class="NB1_banner_left d-flex flex-row justify-content-between align-items-center">
             <?php
-            $APPLICATION->IncludeComponent(
-                'bitrix:main.include',
-                'common_docs_banner_left',
-                [
-                    'AREA_FILE_SHOW' => 'file',
-                    'AREA_FILE_SUFFIX' => 'inc',
-                    'EDIT_TEMPLATE' => '',
-                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item1.php',
-                ]
-            ); ?>
+$APPLICATION->IncludeComponent(
+    'bitrix:news.detail',
+    'include_docsBase_banner_greating',
+    [
+        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+        'ADD_ELEMENT_CHAIN' => 'N',
+        'ADD_SECTIONS_CHAIN' => 'N',
+        'AJAX_MODE' => 'N',
+        'AJAX_OPTION_ADDITIONAL' => '',
+        'AJAX_OPTION_HISTORY' => 'N',
+        'AJAX_OPTION_JUMP' => 'N',
+        'AJAX_OPTION_STYLE' => 'N',
+        'BROWSER_TITLE' => '-',
+        'CACHE_GROUPS' => 'Y',
+        'CACHE_TIME' => '36000000',
+        'CACHE_TYPE' => 'A',
+        'CHECK_DATES' => 'Y',
+        'DETAIL_URL' => '',
+        'DISPLAY_BOTTOM_PAGER' => 'N',
+        'DISPLAY_DATE' => 'N',
+        'DISPLAY_NAME' => 'N',
+        'DISPLAY_PICTURE' => 'N',
+        'DISPLAY_PREVIEW_TEXT' => 'Y',
+        'DISPLAY_TOP_PAGER' => 'N',
+        'ELEMENT_CODE' => 'common_docs_banner_item1',
+        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+        'FIELD_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'IBLOCK_ID' => '',
+        'IBLOCK_TYPE' => 'CityStaffUIP',
+        'IBLOCK_URL' => '',
+        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+        'MESSAGE_404' => '',
+        'META_DESCRIPTION' => '-',
+        'META_KEYWORDS' => '-',
+        'PAGER_BASE_LINK_ENABLE' => 'N',
+        'PAGER_SHOW_ALL' => 'N',
+        'PAGER_TEMPLATE' => '.default',
+        'PAGER_TITLE' => 'Страница',
+        'PROPERTY_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'SET_BROWSER_TITLE' => 'N',
+        'SET_CANONICAL_URL' => 'N',
+        'SET_LAST_MODIFIED' => 'N',
+        'SET_META_DESCRIPTION' => 'N',
+        'SET_META_KEYWORDS' => 'N',
+        'SET_STATUS_404' => 'N',
+        'SET_TITLE' => 'N',
+        'SHOW_404' => 'N',
+        'STRICT_SECTION_CHECK' => 'N',
+        'USE_PERMISSIONS' => 'N',
+        'USE_SHARE' => 'N',
+    ],
+    false
+); ?>
             <?php
-            $APPLICATION->IncludeComponent(
-                'bitrix:main.include',
-                '',
-                [
-                    'AREA_FILE_SHOW' => 'file',
-                    'AREA_FILE_SUFFIX' => 'inc',
-                    'EDIT_TEMPLATE' => '',
-                    'PATH' => '/local/templates/landing/includes/common_docs_item_img.php',
-                ]
-            ); ?>
+$APPLICATION->IncludeComponent(
+    'bitrix:news.detail',
+    'include_basic',
+    [
+        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+        'ADD_ELEMENT_CHAIN' => 'N',
+        'ADD_SECTIONS_CHAIN' => 'N',
+        'AJAX_MODE' => 'N',
+        'AJAX_OPTION_ADDITIONAL' => '',
+        'AJAX_OPTION_HISTORY' => 'N',
+        'AJAX_OPTION_JUMP' => 'N',
+        'AJAX_OPTION_STYLE' => 'N',
+        'BROWSER_TITLE' => '-',
+        'CACHE_GROUPS' => 'Y',
+        'CACHE_TIME' => '36000000',
+        'CACHE_TYPE' => 'A',
+        'CHECK_DATES' => 'Y',
+        'DETAIL_URL' => '',
+        'DISPLAY_BOTTOM_PAGER' => 'N',
+        'DISPLAY_DATE' => 'N',
+        'DISPLAY_NAME' => 'N',
+        'DISPLAY_PICTURE' => 'N',
+        'DISPLAY_PREVIEW_TEXT' => 'Y',
+        'DISPLAY_TOP_PAGER' => 'N',
+        'ELEMENT_CODE' => 'common_docs_item_img',
+        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+        'FIELD_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'IBLOCK_ID' => '',
+        'IBLOCK_TYPE' => 'CityStaffUIP',
+        'IBLOCK_URL' => '',
+        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+        'MESSAGE_404' => '',
+        'META_DESCRIPTION' => '-',
+        'META_KEYWORDS' => '-',
+        'PAGER_BASE_LINK_ENABLE' => 'N',
+        'PAGER_SHOW_ALL' => 'N',
+        'PAGER_TEMPLATE' => '.default',
+        'PAGER_TITLE' => 'Страница',
+        'PROPERTY_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'SET_BROWSER_TITLE' => 'N',
+        'SET_CANONICAL_URL' => 'N',
+        'SET_LAST_MODIFIED' => 'N',
+        'SET_META_DESCRIPTION' => 'N',
+        'SET_META_KEYWORDS' => 'N',
+        'SET_STATUS_404' => 'N',
+        'SET_TITLE' => 'N',
+        'SHOW_404' => 'N',
+        'STRICT_SECTION_CHECK' => 'N',
+        'USE_PERMISSIONS' => 'N',
+        'USE_SHARE' => 'N',
+    ],
+    false
+); ?>
         </div>
         <div class="NB1_banner_right d-flex flex-column align-items-center justify-content-center">
             <?php
-            $APPLICATION->IncludeComponent(
-                'bitrix:main.include',
-                'main_community_item_title3',
-                [
-                    'AREA_FILE_SHOW' => 'file',
-                    'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_community_item_title3',
-                    'EDIT_TEMPLATE' => '',
-                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item2.php',
-                ]
-            );
-            ?>
+$APPLICATION->IncludeComponent(
+    'bitrix:news.detail',
+    'include_h3_empty',
+    [
+        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+        'ADD_ELEMENT_CHAIN' => 'N',
+        'ADD_SECTIONS_CHAIN' => 'N',
+        'AJAX_MODE' => 'N',
+        'AJAX_OPTION_ADDITIONAL' => '',
+        'AJAX_OPTION_HISTORY' => 'N',
+        'AJAX_OPTION_JUMP' => 'N',
+        'AJAX_OPTION_STYLE' => 'N',
+        'BROWSER_TITLE' => '-',
+        'CACHE_GROUPS' => 'Y',
+        'CACHE_TIME' => '36000000',
+        'CACHE_TYPE' => 'A',
+        'CHECK_DATES' => 'Y',
+        'DETAIL_URL' => '',
+        'DISPLAY_BOTTOM_PAGER' => 'N',
+        'DISPLAY_DATE' => 'N',
+        'DISPLAY_NAME' => 'N',
+        'DISPLAY_PICTURE' => 'N',
+        'DISPLAY_PREVIEW_TEXT' => 'Y',
+        'DISPLAY_TOP_PAGER' => 'N',
+        'ELEMENT_CODE' => 'common_docs_banner_item2',
+        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+        'FIELD_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'IBLOCK_ID' => '',
+        'IBLOCK_TYPE' => 'CityStaffUIP',
+        'IBLOCK_URL' => '',
+        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+        'MESSAGE_404' => '',
+        'META_DESCRIPTION' => '-',
+        'META_KEYWORDS' => '-',
+        'PAGER_BASE_LINK_ENABLE' => 'N',
+        'PAGER_SHOW_ALL' => 'N',
+        'PAGER_TEMPLATE' => '.default',
+        'PAGER_TITLE' => 'Страница',
+        'PROPERTY_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'SET_BROWSER_TITLE' => 'N',
+        'SET_CANONICAL_URL' => 'N',
+        'SET_LAST_MODIFIED' => 'N',
+        'SET_META_DESCRIPTION' => 'N',
+        'SET_META_KEYWORDS' => 'N',
+        'SET_STATUS_404' => 'N',
+        'SET_TITLE' => 'N',
+        'SHOW_404' => 'N',
+        'STRICT_SECTION_CHECK' => 'N',
+        'USE_PERMISSIONS' => 'N',
+        'USE_SHARE' => 'N',
+    ],
+    false
+); ?>
             <?php
-            $APPLICATION->IncludeComponent(
-                'bitrix:main.include',
-                'main_about_p',
-                [
-                    'AREA_FILE_SHOW' => 'file',
-                    'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_about_p',
-                    'EDIT_TEMPLATE' => '',
-                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item3.php',
-                ]
-            ); ?>
+$APPLICATION->IncludeComponent(
+    'bitrix:news.detail',
+    'include_Fbody',
+    [
+        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+        'ADD_ELEMENT_CHAIN' => 'N',
+        'ADD_SECTIONS_CHAIN' => 'N',
+        'AJAX_MODE' => 'N',
+        'AJAX_OPTION_ADDITIONAL' => '',
+        'AJAX_OPTION_HISTORY' => 'N',
+        'AJAX_OPTION_JUMP' => 'N',
+        'AJAX_OPTION_STYLE' => 'N',
+        'BROWSER_TITLE' => '-',
+        'CACHE_GROUPS' => 'Y',
+        'CACHE_TIME' => '36000000',
+        'CACHE_TYPE' => 'A',
+        'CHECK_DATES' => 'Y',
+        'DETAIL_URL' => '',
+        'DISPLAY_BOTTOM_PAGER' => 'N',
+        'DISPLAY_DATE' => 'N',
+        'DISPLAY_NAME' => 'N',
+        'DISPLAY_PICTURE' => 'N',
+        'DISPLAY_PREVIEW_TEXT' => 'Y',
+        'DISPLAY_TOP_PAGER' => 'N',
+        'ELEMENT_CODE' => 'common_docs_banner_item3',
+        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+        'FIELD_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'IBLOCK_ID' => '',
+        'IBLOCK_TYPE' => 'CityStaffUIP',
+        'IBLOCK_URL' => '',
+        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+        'MESSAGE_404' => '',
+        'META_DESCRIPTION' => '-',
+        'META_KEYWORDS' => '-',
+        'PAGER_BASE_LINK_ENABLE' => 'N',
+        'PAGER_SHOW_ALL' => 'N',
+        'PAGER_TEMPLATE' => '.default',
+        'PAGER_TITLE' => 'Страница',
+        'PROPERTY_CODE' => [
+            0 => '',
+            1 => '',
+        ],
+        'SET_BROWSER_TITLE' => 'N',
+        'SET_CANONICAL_URL' => 'N',
+        'SET_LAST_MODIFIED' => 'N',
+        'SET_META_DESCRIPTION' => 'N',
+        'SET_META_KEYWORDS' => 'N',
+        'SET_STATUS_404' => 'N',
+        'SET_TITLE' => 'N',
+        'SHOW_404' => 'N',
+        'STRICT_SECTION_CHECK' => 'N',
+        'USE_PERMISSIONS' => 'N',
+        'USE_SHARE' => 'N',
+    ],
+    false
+); ?>
         </div>
     </section>
     <!--общее-->
     <section data-nav-title="Общее" id="general" class="NB1_section_info NB_content widthBase d-flex flex-column">
         <?php
         $APPLICATION->IncludeComponent(
-            'bitrix:main.include',
-            'main_union_title',
+            'bitrix:news.detail',
+            'include_h3_basic',
             [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => 'main_union_title',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_info_title1.php',
-            ]
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'common_info_title1',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                    0 => '',
+                    1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                    0 => '',
+                    1 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
+            ],
+            false
         ); ?>
         <?php
         $APPLICATION->IncludeComponent(
@@ -300,12 +612,12 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'FIELD_CODE' => [0 => '', 1 => ''],
                 'FILTER_NAME' => '',
                 'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                'IBLOCK_ID' => $IB_ID["docsInfo"],
+                'IBLOCK_ID' => $IB_ID['docsInfo'],
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                 'INCLUDE_SUBSECTIONS' => 'Y',
                 'MESSAGE_404' => '',
-                'NEWS_COUNT' => '20',
+                'NEWS_COUNT' => '500',
                 'PAGER_BASE_LINK_ENABLE' => 'N',
                 'PAGER_DESC_NUMBERING' => 'N',
                 'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
@@ -340,27 +652,99 @@ $APPLICATION->SetTitle('База знаний и документы');
     <section data-nav-title="Документы" id="documents" class="NB1_docs d-flex flex-column NB_content widthBase">
         <?php
         $APPLICATION->IncludeComponent(
-            'bitrix:main.include',
-            'main_union_title',
+            'bitrix:news.detail',
+            'include_h3_basic',
             [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_info_title2.php',
-            ]
-        ); ?>
-        <?php
-        $APPLICATION->IncludeComponent(
-            'bitrix:main.include',
-            'common_sharedFiles',
-            [
-                'AREA_FILE_SHOW' => 'file',    // Показывать включаемую область
-                'AREA_FILE_SUFFIX' => 'inc',
-                'EDIT_TEMPLATE' => '',    // Шаблон области по умолчанию
-                'PATH' => '/local/templates/landing/includes/common_sharedFiles.php',    // Путь к файлу области
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'common_info_title2',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                    0 => '',
+                    1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                    0 => '',
+                    1 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
             ],
             false
         ); ?>
+        <!--поиск-->
+        <div class="NB_search NB1_docs_item_size NB1_search_color NB_backdrop-blur NB_rounded-30 search-box d-flex me-3 align-items-center justify-content-around">
+            <input type="search" placeholder="Найти" class="NB_search_input form-control Fmenu" id="search_documents">
+            <div class="NB_search_ico NB1_search_ico_color NB_rounded-circle" id="search_documents_ico">
+            </div>
+        </div>
+        <div class="NB1_docs_items" id="documents">
+            <?php
+            //проходимся по каждому документу и заполняем массив файлов
+            foreach ($fileList as $file) :?>
+                <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center"
+                     style="display: flex;">
+                    <p class="Fa">
+                        <?= $file['name'] ?>
+                    </p>
+                    <?php
+                    // Генерируем атрибуты для просмотрщика
+                    $attributes = ItemAttributes::tryBuildByFileId(
+                            $file['id'],
+                            $file['download']
+                    )->setTitle($file['name']);?>
+
+                    <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
+                    <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center"
+                          <?= $attributes ?>style="cursor: pointer;">
+                        смотреть
+                    </span>
+                        <a href="<?= $file['download'] ?>" class="NB1_docs_item_right_download d-flex"
+                           style="background-image: url('<?=SITE_TEMPLATE_PATH?>/assets/img/download.svg');"></a>
+                    </div>
+                </div>
+            <?php
+            endforeach; ?>
+        </div>
+        <h4 class="NB1_docs_items_empty" id="nodocuments">-----------документов нет----------- </h4>
     </section>
     <!--баннер шаблонов-->
     <section data-nav-title="Шаблоны" id="templates"
@@ -368,39 +752,184 @@ $APPLICATION->SetTitle('База знаний и документы');
         <div class="NB1_bannerT_content d-flex flex-column justify-content-center">
             <?php
             $APPLICATION->IncludeComponent(
-                'bitrix:main.include',
-                'main_community_item_title3',
-                [
-                    'AREA_FILE_SHOW' => 'file',
-                    'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_community_item_title3',
-                    'EDIT_TEMPLATE' => '',
-                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item4.php',
-                ]
+                    'bitrix:news.detail',
+                    'include_h3_empty',
+                    [
+                            'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                            'ADD_ELEMENT_CHAIN' => 'N',
+                            'ADD_SECTIONS_CHAIN' => 'N',
+                            'AJAX_MODE' => 'N',
+                            'AJAX_OPTION_ADDITIONAL' => '',
+                            'AJAX_OPTION_HISTORY' => 'N',
+                            'AJAX_OPTION_JUMP' => 'N',
+                            'AJAX_OPTION_STYLE' => 'N',
+                            'BROWSER_TITLE' => '-',
+                            'CACHE_GROUPS' => 'Y',
+                            'CACHE_TIME' => '36000000',
+                            'CACHE_TYPE' => 'A',
+                            'CHECK_DATES' => 'Y',
+                            'DETAIL_URL' => '',
+                            'DISPLAY_BOTTOM_PAGER' => 'N',
+                            'DISPLAY_DATE' => 'N',
+                            'DISPLAY_NAME' => 'N',
+                            'DISPLAY_PICTURE' => 'N',
+                            'DISPLAY_PREVIEW_TEXT' => 'Y',
+                            'DISPLAY_TOP_PAGER' => 'N',
+                            'ELEMENT_CODE' => 'common_docs_banner_item4',
+                            'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                            'FIELD_CODE' => [
+                                    0 => '',
+                                    1 => '',
+                            ],
+                            'IBLOCK_ID' => '',
+                            'IBLOCK_TYPE' => 'CityStaffUIP',
+                            'IBLOCK_URL' => '',
+                            'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                            'MESSAGE_404' => '',
+                            'META_DESCRIPTION' => '-',
+                            'META_KEYWORDS' => '-',
+                            'PAGER_BASE_LINK_ENABLE' => 'N',
+                            'PAGER_SHOW_ALL' => 'N',
+                            'PAGER_TEMPLATE' => '.default',
+                            'PAGER_TITLE' => 'Страница',
+                            'PROPERTY_CODE' => [
+                                    0 => '',
+                                    1 => '',
+                            ],
+                            'SET_BROWSER_TITLE' => 'N',
+                            'SET_CANONICAL_URL' => 'N',
+                            'SET_LAST_MODIFIED' => 'N',
+                            'SET_META_DESCRIPTION' => 'N',
+                            'SET_META_KEYWORDS' => 'N',
+                            'SET_STATUS_404' => 'N',
+                            'SET_TITLE' => 'N',
+                            'SHOW_404' => 'N',
+                            'STRICT_SECTION_CHECK' => 'N',
+                            'USE_PERMISSIONS' => 'N',
+                            'USE_SHARE' => 'N',
+                    ],
+                    false
             ); ?>
             <?php
             $APPLICATION->IncludeComponent(
-                'bitrix:main.include',
-                'main_about_p',
-                [
-                    'AREA_FILE_SHOW' => 'file',
-                    'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_about_p',
-                    'EDIT_TEMPLATE' => '',
-                    'PATH' => '/local/templates/landing/includes/common_docs_banner_item5.php',
-                ]
+                    'bitrix:news.detail',
+                    'include_Fbody',
+                    [
+                            'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                            'ADD_ELEMENT_CHAIN' => 'N',
+                            'ADD_SECTIONS_CHAIN' => 'N',
+                            'AJAX_MODE' => 'N',
+                            'AJAX_OPTION_ADDITIONAL' => '',
+                            'AJAX_OPTION_HISTORY' => 'N',
+                            'AJAX_OPTION_JUMP' => 'N',
+                            'AJAX_OPTION_STYLE' => 'N',
+                            'BROWSER_TITLE' => '-',
+                            'CACHE_GROUPS' => 'Y',
+                            'CACHE_TIME' => '36000000',
+                            'CACHE_TYPE' => 'A',
+                            'CHECK_DATES' => 'Y',
+                            'DETAIL_URL' => '',
+                            'DISPLAY_BOTTOM_PAGER' => 'N',
+                            'DISPLAY_DATE' => 'N',
+                            'DISPLAY_NAME' => 'N',
+                            'DISPLAY_PICTURE' => 'N',
+                            'DISPLAY_PREVIEW_TEXT' => 'Y',
+                            'DISPLAY_TOP_PAGER' => 'N',
+                            'ELEMENT_CODE' => 'common_docs_banner_item5',
+                            'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                            'FIELD_CODE' => [
+                                    0 => '',
+                                    1 => '',
+                            ],
+                            'IBLOCK_ID' => '',
+                            'IBLOCK_TYPE' => 'CityStaffUIP',
+                            'IBLOCK_URL' => '',
+                            'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                            'MESSAGE_404' => '',
+                            'META_DESCRIPTION' => '-',
+                            'META_KEYWORDS' => '-',
+                            'PAGER_BASE_LINK_ENABLE' => 'N',
+                            'PAGER_SHOW_ALL' => 'N',
+                            'PAGER_TEMPLATE' => '.default',
+                            'PAGER_TITLE' => 'Страница',
+                            'PROPERTY_CODE' => [
+                                    0 => '',
+                                    1 => '',
+                            ],
+                            'SET_BROWSER_TITLE' => 'N',
+                            'SET_CANONICAL_URL' => 'N',
+                            'SET_LAST_MODIFIED' => 'N',
+                            'SET_META_DESCRIPTION' => 'N',
+                            'SET_META_KEYWORDS' => 'N',
+                            'SET_STATUS_404' => 'N',
+                            'SET_TITLE' => 'N',
+                            'SHOW_404' => 'N',
+                            'STRICT_SECTION_CHECK' => 'N',
+                            'USE_PERMISSIONS' => 'N',
+                            'USE_SHARE' => 'N',
+                    ],
+                    false
             ); ?>
         </div>
         <?php
         $APPLICATION->IncludeComponent(
-            'bitrix:main.include',
-            '',
-            [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/common_docs_banner_item6.php',
-            ]
+                'bitrix:news.detail',
+                'include_basic',
+                [
+                        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                        'ADD_ELEMENT_CHAIN' => 'N',
+                        'ADD_SECTIONS_CHAIN' => 'N',
+                        'AJAX_MODE' => 'N',
+                        'AJAX_OPTION_ADDITIONAL' => '',
+                        'AJAX_OPTION_HISTORY' => 'N',
+                        'AJAX_OPTION_JUMP' => 'N',
+                        'AJAX_OPTION_STYLE' => 'N',
+                        'BROWSER_TITLE' => '-',
+                        'CACHE_GROUPS' => 'Y',
+                        'CACHE_TIME' => '36000000',
+                        'CACHE_TYPE' => 'A',
+                        'CHECK_DATES' => 'Y',
+                        'DETAIL_URL' => '',
+                        'DISPLAY_BOTTOM_PAGER' => 'N',
+                        'DISPLAY_DATE' => 'N',
+                        'DISPLAY_NAME' => 'N',
+                        'DISPLAY_PICTURE' => 'N',
+                        'DISPLAY_PREVIEW_TEXT' => 'Y',
+                        'DISPLAY_TOP_PAGER' => 'N',
+                        'ELEMENT_CODE' => 'common_docs_banner_item6',
+                        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                        'FIELD_CODE' => [
+                                0 => '',
+                                1 => '',
+                        ],
+                        'IBLOCK_ID' => '',
+                        'IBLOCK_TYPE' => 'CityStaffUIP',
+                        'IBLOCK_URL' => '',
+                        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                        'MESSAGE_404' => '',
+                        'META_DESCRIPTION' => '-',
+                        'META_KEYWORDS' => '-',
+                        'PAGER_BASE_LINK_ENABLE' => 'N',
+                        'PAGER_SHOW_ALL' => 'N',
+                        'PAGER_TEMPLATE' => '.default',
+                        'PAGER_TITLE' => 'Страница',
+                        'PROPERTY_CODE' => [
+                                0 => '',
+                                1 => '',
+                        ],
+                        'SET_BROWSER_TITLE' => 'N',
+                        'SET_CANONICAL_URL' => 'N',
+                        'SET_LAST_MODIFIED' => 'N',
+                        'SET_META_DESCRIPTION' => 'N',
+                        'SET_META_KEYWORDS' => 'N',
+                        'SET_STATUS_404' => 'N',
+                        'SET_TITLE' => 'N',
+                        'SHOW_404' => 'N',
+                        'STRICT_SECTION_CHECK' => 'N',
+                        'USE_PERMISSIONS' => 'N',
+                        'USE_SHARE' => 'N',
+                ],
+                false
         ); ?>
     </section>
     <!--шаблоны-->
@@ -409,27 +938,92 @@ $APPLICATION->SetTitle('База знаний и документы');
             <div class="NB1_docs_content">
                 <?php
                 $APPLICATION->IncludeComponent(
-                    'bitrix:main.include',
-                    'common_h4',
-                    [
-                        'AREA_FILE_SHOW' => 'file',
-                        'AREA_FILE_SUFFIX' => 'inc',
-                        'COMPONENT_TEMPLATE' => '.default',
-                        'EDIT_TEMPLATE' => '',
-                        'PATH' => '/local/templates/landing/includes/common_docs_h4.php',
-                    ]
+                        'bitrix:news.detail',
+                        'include_h4_empty',
+                        [
+                                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                                'ADD_ELEMENT_CHAIN' => 'N',
+                                'ADD_SECTIONS_CHAIN' => 'N',
+                                'AJAX_MODE' => 'N',
+                                'AJAX_OPTION_ADDITIONAL' => '',
+                                'AJAX_OPTION_HISTORY' => 'N',
+                                'AJAX_OPTION_JUMP' => 'N',
+                                'AJAX_OPTION_STYLE' => 'N',
+                                'BROWSER_TITLE' => '-',
+                                'CACHE_GROUPS' => 'Y',
+                                'CACHE_TIME' => '36000000',
+                                'CACHE_TYPE' => 'A',
+                                'CHECK_DATES' => 'Y',
+                                'DETAIL_URL' => '',
+                                'DISPLAY_BOTTOM_PAGER' => 'N',
+                                'DISPLAY_DATE' => 'N',
+                                'DISPLAY_NAME' => 'N',
+                                'DISPLAY_PICTURE' => 'N',
+                                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                                'DISPLAY_TOP_PAGER' => 'N',
+                                'ELEMENT_CODE' => 'common_docs_h4',
+                                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                                'FIELD_CODE' => [
+                                        0 => '',
+                                        1 => '',
+                                ],
+                                'IBLOCK_ID' => '',
+                                'IBLOCK_TYPE' => 'CityStaffUIP',
+                                'IBLOCK_URL' => '',
+                                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                                'MESSAGE_404' => '',
+                                'META_DESCRIPTION' => '-',
+                                'META_KEYWORDS' => '-',
+                                'PAGER_BASE_LINK_ENABLE' => 'N',
+                                'PAGER_SHOW_ALL' => 'N',
+                                'PAGER_TEMPLATE' => '.default',
+                                'PAGER_TITLE' => 'Страница',
+                                'PROPERTY_CODE' => [
+                                        0 => '',
+                                        1 => '',
+                                ],
+                                'SET_BROWSER_TITLE' => 'N',
+                                'SET_CANONICAL_URL' => 'N',
+                                'SET_LAST_MODIFIED' => 'N',
+                                'SET_META_DESCRIPTION' => 'N',
+                                'SET_META_KEYWORDS' => 'N',
+                                'SET_STATUS_404' => 'N',
+                                'SET_TITLE' => 'N',
+                                'SHOW_404' => 'N',
+                                'STRICT_SECTION_CHECK' => 'N',
+                                'USE_PERMISSIONS' => 'N',
+                                'USE_SHARE' => 'N',
+                        ],
+                        false
                 ); ?>
-                <?php
-                $APPLICATION->IncludeComponent(
-                    'bitrix:main.include',
-                    'common_sharedTemplates',
-                    [
-                        'AREA_FILE_SHOW' => 'file',
-                        'AREA_FILE_SUFFIX' => 'inc',
-                        'EDIT_TEMPLATE' => '',
-                        'PATH' => '/local/templates/landing/includes/common_sharedFiles.php',
-                    ]
-                ); ?>
+                <div class="NB1_docs_items d-flex flex-row flex-wrap">
+                    <?php
+                    //проходимся по каждому документу и заполняем массив файлов
+                    foreach ($templateList as $file) :?>
+                        <div class="NB1_docs_item NB1_docs_item_size flex-row justify-content-between align-items-center"
+                             style="display: flex;">
+                            <p class="Fa">
+                                <?= $file['name'] ?>
+                            </p>
+                            <?php
+                            // Генерируем атрибуты для просмотрщика
+                            $attributes = ItemAttributes::tryBuildByFileId(
+                                    $file['id'],
+                                    $file['download']
+                            )->setTitle($file['name']);?>
+
+                            <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
+                    <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center"
+                          <?= $attributes ?>style="cursor: pointer;">
+                        смотреть
+                    </span>
+                                <a href="<?= $file['download'] ?>" class="NB1_docs_item_right_download d-flex"
+                                   style="background-image: url('<?=SITE_TEMPLATE_PATH?>/assets/img/download.svg');"></a>
+                            </div>
+                        </div>
+                    <?php
+                    endforeach; ?>
+                </div>
                 <?php
                 $APPLICATION->IncludeComponent(
                     'bitrix:news.detail',
@@ -531,7 +1125,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                         // Использовать дополнительное ограничение доступа
                         'USE_SHARE' => 'N',
                         // Отображать панель соц. Закладок
-                        'COMPONENT_TEMPLATE' => '.default',
+
                     ],
                     false
                 ); ?>
@@ -564,7 +1158,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'DISPLAY_PICTURE' => 'N',
                 'DISPLAY_PREVIEW_TEXT' => 'Y',
                 'DISPLAY_TOP_PAGER' => 'N',
-                'ELEMENT_CODE' => 'main_bottommenu_link1',
+                'ELEMENT_CODE' => 'docs_bottommenu_1',
                 'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
                 'FIELD_CODE' => [
                     0 => '',
@@ -598,20 +1192,69 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'STRICT_SECTION_CHECK' => 'N',
                 'USE_PERMISSIONS' => 'N',
                 'USE_SHARE' => 'N',
-                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+
             ],
             false
         ); ?>
         <?php
         $APPLICATION->IncludeComponent(
-            'bitrix:main.include',
-            '',
-            [
-                'AREA_FILE_SHOW' => 'file',
-                'AREA_FILE_SUFFIX' => 'inc',
-                'EDIT_TEMPLATE' => '',
-                'PATH' => '/local/templates/landing/includes/main_bottommenu_arrow.php',
-            ]
+                'bitrix:news.detail',
+                'include_basic',
+                [
+                        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                        'ADD_ELEMENT_CHAIN' => 'N',
+                        'ADD_SECTIONS_CHAIN' => 'N',
+                        'AJAX_MODE' => 'N',
+                        'AJAX_OPTION_ADDITIONAL' => '',
+                        'AJAX_OPTION_HISTORY' => 'N',
+                        'AJAX_OPTION_JUMP' => 'N',
+                        'AJAX_OPTION_STYLE' => 'N',
+                        'BROWSER_TITLE' => '-',
+                        'CACHE_GROUPS' => 'Y',
+                        'CACHE_TIME' => '36000000',
+                        'CACHE_TYPE' => 'A',
+                        'CHECK_DATES' => 'Y',
+                        'DETAIL_URL' => '',
+                        'DISPLAY_BOTTOM_PAGER' => 'N',
+                        'DISPLAY_DATE' => 'N',
+                        'DISPLAY_NAME' => 'N',
+                        'DISPLAY_PICTURE' => 'N',
+                        'DISPLAY_PREVIEW_TEXT' => 'Y',
+                        'DISPLAY_TOP_PAGER' => 'N',
+                        'ELEMENT_CODE' => 'main_bottommenu_arrow',
+                        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                        'FIELD_CODE' => [
+                                0 => '',
+                                1 => '',
+                        ],
+                        'IBLOCK_ID' => '',
+                        'IBLOCK_TYPE' => 'CityStaffUIP',
+                        'IBLOCK_URL' => '',
+                        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                        'MESSAGE_404' => '',
+                        'META_DESCRIPTION' => '-',
+                        'META_KEYWORDS' => '-',
+                        'PAGER_BASE_LINK_ENABLE' => 'N',
+                        'PAGER_SHOW_ALL' => 'N',
+                        'PAGER_TEMPLATE' => '.default',
+                        'PAGER_TITLE' => 'Страница',
+                        'PROPERTY_CODE' => [
+                                0 => '',
+                                1 => '',
+                        ],
+                        'SET_BROWSER_TITLE' => 'N',
+                        'SET_CANONICAL_URL' => 'N',
+                        'SET_LAST_MODIFIED' => 'N',
+                        'SET_META_DESCRIPTION' => 'N',
+                        'SET_META_KEYWORDS' => 'N',
+                        'SET_STATUS_404' => 'N',
+                        'SET_TITLE' => 'N',
+                        'SHOW_404' => 'N',
+                        'STRICT_SECTION_CHECK' => 'N',
+                        'USE_PERMISSIONS' => 'N',
+                        'USE_SHARE' => 'N',
+                ],
+                false
         ); ?>
         <?php
         $APPLICATION->IncludeComponent(
@@ -638,7 +1281,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'DISPLAY_PICTURE' => 'N',
                 'DISPLAY_PREVIEW_TEXT' => 'Y',
                 'DISPLAY_TOP_PAGER' => 'N',
-                'ELEMENT_CODE' => 'main_bottommenu_link2',
+                'ELEMENT_CODE' => 'docs_bottommenu_2',
                 'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
                 'FIELD_CODE' => [
                     0 => '',
@@ -672,7 +1315,7 @@ $APPLICATION->SetTitle('База знаний и документы');
                 'STRICT_SECTION_CHECK' => 'N',
                 'USE_PERMISSIONS' => 'N',
                 'USE_SHARE' => 'N',
-                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+
             ],
             false
         ); ?>

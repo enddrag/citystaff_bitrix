@@ -29,6 +29,8 @@ $this->setFrameMode(true);
                 if ($arSection['NAME'] !== "Социальные сети") {
                     continue;
                 }
+            } else {
+                continue;
             }
             $link = "";
             foreach ($arItem['PROPERTIES'] as $property) {

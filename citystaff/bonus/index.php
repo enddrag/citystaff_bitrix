@@ -64,7 +64,7 @@ $APPLICATION->SetTitle('Бонус');
                     'STRICT_SECTION_CHECK' => 'N',
                     'USE_PERMISSIONS' => 'N',
                     'USE_SHARE' => 'N',
-                    'COMPONENT_TEMPLATE' => 'main_header_logotype',
+                    
                 ],
                 false
             ); ?>
@@ -181,7 +181,7 @@ $APPLICATION->SetTitle('Бонус');
                     // Направление для второй сортировки новостей
                     'STRICT_SECTION_CHECK' => 'N',
                     // Строгая проверка раздела для показа списка
-                    'COMPONENT_TEMPLATE' => 'main_header_search',
+                    
                 ],
                 false
             ); ?>
@@ -266,7 +266,7 @@ $APPLICATION->SetTitle('Бонус');
                     'STRICT_SECTION_CHECK' => 'N',
                     'USE_PERMISSIONS' => 'N',
                     'USE_SHARE' => 'N',
-                    'COMPONENT_TEMPLATE' => 'main_header_aftermenu',
+                    
                 ],
                 false
             ); ?>
@@ -290,7 +290,7 @@ $APPLICATION->SetTitle('Бонус');
                     [
                         'AREA_FILE_SHOW' => 'file',
                         'AREA_FILE_SUFFIX' => 'inc',
-                        'COMPONENT_TEMPLATE' => 'main_community_item_title3',
+                        
                         'EDIT_TEMPLATE' => '',
                         'PATH' => '/local/templates/landing/includes/common_b_banner_item1.php',
                     ]
@@ -302,7 +302,7 @@ $APPLICATION->SetTitle('Бонус');
                     [
                         'AREA_FILE_SHOW' => 'file',
                         'AREA_FILE_SUFFIX' => 'inc',
-                        'COMPONENT_TEMPLATE' => 'main_about_p',
+                        
                         'EDIT_TEMPLATE' => '',
                         'PATH' => '/local/templates/landing/includes/common_b_banner_item2.php',
                     ]
@@ -423,7 +423,7 @@ $APPLICATION->SetTitle('Бонус');
                 // Использовать дополнительное ограничение доступа
                 'USE_SHARE' => 'N',
                 // Отображать панель соц. закладок
-                'COMPONENT_TEMPLATE' => '.default',
+                
             ],
             false
         ); ?>
@@ -493,7 +493,7 @@ $APPLICATION->SetTitle('Бонус');
                         // Показывать элементы подразделов раздела
                         'MESSAGE_404' => '',
                         // Сообщение для показа (по умолчанию из компонента)
-                        'NEWS_COUNT' => '20',
+                        'NEWS_COUNT' => '500',
                         // Количество новостей на странице
                         'PAGER_BASE_LINK_ENABLE' => 'N',
                         // Включить обработку ссылок
@@ -717,7 +717,7 @@ $APPLICATION->SetTitle('Бонус');
                     'STRICT_SECTION_CHECK' => 'N',
                     'USE_PERMISSIONS' => 'N',
                     'USE_SHARE' => 'N',
-                    'COMPONENT_TEMPLATE' => 'common_b_info_green',
+                    
                 ],
                 false
             ); ?>
@@ -763,7 +763,7 @@ $APPLICATION->SetTitle('Бонус');
             [
                 'AREA_FILE_SHOW' => 'file',
                 'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => 'main_community_item_title3',
+                
                 'EDIT_TEMPLATE' => '',
                 'PATH' => '/local/templates/landing/includes/common_b_p_h4.php',
             ]
@@ -844,7 +844,7 @@ $APPLICATION->SetTitle('Бонус');
                 'SORT_ORDER1' => 'DESC',
                 'SORT_ORDER2' => 'ASC',
                 'STRICT_SECTION_CHECK' => 'N',
-                'COMPONENT_TEMPLATE' => 'common_bonus_coinList',
+                
             ],
             false
         ); ?>
@@ -921,7 +921,7 @@ $APPLICATION->IncludeComponent(
         'STRICT_SECTION_CHECK' => 'N',    // Строгая проверка раздела для показа элемента
         'USE_PERMISSIONS' => 'N',    // Использовать дополнительное ограничение доступа
         'USE_SHARE' => 'N',    // Отображать панель соц. закладок
-        'COMPONENT_TEMPLATE' => '.default',
+        
     ],
     false
 ); ?>
@@ -934,7 +934,7 @@ $APPLICATION->IncludeComponent(
             [
                 'AREA_FILE_SHOW' => 'file',
                 'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => 'main_community_item_title3',
+                
                 'EDIT_TEMPLATE' => '',
                 'PATH' => '/local/templates/landing/includes/common_b_h_h4.php',
             ]
@@ -955,12 +955,12 @@ $APPLICATION->IncludeComponent(
             'bitrix:news.list',
             'common_b_h',
             [
-                'COMPONENT_TEMPLATE' => '.default',
+                
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 // Тип информационного блока (используется только для проверки)
                 'IBLOCK_ID' => $IB_ID["gallery"],
                 // Код информационного блока
-                'NEWS_COUNT' => '20',
+                'NEWS_COUNT' => '500',
                 // Количество новостей на странице
                 'SORT_BY1' => 'ACTIVE_FROM',
                 // Поле для первой сортировки новостей
@@ -1126,7 +1126,7 @@ $APPLICATION->IncludeComponent(
                 'STRICT_SECTION_CHECK' => 'N',
                 'USE_PERMISSIONS' => 'N',
                 'USE_SHARE' => 'N',
-                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+                
             ],
             false
         ); ?>
@@ -1200,7 +1200,7 @@ $APPLICATION->IncludeComponent(
                 'STRICT_SECTION_CHECK' => 'N',
                 'USE_PERMISSIONS' => 'N',
                 'USE_SHARE' => 'N',
-                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+                
             ],
             false
         ); ?>

@@ -27,7 +27,7 @@ $APPLICATION->SetTitle('Помощь');
                         'CACHE_TIME' => '36000000',
                         'CACHE_TYPE' => 'A',
                         'CHECK_DATES' => 'Y',
-                        'COMPONENT_TEMPLATE' => 'main_header_logotype',
+                        
                         'DETAIL_URL' => '',
                         'DISPLAY_BOTTOM_PAGER' => 'Y',
                         'DISPLAY_DATE' => 'N',
@@ -81,7 +81,7 @@ $APPLICATION->SetTitle('Помощь');
                         'CACHE_TIME' => '36000000',
                         'CACHE_TYPE' => 'A',
                         'CHECK_DATES' => 'Y',
-                        'COMPONENT_TEMPLATE' => 'main_header_search',
+                        
                         'DETAIL_URL' => '',
                         'DISPLAY_BOTTOM_PAGER' => 'Y',
                         'DISPLAY_DATE' => 'Y',
@@ -160,7 +160,7 @@ $APPLICATION->SetTitle('Помощь');
                         'CACHE_TIME' => '36000000',
                         'CACHE_TYPE' => 'A',
                         'CHECK_DATES' => 'Y',
-                        'COMPONENT_TEMPLATE' => 'main_header_aftermenu',
+                        
                         'DETAIL_URL' => '',
                         'DISPLAY_BOTTOM_PAGER' => 'N',
                         'DISPLAY_DATE' => 'N',
@@ -231,7 +231,7 @@ $APPLICATION->SetTitle('Помощь');
                         'AREA_FILE_SUFFIX' => 'inc',
                         'EDIT_TEMPLATE' => '',
                         'PATH' => '/local/templates/landing/includes/common_f_b_p.php',
-                        'COMPONENT_TEMPLATE' => 'main_about_p',
+                        
                     ],
                     false
                 ); ?>
@@ -259,7 +259,7 @@ $APPLICATION->SetTitle('Помощь');
                 [
                     'AREA_FILE_SHOW' => 'file',
                     'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => '.default',
+                    
                     'EDIT_TEMPLATE' => '',
                     'PATH' => '/local/templates/landing/includes/common_b_f_HowWork_img.php',
                 ],
@@ -274,7 +274,7 @@ $APPLICATION->SetTitle('Помощь');
                 [
                     'AREA_FILE_SHOW' => 'file',
                     'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_community_item_title3',
+                    
                     'EDIT_TEMPLATE' => '',
                     'PATH' => '/local/templates/landing/includes/common_b_f_HowWork_t.php',
                 ]
@@ -286,7 +286,7 @@ $APPLICATION->SetTitle('Помощь');
                 [
                     'AREA_FILE_SHOW' => 'file',
                     'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'common_h4',
+                    
                     'EDIT_TEMPLATE' => '',
                     'PATH' => '/local/templates/landing/includes/common_b_f_HowWork_t2.php',
                 ],
@@ -300,7 +300,7 @@ $APPLICATION->SetTitle('Помощь');
                     [
                         'AREA_FILE_SHOW' => 'file',
                         'AREA_FILE_SUFFIX' => 'inc',
-                        'COMPONENT_TEMPLATE' => 'common_b_f_HowWork',
+                        
                         'EDIT_TEMPLATE' => '',
                         'PATH' => '/local/templates/landing/includes/common_b_f_HowWork_p.php',
                     ],
@@ -319,7 +319,7 @@ $APPLICATION->SetTitle('Помощь');
                 [
                     'AREA_FILE_SHOW' => 'file',
                     'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_union_title',
+                    
                     'EDIT_TEMPLATE' => '',
                     'PATH' => '/local/templates/landing/includes/common_f_greenb_h.php',
                 ]
@@ -331,7 +331,7 @@ $APPLICATION->SetTitle('Помощь');
                 [
                     'AREA_FILE_SHOW' => 'file',
                     'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_about_p',
+                    
                     'EDIT_TEMPLATE' => '',
                     'PATH' => '/local/templates/landing/includes/common_f_greenb_p.php',
                 ]
@@ -345,7 +345,7 @@ $APPLICATION->SetTitle('Помощь');
                 [
                     'AREA_FILE_SHOW' => 'file',
                     'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => '.default',
+                    
                     'EDIT_TEMPLATE' => '',
                     'PATH' => '/local/templates/landing/includes/common_f_greenb_img.php',
                 ],
@@ -361,10 +361,10 @@ $APPLICATION->SetTitle('Помощь');
             'bitrix:news.list',
             'common_f_questions',
             [
-                'COMPONENT_TEMPLATE' => '.default',
+                
                 'IBLOCK_TYPE' => 'CityStaffUIP',
                 // Тип информационного блока (используется только для проверки)
-                'IBLOCK_ID' => $IB_ID["DetailInfo"],
+                'IBLOCK_ID' => $IB_ID["content"],
                 // Код информационного блока
                 'NEWS_COUNT' => '100',
                 // Количество новостей на странице
@@ -516,7 +516,7 @@ $APPLICATION->SetTitle('Помощь');
                     [
                         'AREA_FILE_SHOW' => 'file',
                         'AREA_FILE_SUFFIX' => 'inc',
-                        'COMPONENT_TEMPLATE' => 'common_f_b_t',
+                        
                         'EDIT_TEMPLATE' => '',
                         'PATH' => '/local/templates/landing/includes/common_f_chat_t.php',
                     ]
@@ -528,7 +528,7 @@ $APPLICATION->SetTitle('Помощь');
                     [
                         'AREA_FILE_SHOW' => 'file',
                         'AREA_FILE_SUFFIX' => 'inc',
-                        'COMPONENT_TEMPLATE' => 'main_about_p',
+                        
                         'EDIT_TEMPLATE' => '',
                         'PATH' => '/local/templates/landing/includes/common_f_chat_p.php',
                     ]
@@ -651,7 +651,7 @@ $APPLICATION->SetTitle('Помощь');
             [
                 'AREA_FILE_SHOW' => 'file',
                 'AREA_FILE_SUFFIX' => 'inc',
-                'COMPONENT_TEMPLATE' => '.default',
+                
                 'EDIT_TEMPLATE' => '',
                 'PATH' => '/local/templates/landing/includes/common_f_WH_img.php',
             ],
@@ -665,7 +665,7 @@ $APPLICATION->SetTitle('Помощь');
                 [
                     'AREA_FILE_SHOW' => 'file',
                     'AREA_FILE_SUFFIX' => 'inc',
-                    'COMPONENT_TEMPLATE' => 'main_community_item_title3',
+                    
                     'EDIT_TEMPLATE' => '',
                     'PATH' => '/local/templates/landing/includes/common_f_WH_h.php',
                 ],
@@ -701,12 +701,12 @@ $APPLICATION->SetTitle('Помощь');
                     ],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                    'IBLOCK_ID' => $IB_ID["DetailInfo"],
+                    'IBLOCK_ID' => $IB_ID["content"],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'Y',
                     'INCLUDE_SUBSECTIONS' => 'Y',
                     'MESSAGE_404' => '',
-                    'NEWS_COUNT' => '20',
+                    'NEWS_COUNT' => '500',
                     'PAGER_BASE_LINK_ENABLE' => 'N',
                     'PAGER_DESC_NUMBERING' => 'N',
                     'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
@@ -733,7 +733,7 @@ $APPLICATION->SetTitle('Помощь');
                     'SORT_ORDER1' => 'ASC',
                     'SORT_ORDER2' => 'ASC',
                     'STRICT_SECTION_CHECK' => 'N',
-                    'COMPONENT_TEMPLATE' => 'common_f_workhours',
+                    
                 ],
                 false
             ); ?>
@@ -803,7 +803,7 @@ $APPLICATION->SetTitle('Помощь');
                 'STRICT_SECTION_CHECK' => 'N',
                 'USE_PERMISSIONS' => 'N',
                 'USE_SHARE' => 'N',
-                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+                
             ],
             false
         ); ?>
@@ -877,7 +877,7 @@ $APPLICATION->SetTitle('Помощь');
                 'STRICT_SECTION_CHECK' => 'N',
                 'USE_PERMISSIONS' => 'N',
                 'USE_SHARE' => 'N',
-                'COMPONENT_TEMPLATE' => 'main_bottommenu_link1',
+                
             ],
             false
         ); ?>

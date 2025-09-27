@@ -22,9 +22,11 @@ $this->setFrameMode(true);
         <?php
         $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
         if ($arSection = $selectSection->GetNext()) {
-            if ($arSection['NAME'] !== "Соглашения") {
+            if ($arSection['CODE'] !== "TermsOfService") {
                 continue;
             }
+        } else {
+            continue;
         }
         ?>
         <?php
@@ -46,9 +48,11 @@ $this->setFrameMode(true);
         <?php
         $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
         if ($arSection = $selectSection->GetNext()) {
-            if ($arSection['NAME'] !== "Соглашения") {
+            if ($arSection['CODE'] !== "TermsOfService") {
                 continue;
             }
+        } else {
+            continue;
         }
         ?>
         <?php

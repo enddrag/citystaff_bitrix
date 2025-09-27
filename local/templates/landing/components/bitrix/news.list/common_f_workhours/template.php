@@ -32,9 +32,11 @@ foreach ($arResult["ITEMS"] as $arItem): ?>
     );
     $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
     if ($arSection = $selectSection->GetNext()) {
-        if ($arSection['NAME'] != "график работ") {
+        if ($arSection['CODE'] != "offices") {
             continue;
         }
+    } else{
+        continue;
     }
     ?>
     <div class="NB3_WH_item_item d-flex flex-column align-items-end justify-content-between"

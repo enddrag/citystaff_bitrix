@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -14,7 +15,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-if ($arResult['FILE'] <> '') :?>
-    <p class="Fbody text-white NB_content_community_content_item_left_p"><?php include($arResult['FILE']);?></p>
+if ($arResult['DETAIL_TEXT'] <> '') : ?>
+    <p class="Fbody NB_content_tradition_p"><?= $arResult['DETAIL_TEXT']; ?></p>
 <?php endif;?>

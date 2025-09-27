@@ -29,13 +29,9 @@ $extension = [
 ];
 $fileList = [];
 
-if (
-    Loader::includeModule('disk')
-    && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')
-) {
+if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')) {
     $securityContext = $storage->getCurrentUserSecurityContext();
     $urlManager = Driver::getInstance()->getUrlManager();
-
     $folderObjectList = $storage->getChildren($securityContext, [
         'filter' => [
             'TYPE' => ObjectTable::TYPE_FOLDER,
@@ -44,7 +40,6 @@ if (
             'ID' => 'DESC',
         ],
     ]);
-
     foreach ($folderObjectList as $folder) {
         $fileObjectList = $folder->getChildren($securityContext, [
             'filter' => [

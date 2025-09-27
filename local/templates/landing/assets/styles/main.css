@@ -814,7 +814,9 @@ mark {
     width: 700px;
     align-self: center;
 }
-
+.NB_content_tradition_footer .Fbody{
+    text-align: center;
+}
 .NB_content_tradition_footer_link {
     position: relative;
     height: 100px;

@@ -16,8 +16,19 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-// Подготовка данных для каруселей
-$allItems = $arResult['ITEMS'];
+$allItems = [];
+foreach ($arResult['ITEMS'] as $arItem){
+    $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
+    if ($arSection = $selectSection->GetNext()) {
+        if ($arSection['CODE'] !== 'clients') {
+            continue;
+        }
+    } else {
+        continue;
+    }
+    $allItems[] = $arItem;
+
+}
 $itemsCount = count($allItems);
 $items1 = 0;//количество элементов в первой карусели
 $items2 = 0;//количество элементов в первой карусели
@@ -38,7 +49,7 @@ $i = 0;
 <div class="NB_content_corusel ontheleft">
     <!--логотипы-->
     <?php
-    foreach ($arResult['ITEMS'] as $arItem) : ?>
+    foreach ($allItems as $arItem) : ?>
         <?php
         if ($i < $items1) : ?>
             <?php
@@ -74,7 +85,7 @@ $i = 0;
     $i = 0;//чтобы пройти мимо лишних элементов?>
     <!--дубликаты-->
     <?php
-    foreach ($arResult['ITEMS'] as $arItem) : ?>
+    foreach ($allItems as $arItem) : ?>
         <?php
         if ($i < $items1) : ?>
             <div class="NB_content_corusel_item d-flex align-items-center justify-content-center"
@@ -96,7 +107,7 @@ $i = 0;
     $i = 0;//чтобы пройти мимо лишних элементов?>
     <!--логотипы-->
     <?php
-    foreach ($arResult['ITEMS'] as $arItem) : ?>
+    foreach ($allItems as $arItem) : ?>
         <?php
         if ($i >= $items1) : ?>
             <?php
@@ -134,7 +145,7 @@ $i = 0;
     $i = 0;//чтобы пройти мимо лишних элементов?>
     <!--дубликаты-->
     <?php
-    foreach ($arResult['ITEMS'] as $arItem) : ?>
+    foreach ($allItems as $arItem) : ?>
         <?php
         if ($i >= $items1) : ?>
             <?php

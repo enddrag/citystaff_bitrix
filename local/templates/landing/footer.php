@@ -120,12 +120,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                     'FIELD_CODE' => [0 => '', 1 => ''],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'N',
-                    'IBLOCK_ID' => $IB_ID["footer_content"],
+                    'IBLOCK_ID' => $IB_ID["content"],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
                     'INCLUDE_SUBSECTIONS' => 'N',
                     'MESSAGE_404' => '',
-                    'NEWS_COUNT' => '20',
+                    'NEWS_COUNT' => '500',
                     'PAGER_BASE_LINK_ENABLE' => 'N',
                     'PAGER_DESC_NUMBERING' => 'N',
                     'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
@@ -183,12 +183,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                     ],
                     'FILTER_NAME' => '',
                     'HIDE_LINK_WHEN_NO_DETAIL' => 'Y',
-                    'IBLOCK_ID' => $IB_ID["footer_content"],
+                    'IBLOCK_ID' => $IB_ID["content"],
                     'IBLOCK_TYPE' => 'CityStaffUIP',
                     'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
                     'INCLUDE_SUBSECTIONS' => 'N',
                     'MESSAGE_404' => '',
-                    'NEWS_COUNT' => '20',
+                    'NEWS_COUNT' => '500',
                     'PAGER_BASE_LINK_ENABLE' => 'N',
                     'PAGER_DESC_NUMBERING' => 'N',
                     'PAGER_DESC_NUMBERING_CACHE_TIME' => '36000',
@@ -228,8 +228,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
         [
             'COMPONENT_TEMPLATE' => '.default',
             'IBLOCK_TYPE' => 'CityStaffUIP',    // Тип информационного блока (используется только для проверки)
-            'IBLOCK_ID' => $IB_ID["footer_content"],    // Код информационного блока
-            'NEWS_COUNT' => '20',    // Количество новостей на странице
+            'IBLOCK_ID' => $IB_ID["content"],    // Код информационного блока
+            'NEWS_COUNT' => '500',    // Количество новостей на странице
             'SORT_BY1' => 'ACTIVE_FROM',    // Поле для первой сортировки новостей
             'SORT_ORDER1' => 'DESC',    // Направление для первой сортировки новостей
             'SORT_BY2' => 'SORT',    // Поле для второй сортировки новостей

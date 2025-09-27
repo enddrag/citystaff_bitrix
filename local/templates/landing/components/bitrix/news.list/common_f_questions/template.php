@@ -33,10 +33,12 @@ $this->setFrameMode(true);
         );
         $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
         if ($arSection = $selectSection->GetNext()) {
-            if ($arSection['NAME'] != 'вопросник') {
+            if ($arSection['CODE'] != 'questions') {
                 continue;
             }
-        }
+        } else{
+            continue;
+        } 
         ?>
         <div class="NB3_q_item d-flex flex-column align-items-center justify-content-between NB_rounded-20"
              id="<?= $this->GetEditAreaId($arItem['ID']); ?>">

@@ -32,6 +32,16 @@ $this->setFrameMode(true);
                 ['CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')]
             );
             ?>
+            <?php
+            $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
+            if ($arSection = $selectSection->GetNext()) {
+                if ($arSection['CODE'] !== 'uniting') {
+                    continue;
+                }
+            } else {
+                continue;
+            }
+            ?>
             <div class="NB_content_cyrcles_item NB_rounded-circle d-flex flex-column align-items-center justify-content-center"
                  id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                 <div class="NB_content_cyrcles_item_card d-flex flex-column justify-content-around">
