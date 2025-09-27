@@ -1,1 +1,0 @@
-<img alt="community_message.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/community_message.png" class="NB_content_community_img_left">

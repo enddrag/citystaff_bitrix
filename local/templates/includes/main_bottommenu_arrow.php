@@ -1,1 +1,0 @@
-<img alt="newArrow.svg" src="<?=SITE_TEMPLATE_PATH?>/assets/img/newArrow.svg" title="newArrow.svg"><br>

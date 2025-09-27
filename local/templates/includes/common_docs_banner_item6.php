@@ -1,1 +1,0 @@
-<img alt="file.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/file.png" title="file.png"><br>

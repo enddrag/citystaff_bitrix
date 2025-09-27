@@ -1,1 +1,0 @@
-<img alt="finger.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/finger.png" title="finger.png" class="NB3_info1_38_img">

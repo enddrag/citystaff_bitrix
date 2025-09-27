@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="CityStaffUIP:subscribes" exchangeVersion="2" >
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>телеграмм</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="banner.gif" type="file">iblock/8a3/vgoqzawsrsuhblc5xhedueiwus21jery/banner.gif</value>
+ </field>
+ <field name="PREVIEW_TEXT">
+  <value>Какой-то небольшой текст с описанием контента</value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE">
+  <value name="tg_logo.png" type="file">iblock/376/xyoiqtej8qbwprpeym287enjf6g3h4k4/tg_logo.png</value>
+ </field>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>tg</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>68</value>
+ </field>
+ <field name="IBLOCK_SECTION"/>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link">
+  <value>/t.me</value>
+ </property>
+ <property name="link_text">
+  <value>подписаться</value>
+ </property>
+ <property name="link_api">
+  <value>https://api.telegram.org/bot8343940875:AAFrYhJRrK9A7jKPlETMV7sXZ2retPvqsoM/getChatMembersCount?chat_id=-1002916932417</value>
+ </property>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>вк</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="faq.png" type="file">iblock/413/fatc3dqs51dtidfh203p2m937pjyv1kv/faq.png</value>
+ </field>
+ <field name="PREVIEW_TEXT">
+  <value>какой то текст</value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE">
+  <value name="vk_logo.png" type="file">iblock/4b9/5hr21zemvimry64dtbpwxm6jltah6uma/vk_logo.png</value>
+ </field>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>vk</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>69</value>
+ </field>
+ <field name="IBLOCK_SECTION"/>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link">
+  <value>/vk.com</value>
+ </property>
+ <property name="link_text">
+  <value>какой то текст</value>
+ </property>
+ <property name="link_api">
+  <value>https://api.vk.com/method/groups.getById?group_id=club232316334&amp;fields=description,members_count&amp;access_token=vk1.a.Vki-qIX7c9lfuBYCjCVfTuSUtRBfhhE0Fiak-_D7TWTuzlTZVDLK_v7Nxzp9dqZ8MjPLFJ3TEgs1p3c50ziFHnqf3M2LvsE5ykyBBb7sKAbRe_-YlFpGmvqjN40ktKOtdb5G7uN3oog0RLe2IenE9IAWTqGFeQ7hUpIFDLQpEmZI3M6VXF7Bio7vbOxhQ1dLoO3bq_eAh901xGnpQJvWIQ&amp;v=5.131</value>
+ </property>
+</item>
+
+</items>

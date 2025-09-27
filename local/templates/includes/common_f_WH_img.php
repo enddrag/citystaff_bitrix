@@ -1,1 +1,0 @@
-<img alt="календарь.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/date.png" title="календарь.png" class="NB3_WH_item_img">

@@ -1,1 +1,0 @@
-<img alt="каткова2.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/katkova.png" title="каткова2.png" class="NB3_info1_img NB_rounded-circle">

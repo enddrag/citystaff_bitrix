@@ -1,1 +1,0 @@
-<img alt="фото_о_нас.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/about.png" title="фото_о_нас.png" class="NB_about_right">

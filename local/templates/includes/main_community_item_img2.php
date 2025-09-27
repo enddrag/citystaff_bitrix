@@ -1,1 +1,0 @@
-<img alt="community_news.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/community_news.png" class="NB_content_community_img_left">

@@ -1,1 +1,0 @@
-<img alt="heard.png" src="<?=SITE_TEMPLATE_PATH?>/assets/img/heard.png" title="heard.png" class="NB_content_community_img_right">
