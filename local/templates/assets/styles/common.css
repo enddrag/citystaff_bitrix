@@ -713,6 +713,7 @@
 
 .NB3_banner_content h3, .NB3_banner_content p {
     width: 77%;
+    color: white !important;
 }
 
 .NB3_banner_form {
@@ -876,6 +877,9 @@
 
     width: 62%;
     height: 100%;
+}
+.NB3_info3 .NB3_info1_62 *{
+    color: white;
 }
 
 .NB3_info1 .NB3_info1_62 {
