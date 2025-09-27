@@ -44,7 +44,7 @@
   <value>подписаться</value>
  </property>
  <property name="link_api">
-  <value>https://api.telegram.org/bot8343940875:AAFrYhJRrK9A7jKPlETMV7sXZ2retPvqsoM/getChatMembersCount?chat_id=-1002916932417</value>
+  <value>https://api.telegram.org/bot8343940875:AAE4v1OE0xTaMB7ZSn1IqNkv9s-5xp11Gnk/getChatMembersCount?chat_id=-1002916932417</value>
  </property>
 </item>
 <item>
