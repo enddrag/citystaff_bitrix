@@ -22,6 +22,6 @@ $firstName = $currentUser->GetFirstName();
 if ($arResult['DETAIL_TEXT'] <> '') : ?>
     <h3 class="NB1_banner_left_item d-flex flex-column align-items-start justify-content-center">
         <?=$arResult['DETAIL_TEXT'];?>
-        <mark><?=$firstName?>!</mark>
+        <mark><?=trim($firstName)?>!</mark>
     </h3>
 <?php endif; ?>

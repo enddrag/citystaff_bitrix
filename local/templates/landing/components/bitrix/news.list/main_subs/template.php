@@ -15,10 +15,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-$link = '';
-$link_text = '';
-$url = 'asd';
-$subs = '';
+
 $httpClient = new \Bitrix\Main\Web\HttpClient([
     'socketTimeout' => 10,
     'streamTimeout' => 30,
@@ -31,6 +28,11 @@ $httpClient = new \Bitrix\Main\Web\HttpClient([
     <?php
     foreach ($arResult['ITEMS'] as $arItem) : ?>
         <?php
+        $link = '';
+        $link_text = '';
+        $url = '';
+        $subs = '';
+        $checkApi = true;
         $this->AddEditAction(
             $arItem['ID'],
             $arItem['EDIT_LINK'],
@@ -42,46 +44,49 @@ $httpClient = new \Bitrix\Main\Web\HttpClient([
             CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),
             ['CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')]
         );
-        ?>
-        <?php
         foreach ($arItem['PROPERTIES'] as $arProperty) {
             if ($arProperty['NAME'] == 'link') {
                 $link = $arProperty['VALUE'];
-            } else {
-                if ($arProperty['NAME'] == 'link_text') {
-                    $link_text = $arProperty['VALUE'];
-                } else {
-                    if ($arProperty['NAME'] == 'link_api') {
-                        $url = $arProperty['VALUE'];
-                        $response = $httpClient->get($url);
-                        $status = $httpClient->getStatus();
-                        if ($status == 200) {
-                            // Декодируем JSON-ответ
-                            $response = \Bitrix\Main\Web\Json::decode($response);
-
-                            if ($response['result']) {
-                                $subs = $response['result'];
-                            } else {
-                                if ($response['response']['0']['members_count']) {
-                                    $subs = $response['response']['0']['members_count'];
-                                }
+            }
+            else if ($arProperty['NAME'] == 'link_text') {
+                $link_text = $arProperty['VALUE'];
+            }
+            else if ($arProperty['NAME'] == 'link_api') {
+                $url = $arProperty['VALUE'];
+                $response = $httpClient->get($url);
+                $status = $httpClient->getStatus();
+                if ($status == 200) {
+                    // Декодируем JSON-ответ
+                    $response = \Bitrix\Main\Web\Json::decode($response);
+                    if ($response['result']) {
+                        $subs = $response['result'];
+                    }
+                    else if ($response['response']['0']['members_count']) {
+                        $subs = $response['response']['0']['members_count'];
+                    }
+                }
+                if ($subs != '') {
+                    if ($subs % 10 === 1 && $subs % 100 !== 11) {
+                        $subs = $subs . ' подписчик';
                             }
+                    else {
+                        if (($subs % 10 >= 2 && $subs % 10 <= 4) && ($subs % 100 < 10 || $subs % 100 >= 20)) {
+                            $subs = $subs . ' подписчика';
                         }
-                        if ($subs != '') {
-                            if ($subs % 10 === 1 && $subs % 100 !== 11) {
-                                $subs = $subs . ' подписчик';
-                            } else {
-                                if (($subs % 10 >= 2 && $subs % 10 <= 4) && ($subs % 100 < 10 || $subs % 100 >= 20)) {
-                                    $subs = $subs . ' подписчика';
-                                } else {
-                                    $subs = $subs . ' подписчиков';
-                                }
-                            }
+                        else {
+                            $subs = $subs . ' подписчиков';
                         }
                     }
                 }
+                else{
+                    $checkApi = false;
+                    break;
+                }
             }
-        } ?>
+
+        }
+        if(!$checkApi) continue;
+        ?>
         <div class="NB_content_card_item d-flex flex-column justify-content-between"
              id="<?= $this->GetEditAreaId($arItem['ID']) ?>">
             <div class="NB_content_card_item_banner">
