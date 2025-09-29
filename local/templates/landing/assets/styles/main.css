@@ -25,12 +25,12 @@
 
 
 /*-------типография------*/
-h1, h1 mark {
+h1, h1  *  {
     font-family: 'ebold_c', serif;
     font-size: 102px;
 }
 
-h2, h2 mark {
+h2, h2  *  {
     font-size: 86px;
     font-family: 'ebold_c', serif;
 }
@@ -39,7 +39,7 @@ h2 {
     color: #353536;
 }
 
-h3, h3 mark {
+h3, h3  *  {
     font-family: 'ebold_c', serif;
     font-size: 54px;
 }
@@ -48,7 +48,7 @@ h3 {
     color: #003527;
 }
 
-h4, h4 mark {
+h4, h4  *  {
     font-family: 'bold_c', serif;
     font-size: 32px;
 }
@@ -534,6 +534,7 @@ mark {
     margin-bottom: 20px;
 }
 
+
 .NB_about_content_main {
     margin-left: 150px;
 }
@@ -544,6 +545,7 @@ mark {
     height: auto;
     padding-bottom: 60px;
     overflow: visible;
+    z-index: -1;
 }
 .NB_about_content_wrap::after{
     position: absolute;
@@ -1717,15 +1719,15 @@ body:has(section.NB_modal.NB_active) {
         width: 1550px;
     }
 
-    h1, h1 mark {
+    h1, h1 * {
         font-size: 90px;
     }
 
-    h2, h2 mark {
+    h2, h2 * {
         font-size: 65px;
     }
 
-    h3, h3 mark {
+    h3, h3 * {
         font-size: 50px;
     }
 
@@ -1927,19 +1929,19 @@ body:has(section.NB_modal.NB_active) {
         width: 1300px;
     }
 
-    h1, h1 mark {
+    h1, h1  *  {
         font-size: 80px;
     }
 
-    h2, h2 mark {
+    h2, h2  *  {
         font-size: 60px;
     }
 
-    h3, h3 mark {
+    h3, h3  *  {
         font-size: 40px;
     }
 
-    h4, h4 mark {
+    h4, h4  *  {
         font-size: 25px;
     }
 
@@ -2356,7 +2358,7 @@ body:has(section.NB_modal.NB_active) {
         width: 1220px;
     }
 
-    h1, h1 mark {
+    h1, h1  *  {
         font-size: 70px;
     }
 
@@ -2558,16 +2560,16 @@ body:has(section.NB_modal.NB_active) {
         width: 1140px;
     }
 
-    h1, h1 mark,
-    h2, h2 mark {
+    h1, h1  * ,
+    h2, h2  *  {
         font-size: 60px;
     }
 
-    h3, h3 mark {
+    h3, h3  *  {
         font-size: 35px;
     }
 
-    h4, h4 mark {
+    h4, h4  *  {
         font-size: 22px;
     }
 

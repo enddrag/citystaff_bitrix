@@ -1,7 +1,6 @@
 <?php
 
 global $APPLICATION, $IB_ID;
-//use Bitrix\Main\Page\Asset;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('База знаний и документы');
 
@@ -56,6 +55,7 @@ if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorag
                     'id' => $file->getId(),
                     'name' => str_replace($extension, '', $file->getName()),
                     'download' => $urlManager->getUrlForDownloadFile($file),
+                    'getExtension' => $file->getExtension(),
             ];
         }
     }
@@ -76,6 +76,7 @@ if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorag
                     'id' => $file->getId(),
                     'name' => str_replace($extension, '', $file->getName()),
                     'download' => $urlManager->getUrlForDownloadFile($file),
+                    'getExtension' => $file->getExtension(),
             ];
         }
     }
@@ -735,7 +736,22 @@ if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorag
                     $attributes = ItemAttributes::tryBuildByFileId(
                             $file['id'],
                             $file['download']
-                    )->setTitle($file['name']); ?>
+                    )->setTitle($file['name']);
+                    $fileExtension = strtolower($file['getExtension']);
+                    $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
+                    $audioExtensions = ['mp3', 'wav', 'ogg'];
+                    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+                    if (in_array($fileExtension, $videoExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'video');
+                    } elseif (in_array($fileExtension, $audioExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'audio');
+                    } elseif (in_array($fileExtension, $imageExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'image');
+                    } else {
+                        $attributes->setAttribute('data-viewer-type', 'file');
+                    }
+                    ?>
 
                     <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
                     <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center"
@@ -1014,7 +1030,22 @@ if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorag
                             $attributes = ItemAttributes::tryBuildByFileId(
                                     $file['id'],
                                     $file['download']
-                            )->setTitle($file['name']); ?>
+                            )->setTitle($file['name']);
+                            $fileExtension = strtolower($file['getExtension']);
+                            $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
+                            $audioExtensions = ['mp3', 'wav', 'ogg'];
+                            $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+                            if (in_array($fileExtension, $videoExtensions)) {
+                                $attributes->setAttribute('data-viewer-type', 'video');
+                            } elseif (in_array($fileExtension, $audioExtensions)) {
+                                $attributes->setAttribute('data-viewer-type', 'audio');
+                            } elseif (in_array($fileExtension, $imageExtensions)) {
+                                $attributes->setAttribute('data-viewer-type', 'image');
+                            } else {
+                                $attributes->setAttribute('data-viewer-type', 'file');
+                            }
+                            ?>
 
                             <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
                     <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center"
