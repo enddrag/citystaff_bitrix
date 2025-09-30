@@ -273,260 +273,260 @@ if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorag
                     'USE_SHARE' => 'N',
                 ]
             );
-?>
+            ?>
             <?php
-$APPLICATION->IncludeComponent(
-    'bitrix:system.auth.form',
-    'common_header_avatar',
-    []
-); ?>
+            $APPLICATION->IncludeComponent(
+                'bitrix:system.auth.form',
+                'common_header_avatar',
+                []
+            ); ?>
         </div>
     </nav>
     <!--баннер-->
     <section class="NB1_banner d-flex flex-row widthBase">
         <div class="NB1_banner_left d-flex flex-row justify-content-between align-items-center">
             <?php
-$APPLICATION->IncludeComponent(
-    'bitrix:news.detail',
-    'include_docsBase_banner_greating',
-    [
-        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
-        'ADD_ELEMENT_CHAIN' => 'N',
-        'ADD_SECTIONS_CHAIN' => 'N',
-        'AJAX_MODE' => 'N',
-        'AJAX_OPTION_ADDITIONAL' => '',
-        'AJAX_OPTION_HISTORY' => 'N',
-        'AJAX_OPTION_JUMP' => 'N',
-        'AJAX_OPTION_STYLE' => 'N',
-        'BROWSER_TITLE' => '-',
-        'CACHE_GROUPS' => 'Y',
-        'CACHE_TIME' => '36000000',
-        'CACHE_TYPE' => 'A',
-        'CHECK_DATES' => 'Y',
-        'DETAIL_URL' => '',
-        'DISPLAY_BOTTOM_PAGER' => 'N',
-        'DISPLAY_DATE' => 'N',
-        'DISPLAY_NAME' => 'N',
-        'DISPLAY_PICTURE' => 'N',
-        'DISPLAY_PREVIEW_TEXT' => 'Y',
-        'DISPLAY_TOP_PAGER' => 'N',
-        'ELEMENT_CODE' => 'common_docs_banner_item1',
-        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
-        'FIELD_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'IBLOCK_ID' => '',
-        'IBLOCK_TYPE' => 'CityStaffUIP',
-        'IBLOCK_URL' => '',
-        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
-        'MESSAGE_404' => '',
-        'META_DESCRIPTION' => '-',
-        'META_KEYWORDS' => '-',
-        'PAGER_BASE_LINK_ENABLE' => 'N',
-        'PAGER_SHOW_ALL' => 'N',
-        'PAGER_TEMPLATE' => '.default',
-        'PAGER_TITLE' => 'Страница',
-        'PROPERTY_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'SET_BROWSER_TITLE' => 'N',
-        'SET_CANONICAL_URL' => 'N',
-        'SET_LAST_MODIFIED' => 'N',
-        'SET_META_DESCRIPTION' => 'N',
-        'SET_META_KEYWORDS' => 'N',
-        'SET_STATUS_404' => 'N',
-        'SET_TITLE' => 'N',
-        'SHOW_404' => 'N',
-        'STRICT_SECTION_CHECK' => 'N',
-        'USE_PERMISSIONS' => 'N',
-        'USE_SHARE' => 'N',
-    ],
-    false
-); ?>
+            $APPLICATION->IncludeComponent(
+                'bitrix:news.detail',
+                'include_docsBase_banner_greating',
+                [
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'common_docs_banner_item1',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
+                ],
+                false
+            ); ?>
             <?php
-$APPLICATION->IncludeComponent(
-    'bitrix:news.detail',
-    'include_basic',
-    [
-        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
-        'ADD_ELEMENT_CHAIN' => 'N',
-        'ADD_SECTIONS_CHAIN' => 'N',
-        'AJAX_MODE' => 'N',
-        'AJAX_OPTION_ADDITIONAL' => '',
-        'AJAX_OPTION_HISTORY' => 'N',
-        'AJAX_OPTION_JUMP' => 'N',
-        'AJAX_OPTION_STYLE' => 'N',
-        'BROWSER_TITLE' => '-',
-        'CACHE_GROUPS' => 'Y',
-        'CACHE_TIME' => '36000000',
-        'CACHE_TYPE' => 'A',
-        'CHECK_DATES' => 'Y',
-        'DETAIL_URL' => '',
-        'DISPLAY_BOTTOM_PAGER' => 'N',
-        'DISPLAY_DATE' => 'N',
-        'DISPLAY_NAME' => 'N',
-        'DISPLAY_PICTURE' => 'N',
-        'DISPLAY_PREVIEW_TEXT' => 'Y',
-        'DISPLAY_TOP_PAGER' => 'N',
-        'ELEMENT_CODE' => 'common_docs_item_img',
-        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
-        'FIELD_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'IBLOCK_ID' => '',
-        'IBLOCK_TYPE' => 'CityStaffUIP',
-        'IBLOCK_URL' => '',
-        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
-        'MESSAGE_404' => '',
-        'META_DESCRIPTION' => '-',
-        'META_KEYWORDS' => '-',
-        'PAGER_BASE_LINK_ENABLE' => 'N',
-        'PAGER_SHOW_ALL' => 'N',
-        'PAGER_TEMPLATE' => '.default',
-        'PAGER_TITLE' => 'Страница',
-        'PROPERTY_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'SET_BROWSER_TITLE' => 'N',
-        'SET_CANONICAL_URL' => 'N',
-        'SET_LAST_MODIFIED' => 'N',
-        'SET_META_DESCRIPTION' => 'N',
-        'SET_META_KEYWORDS' => 'N',
-        'SET_STATUS_404' => 'N',
-        'SET_TITLE' => 'N',
-        'SHOW_404' => 'N',
-        'STRICT_SECTION_CHECK' => 'N',
-        'USE_PERMISSIONS' => 'N',
-        'USE_SHARE' => 'N',
-    ],
-    false
-); ?>
+            $APPLICATION->IncludeComponent(
+                'bitrix:news.detail',
+                'include_basic',
+                [
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'common_docs_item_img',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
+                ],
+                false
+            ); ?>
         </div>
         <div class="NB1_banner_right d-flex flex-column align-items-center justify-content-center">
             <?php
-$APPLICATION->IncludeComponent(
-    'bitrix:news.detail',
-    'include_h3_empty',
-    [
-        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
-        'ADD_ELEMENT_CHAIN' => 'N',
-        'ADD_SECTIONS_CHAIN' => 'N',
-        'AJAX_MODE' => 'N',
-        'AJAX_OPTION_ADDITIONAL' => '',
-        'AJAX_OPTION_HISTORY' => 'N',
-        'AJAX_OPTION_JUMP' => 'N',
-        'AJAX_OPTION_STYLE' => 'N',
-        'BROWSER_TITLE' => '-',
-        'CACHE_GROUPS' => 'Y',
-        'CACHE_TIME' => '36000000',
-        'CACHE_TYPE' => 'A',
-        'CHECK_DATES' => 'Y',
-        'DETAIL_URL' => '',
-        'DISPLAY_BOTTOM_PAGER' => 'N',
-        'DISPLAY_DATE' => 'N',
-        'DISPLAY_NAME' => 'N',
-        'DISPLAY_PICTURE' => 'N',
-        'DISPLAY_PREVIEW_TEXT' => 'Y',
-        'DISPLAY_TOP_PAGER' => 'N',
-        'ELEMENT_CODE' => 'common_docs_banner_item2',
-        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
-        'FIELD_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'IBLOCK_ID' => '',
-        'IBLOCK_TYPE' => 'CityStaffUIP',
-        'IBLOCK_URL' => '',
-        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
-        'MESSAGE_404' => '',
-        'META_DESCRIPTION' => '-',
-        'META_KEYWORDS' => '-',
-        'PAGER_BASE_LINK_ENABLE' => 'N',
-        'PAGER_SHOW_ALL' => 'N',
-        'PAGER_TEMPLATE' => '.default',
-        'PAGER_TITLE' => 'Страница',
-        'PROPERTY_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'SET_BROWSER_TITLE' => 'N',
-        'SET_CANONICAL_URL' => 'N',
-        'SET_LAST_MODIFIED' => 'N',
-        'SET_META_DESCRIPTION' => 'N',
-        'SET_META_KEYWORDS' => 'N',
-        'SET_STATUS_404' => 'N',
-        'SET_TITLE' => 'N',
-        'SHOW_404' => 'N',
-        'STRICT_SECTION_CHECK' => 'N',
-        'USE_PERMISSIONS' => 'N',
-        'USE_SHARE' => 'N',
-    ],
-    false
-); ?>
+            $APPLICATION->IncludeComponent(
+                'bitrix:news.detail',
+                'include_h3_empty',
+                [
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'common_docs_banner_item2',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
+                ],
+                false
+            ); ?>
             <?php
-$APPLICATION->IncludeComponent(
-    'bitrix:news.detail',
-    'include_Fbody',
-    [
-        'ACTIVE_DATE_FORMAT' => 'd.m.Y',
-        'ADD_ELEMENT_CHAIN' => 'N',
-        'ADD_SECTIONS_CHAIN' => 'N',
-        'AJAX_MODE' => 'N',
-        'AJAX_OPTION_ADDITIONAL' => '',
-        'AJAX_OPTION_HISTORY' => 'N',
-        'AJAX_OPTION_JUMP' => 'N',
-        'AJAX_OPTION_STYLE' => 'N',
-        'BROWSER_TITLE' => '-',
-        'CACHE_GROUPS' => 'Y',
-        'CACHE_TIME' => '36000000',
-        'CACHE_TYPE' => 'A',
-        'CHECK_DATES' => 'Y',
-        'DETAIL_URL' => '',
-        'DISPLAY_BOTTOM_PAGER' => 'N',
-        'DISPLAY_DATE' => 'N',
-        'DISPLAY_NAME' => 'N',
-        'DISPLAY_PICTURE' => 'N',
-        'DISPLAY_PREVIEW_TEXT' => 'Y',
-        'DISPLAY_TOP_PAGER' => 'N',
-        'ELEMENT_CODE' => 'common_docs_banner_item3',
-        'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
-        'FIELD_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'IBLOCK_ID' => '',
-        'IBLOCK_TYPE' => 'CityStaffUIP',
-        'IBLOCK_URL' => '',
-        'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
-        'MESSAGE_404' => '',
-        'META_DESCRIPTION' => '-',
-        'META_KEYWORDS' => '-',
-        'PAGER_BASE_LINK_ENABLE' => 'N',
-        'PAGER_SHOW_ALL' => 'N',
-        'PAGER_TEMPLATE' => '.default',
-        'PAGER_TITLE' => 'Страница',
-        'PROPERTY_CODE' => [
-            0 => '',
-            1 => '',
-        ],
-        'SET_BROWSER_TITLE' => 'N',
-        'SET_CANONICAL_URL' => 'N',
-        'SET_LAST_MODIFIED' => 'N',
-        'SET_META_DESCRIPTION' => 'N',
-        'SET_META_KEYWORDS' => 'N',
-        'SET_STATUS_404' => 'N',
-        'SET_TITLE' => 'N',
-        'SHOW_404' => 'N',
-        'STRICT_SECTION_CHECK' => 'N',
-        'USE_PERMISSIONS' => 'N',
-        'USE_SHARE' => 'N',
-    ],
-    false
-); ?>
+            $APPLICATION->IncludeComponent(
+                'bitrix:news.detail',
+                'include_Fbody',
+                [
+                'ACTIVE_DATE_FORMAT' => 'd.m.Y',
+                'ADD_ELEMENT_CHAIN' => 'N',
+                'ADD_SECTIONS_CHAIN' => 'N',
+                'AJAX_MODE' => 'N',
+                'AJAX_OPTION_ADDITIONAL' => '',
+                'AJAX_OPTION_HISTORY' => 'N',
+                'AJAX_OPTION_JUMP' => 'N',
+                'AJAX_OPTION_STYLE' => 'N',
+                'BROWSER_TITLE' => '-',
+                'CACHE_GROUPS' => 'Y',
+                'CACHE_TIME' => '36000000',
+                'CACHE_TYPE' => 'A',
+                'CHECK_DATES' => 'Y',
+                'DETAIL_URL' => '',
+                'DISPLAY_BOTTOM_PAGER' => 'N',
+                'DISPLAY_DATE' => 'N',
+                'DISPLAY_NAME' => 'N',
+                'DISPLAY_PICTURE' => 'N',
+                'DISPLAY_PREVIEW_TEXT' => 'Y',
+                'DISPLAY_TOP_PAGER' => 'N',
+                'ELEMENT_CODE' => 'common_docs_banner_item3',
+                'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
+                'FIELD_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'IBLOCK_ID' => '',
+                'IBLOCK_TYPE' => 'CityStaffUIP',
+                'IBLOCK_URL' => '',
+                'INCLUDE_IBLOCK_INTO_CHAIN' => 'N',
+                'MESSAGE_404' => '',
+                'META_DESCRIPTION' => '-',
+                'META_KEYWORDS' => '-',
+                'PAGER_BASE_LINK_ENABLE' => 'N',
+                'PAGER_SHOW_ALL' => 'N',
+                'PAGER_TEMPLATE' => '.default',
+                'PAGER_TITLE' => 'Страница',
+                'PROPERTY_CODE' => [
+                0 => '',
+                1 => '',
+                ],
+                'SET_BROWSER_TITLE' => 'N',
+                'SET_CANONICAL_URL' => 'N',
+                'SET_LAST_MODIFIED' => 'N',
+                'SET_META_DESCRIPTION' => 'N',
+                'SET_META_KEYWORDS' => 'N',
+                'SET_STATUS_404' => 'N',
+                'SET_TITLE' => 'N',
+                'SHOW_404' => 'N',
+                'STRICT_SECTION_CHECK' => 'N',
+                'USE_PERMISSIONS' => 'N',
+                'USE_SHARE' => 'N',
+                ],
+                false
+            ); ?>
         </div>
     </section>
     <!--общее-->
@@ -737,27 +737,30 @@ $APPLICATION->IncludeComponent(
                         $file['id'],
                         $file['download']
                     )->setTitle($file['name']);
-                $fileExtension = strtolower($file['getExtension']);
-                $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
-                $audioExtensions = ['mp3', 'wav', 'ogg'];
-                $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+                    $fileExtension = strtolower($file['getExtension']);
+                    $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
+                    $audioExtensions = ['mp3', 'wav', 'ogg'];
+                    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
-                if (in_array($fileExtension, $videoExtensions)) {
-                    $attributes->setAttribute('data-viewer-type', 'video');
-                } elseif (in_array($fileExtension, $audioExtensions)) {
-                    $attributes->setAttribute('data-viewer-type', 'audio');
-                } elseif (in_array($fileExtension, $imageExtensions)) {
-                    $attributes->setAttribute('data-viewer-type', 'image');
-                } else {
-                    $attributes->setAttribute('data-viewer-type', 'file');
-                }
-                ?>
+                    if (in_array($fileExtension, $videoExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'video');
+                    } elseif (in_array($fileExtension, $audioExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'audio');
+                    } elseif (in_array($fileExtension, $imageExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'image');
+                    } else {
+                        $attributes = '';
+                    }
+                    ?>
 
                     <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-                    <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center"
-                          <?= $attributes ?>style="cursor: pointer;">
-                        смотреть
-                    </span>
+                        <?php if(!empty($attributes)):?>
+                            <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center" <?= $attributes ?>style="cursor: pointer;">
+                                смотреть
+                            </span>
+                        <?php else:?>
+                            <a href="<?= $file['download'] ?>" _blank class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a>
+                        <?php endif;?>
                         <a href="<?= $file['download'] ?>" class="NB1_docs_item_right_download d-flex"
                            style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/assets/img/download.svg');"></a>
                     </div>
@@ -1031,27 +1034,30 @@ $APPLICATION->IncludeComponent(
                                 $file['id'],
                                 $file['download']
                             )->setTitle($file['name']);
-                        $fileExtension = strtolower($file['getExtension']);
-                        $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
-                        $audioExtensions = ['mp3', 'wav', 'ogg'];
-                        $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+                            $fileExtension = strtolower($file['getExtension']);
+                            $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
+                            $audioExtensions = ['mp3', 'wav', 'ogg'];
+                            $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
 
-                        if (in_array($fileExtension, $videoExtensions)) {
-                            $attributes->setAttribute('data-viewer-type', 'video');
-                        } elseif (in_array($fileExtension, $audioExtensions)) {
-                            $attributes->setAttribute('data-viewer-type', 'audio');
-                        } elseif (in_array($fileExtension, $imageExtensions)) {
-                            $attributes->setAttribute('data-viewer-type', 'image');
-                        } else {
-                            $attributes->setAttribute('data-viewer-type', 'file');
-                        }
-                        ?>
+                            if (in_array($fileExtension, $videoExtensions)) {
+                                $attributes->setAttribute('data-viewer-type', 'video');
+                            } elseif (in_array($fileExtension, $audioExtensions)) {
+                                $attributes->setAttribute('data-viewer-type', 'audio');
+                            } elseif (in_array($fileExtension, $imageExtensions)) {
+                                $attributes->setAttribute('data-viewer-type', 'image');
+                            } else {
+                                $attributes = '';
+                            }
+                            ?>
 
                             <div class="NB1_docs_item_right d-flex flex-row justify-content-between">
-                    <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center"
-                          <?= $attributes ?>style="cursor: pointer;">
-                        смотреть
-                    </span>
+                                <?php if(!empty($attributes)):?>
+                                    <span class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center" <?= $attributes ?>style="cursor: pointer;">
+                                        смотреть
+                                    </span>
+                                <?php else:?>
+                                    <a href="<?= $file['download'] ?>" _blank class="Fa NB1_docs_item_right_look d-flex flex-row align-items-center">смотреть</a>
+                                <?php endif;?>
                                 <a href="<?= $file['download'] ?>" class="NB1_docs_item_right_download d-flex"
                                    style="background-image: url('<?= SITE_TEMPLATE_PATH ?>/assets/img/download.svg');"></a>
                             </div>
