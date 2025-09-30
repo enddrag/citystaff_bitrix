@@ -3159,7 +3159,16 @@
  </field>
  <field name="DETAIL_PICTURE"/>
  <field name="DETAIL_TEXT">
-  <value><![CDATA[<img src="/local/templates/landing/assets/img/structure.jpg">]]></value>
+  <value><![CDATA[<p style="text-align: center;">
+	Матвей хочет сюда что то приписать
+</p>
+<p style="text-align: left;">
+	Чтож... попробую
+</p>
+<h2 style="text-align: left;">УРЫ</h2>
+<p style="text-align: center;">
+</p>
+ <img src="/local/templates/landing/assets/img/structure.jpg">]]></value>
  </field>
  <field name="DETAIL_TEXT_TYPE">
   <value>html</value>

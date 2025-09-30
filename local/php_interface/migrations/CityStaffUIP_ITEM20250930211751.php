@@ -2,7 +2,7 @@
 
 namespace Sprint\Migration;
 
-class CityStaffUIP_ITEM20250930195258 extends Version
+class CityStaffUIP_ITEM20250930211751 extends Version
 {
     protected $author = "pmv05";
 
