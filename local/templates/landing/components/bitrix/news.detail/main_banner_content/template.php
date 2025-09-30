@@ -27,6 +27,7 @@ Extension::load('ui.viewer');
 $title = '';
 $paragraph = '';
 $a_link = '';
+$file_link = '';
 $a_name = '';
 foreach ($arResult['PROPERTIES'] as $property) {
     switch ($property['NAME']) {
@@ -67,6 +68,7 @@ foreach ($arResult['PROPERTIES'] as $property) {
 
                     ]);
                     foreach ($fileObjectList as $file) {
+                        $file_link = $urlManager->getUrlForDownloadFile($file);
                         $attributes = ItemAttributes::tryBuildByFileId(
                             $file->getId(),
                             $urlManager->getUrlForDownloadFile($file),
@@ -106,3 +108,6 @@ foreach ($arResult['PROPERTIES'] as $property) {
         <h1 class="NB_corner_h"><?= $title ?></h1>
     </div>
 </div>
+<video autoplay loop muted playsinline class="NB_banner_preview">
+    <source src="<?=$file_link?>" type="video/mp4">
+</video>

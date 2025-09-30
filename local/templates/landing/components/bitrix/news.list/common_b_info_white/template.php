@@ -33,9 +33,11 @@ $this->setFrameMode(true);
         );
         $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
         if ($arSection = $selectSection->GetNext()) {
-            if ($arSection['NAME'] !== "белые элементы") {
+            if ($arSection['CODE'] !== "bonus_white") {
                 continue;
             }
+        } else {
+            continue;
         }
         $link = '';
         $name = '';

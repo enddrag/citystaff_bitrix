@@ -19,12 +19,6 @@ $link = 'За что начисляются?';
 //формируем массив данных для js
 $modalsData = [];
 foreach ($arResult['ITEMS'] as $arItem) {
-    $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
-    if ($arSection = $selectSection->GetNext()) {
-        if ($arSection['NAME'] != 'заработок монеток') {
-            continue;
-        }
-    }
     $modalsData[$arItem['CODE']] = $arItem['DETAIL_TEXT'];
 }
 ?>
@@ -53,12 +47,6 @@ foreach ($arResult['ITEMS'] as $arItem) {
             CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),
             ['CONFIRM' => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')]
         );
-        $selectSection = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
-        if ($arSection = $selectSection->GetNext()) {
-            if ($arSection['NAME'] != 'заработок монеток') {
-                continue;
-            }
-        }
         ?>
         <div class="NB2_stafcoin_item NB_rounded-20 d-flex flex-row justify-content-between align-items-center"
              id="<?= $this->GetEditAreaId($arItem['ID']); ?>">

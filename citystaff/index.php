@@ -8,9 +8,6 @@ $APPLICATION->SetTitle('Главная', true);
     <!----баннер лендинга---->
     <section class="NB_banner d-flex flex-column align-items-center"
              style=" background: linear-gradient(#00000000 0%, black)">
-        <video autoplay loop muted playsinline class="NB_banner_preview">
-            <source src="<?= SITE_TEMPLATE_PATH ?>/assets/img/banner.mp4" type="video/mp4">
-        </video>
         <!--навигационное меню сайта-->
         <nav class="NB_menu NB_menu_color NB_backdrop-blur NB_rounded-50 widthBase navbar navbar-expand-lg d-flex flex-row justify-content-around">
             <div class="NB_left d-flex flex-row justify-content-around align-items-center">
@@ -424,7 +421,6 @@ $APPLICATION->SetTitle('Главная', true);
                                 'CACHE_TIME' => '36000000',
                                 'CACHE_TYPE' => 'A',
                                 'CHECK_DATES' => 'Y',
-
                                 'DETAIL_URL' => '',
                                 'DISPLAY_BOTTOM_PAGER' => 'Y',
                                 'DISPLAY_DATE' => 'Y',
@@ -449,7 +445,7 @@ $APPLICATION->SetTitle('Главная', true);
                                 'PAGER_TEMPLATE' => '.default',
                                 'PAGER_TITLE' => 'Новости',
                                 'PARENT_SECTION' => '',
-                                'PARENT_SECTION_CODE' => '',
+                                'PARENT_SECTION_CODE' => 'aboutPoints',
                                 'PREVIEW_TRUNCATE_LEN' => '',
                                 'PROPERTY_CODE' => [0 => '', 1 => ''],
                                 'SET_BROWSER_TITLE' => 'N',
@@ -693,7 +689,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'PAGER_TEMPLATE' => '.default',
                 'PAGER_TITLE' => 'Новости',
                 'PARENT_SECTION' => '',
-                'PARENT_SECTION_CODE' => '',
+                'PARENT_SECTION_CODE' => 'clients',
                 'PREVIEW_TRUNCATE_LEN' => '',
                 'PROPERTY_CODE' => [0 => '', 1 => ''],
                 'SET_BROWSER_TITLE' => 'N',
@@ -815,7 +811,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'PAGER_TEMPLATE' => '.default',
                 'PAGER_TITLE' => 'Новости',
                 'PARENT_SECTION' => '',
-                'PARENT_SECTION_CODE' => '',
+                'PARENT_SECTION_CODE' => 'uniting',
                 'PREVIEW_TRUNCATE_LEN' => '',
                 'PROPERTY_CODE' => [0 => '', 1 => ''],
                 'SET_BROWSER_TITLE' => 'N',
