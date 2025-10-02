@@ -96,12 +96,12 @@ $(document).ready(function() {
     if (item && type){
         if(type == 'doc'){
             $('#search_documents').val(item);
-            window.scrollTo(0, $('#documents_list').offset().top);
+            window.scrollTo(0, $('#documents_list').offset().top - 100);
             filterDocuments();
         }
         else if(type == 'temp'){
             $('#search_templates').val(item);
-            window.scrollTo(0, $('#templates_list').offset().top);
+            window.scrollTo(0, $('#templates_list').offset().top - 100);
             filtertemplates();
         }
     }
