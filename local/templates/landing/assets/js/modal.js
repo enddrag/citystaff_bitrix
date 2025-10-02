@@ -6,12 +6,15 @@ $(document).ready(function() {
     function openModal(modalId) {
         $('#' + modalId).addClass('NB_active');
         $('body').css('overflow', 'hidden'); // Блокируем прокрутку фона
+
+        //убираем ошибки по умолчанию
+        $('.b24-form-field').removeClass('b24-form-control-alert');
     }
 
     // Функция закрытия модального окна
     function closeModal(modalId) {
         $('#' + modalId).removeClass('NB_active');
-        
+
         // Восстанавливаем прокрутку только если нет других открытых модальных окон
         if ($('.NB_active').length === 0) {
             $('body').css('overflow', 'auto');
@@ -22,10 +25,10 @@ $(document).ready(function() {
         $('#happyMonkey').css('display', 'none');
         $('#sadMonkey').css('display', 'none');
         $('.b24-form-wrapper').removeClass('b24-from-state-on');
-        $('.b24-form-wrapper .b24-form-control').each(function (){
-            $(this).val('');
-            $(this).removeClass('b24-form-control-not-empty');
-        });
+        $('button.b24-form-btn.b24-form-btn-border.b24-form-btn-tight').click();
+
+        //убираем ошибки при закрытии
+        $('.b24-form-field').removeClass('b24-form-control-alert');
     }
 
     // Открытие модального окна по клику на кнопку с атрибутом data-modal
@@ -94,6 +97,14 @@ $(document).ready(function() {
             $('#survey').css('display', 'none');
             $('#sadMonkey').css('display', 'flex');
         }
+
+        //форма обратной связи
+        if($('.NB3_banner_form .b24-form-wrapper').hasClass('b24-from-state-on')){
+            $('.NB3_banner_form .b24-form-btn-block').remove();
+            $('.NB3_banner_form .b24-form-wrapper').removeClass('b24-from-state-on')
+            $('.NB3_banner_form .b24-form-btn-container').append('<p class="Fbody"><mark>Сообщение отправлено</mark></p>');
+        }
+
     }
     // наблюдатель изменения DOM
     var obs = new MutationObserver(function(){

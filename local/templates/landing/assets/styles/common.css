@@ -835,7 +835,7 @@
 
 }
 
-.NB3_banner_form .b24-form-btn-block {
+.NB3_banner_form .b24-form-btn-block, .NB3_banner_form .b24-form-btn-container p {
     margin-top: 50px;
 }
 
@@ -1492,7 +1492,7 @@
         margin-bottom: 0;
     }
 
-    .NB3_banner_form .b24-form-btn-block {
+    .NB3_banner_form .b24-form-btn-block, .NB3_banner_form .b24-form-btn-container p {
         margin-top: 40px;
     }
 

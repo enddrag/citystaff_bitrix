@@ -800,8 +800,7 @@ $APPLICATION->SetTitle('Бонус');
                 ); ?>
             </div>
         </div>
-        <div class="NB2_bonusInfo_right NB_rounded-20 d-flex flex-column justify-content-between align-items-center">
-            <?php
+        <?php
             $APPLICATION->IncludeComponent(
                 'bitrix:news.detail',
                 'common_b_info_green',
@@ -818,7 +817,7 @@ $APPLICATION->SetTitle('Бонус');
                     'CACHE_GROUPS' => 'Y',
                     'CACHE_TIME' => '36000000',
                     'CACHE_TYPE' => 'A',
-                    'CHECK_DATES' => 'Y',
+                    'CHECK_DATES' => 'N',
                     'DETAIL_URL' => '',
                     'DISPLAY_BOTTOM_PAGER' => 'Y',
                     'DISPLAY_DATE' => 'Y',
@@ -867,7 +866,6 @@ $APPLICATION->SetTitle('Бонус');
                 ],
                 false
             ); ?>
-        </div>
     </section>
     <!--модальное окно-->
     <section class="NB_modal d-flex flex-row align-items-center justify-content-center"
