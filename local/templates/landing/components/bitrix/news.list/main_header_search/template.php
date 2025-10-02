@@ -1,5 +1,6 @@
 <?php
 
+global $fileList, $templateList;
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
@@ -126,6 +127,22 @@ foreach ($files as $file) {
         <?php foreach ($arr as $item) :?>
         {title: "<?=$item['title'];?>", url: "<?=$item['url'];?>"},
         <?php endforeach;?>
+        <?php
+        foreach ($fileList as $item) {
+        ?>
+        {
+            title: "(док) <?=$item['name']?>",
+            url: "/citystaff/docs_base/index.php?item=<?=$item['name']?>&type=doc"
+        },
+        <?php }?>
+        <?php
+        foreach ($templateList as $item) {
+        ?>
+        {
+            title: "(шаб) <?=$item['name']?>",
+            url: "/citystaff/docs_base/index.php?item=<?=$item['name']?>&type=temp"
+        },
+        <?php }?>
 
     ];
 </script>
