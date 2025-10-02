@@ -1,6 +1,6 @@
 <?php
 
-global $APPLICATION, $IB_ID;
+global $APPLICATION, $IB_ID, $templateList, $fileList;
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 $APPLICATION->SetTitle('Главная', true);
 
@@ -137,7 +137,6 @@ $APPLICATION->SetTitle('Главная', true);
                         'SORT_ORDER1' => 'DESC',
                         'SORT_ORDER2' => 'ASC',
                         'STRICT_SECTION_CHECK' => 'N',
-
                     ],
                     false
                 ); ?>

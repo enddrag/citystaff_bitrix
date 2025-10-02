@@ -6,8 +6,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 global $APPLICATION;
 
+use Bitrix\Disk\Driver;
+use Bitrix\Disk\Internals\ObjectTable;
 use Bitrix\Intranet\CurrentUser;
 use Bitrix\Main\Context;
+use Bitrix\Main\Loader;
 use Bitrix\Main\Page\Asset;
 use Bitrix\Main\UI\Extension;
 
@@ -32,6 +35,78 @@ while ($iblock_list = $res->Fetch()) {
 if (!CurrentUser::get()->isAuthorized()) {
     LocalRedirect('/');
 }
+
+$contextIgnore = [
+    'шаблон',
+    'образец',
+    'бланк',
+    'заявление',
+];
+$extension = [
+    '.docx',
+    '.doc',
+    '.xlsx',
+    '.xls',
+    '.pptx',
+    '.ppt',
+    '.pdf',
+];
+$fileList = [];
+$templateList = [];
+if (Loader::includeModule('disk') && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')) {
+    $securityContext = $storage->getCurrentUserSecurityContext();
+    $urlManager = Driver::getInstance()->getUrlManager();
+    $folderObjectList = $storage->getChildren($securityContext, [
+        'filter' => [
+            'TYPE' => ObjectTable::TYPE_FOLDER,
+        ],
+        'order' => [
+            'ID' => 'DESC',
+        ],
+    ]);
+    foreach ($folderObjectList as $folder) {
+        $fileObjectList = $folder->getChildren($securityContext, [
+            'filter' => [
+                'TYPE' => ObjectTable::TYPE_FILE,
+                '%NAME' => $extension,
+                '!%NAME' => $contextIgnore,
+            ],
+            'order' => [
+                'ID' => 'DESC',
+            ],
+        ]);
+        foreach ($fileObjectList as $file) {
+            $fileList[] = [
+                'id' => $file->getId(),
+                'name' => str_replace($extension, '', $file->getName()),
+                'download' => $urlManager->getUrlForDownloadFile($file),
+                'getExtension' => $file->getExtension(),
+            ];
+        }
+    }
+    foreach ($folderObjectList as $folder) {
+        $fileObjectList = $folder->getChildren($securityContext, [
+            'filter' => [
+                'TYPE' => ObjectTable::TYPE_FILE,
+                '%NAME' => $extension,
+                '%NAME' => $contextIgnore,
+            ],
+            'order' => [
+                'ID' => 'DESC',
+            ],
+        ]);
+
+        foreach ($fileObjectList as $file) {
+            $templateList[] = [
+                'id' => $file->getId(),
+                'name' => str_replace($extension, '', $file->getName()),
+                'download' => $urlManager->getUrlForDownloadFile($file),
+                'getExtension' => $file->getExtension(),
+            ];
+        }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

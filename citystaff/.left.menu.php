@@ -17,7 +17,7 @@ $aMenuLinks = array(
     ),
     array(
         "Шаблоны",
-        "/citystaff/docs_base/index.php#templates",
+        "/citystaff/docs_base/index.php#Bannertemplates",
         array(),
         array(),
         ""
