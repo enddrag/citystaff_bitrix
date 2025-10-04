@@ -741,10 +741,12 @@
     background: rgba(255, 255, 255, 0.24);
     color: white;
     width: 100%;
-    padding-left: 40px !important;
-    padding-right: 150px !important;
 }
-.b24-form-control-container:has(textarea) .b24-form-control-label{
+.NB3_banner_form_input, .NB3_banner_form_text, .NB3_banner_form textarea.b24-form-control, .NB3_banner_form .b24-form-control{
+    padding-left: 40px !important;
+    padding-right: 100px !important;
+}
+.NB3_banner_form .b24-form-control-container:has(textarea) .b24-form-control-label{
     padding-right: 150px !important;
     white-space: normal;
     word-wrap: normal;
@@ -1244,13 +1246,15 @@
     .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after {
         font-size: 14px;
     }
-
-    .NB3_banner_form_text {
-        padding-right: 120px;
+    .NB3_banner_form .b24-form-control-container:has(textarea) .b24-form-control-label{
+        padding-right: 120px !important;
     }
 
     .NB3_banner_form_text, .NB3_banner_form textarea.b24-form-control {
         height: 180px !important;
+    }
+    .NB3_banner_form_input, .NB3_banner_form_text, .NB3_banner_form textarea.b24-form-control, .NB3_banner_form .b24-form-control{
+        padding-right: 90px !important;
     }
 
     .NB3_info1 {
@@ -1435,6 +1439,9 @@
         padding-left: 35px;
         height: 40px;
         border-radius: 15px;
+    }
+    .NB3_banner_form_input, .NB3_banner_form_text, .NB3_banner_form textarea.b24-form-control, .NB3_banner_form .b24-form-control{
+        padding-right: 60px !important;
     }
 
     .NB3_banner_form_button {
@@ -1673,10 +1680,15 @@
     .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after {
         font-size: 11px;
     }
+    .NB3_banner_form .b24-form-control-container:has(textarea) .b24-form-control-label{
+        padding-right: 100px !important;
+    }
 
     .NB3_banner_form_text {
         height: 150px;
-        padding-right: 90px;
+    }
+    .NB3_banner_form_input, .NB3_banner_form_text, .NB3_banner_form textarea.b24-form-control, .NB3_banner_form .b24-form-control{
+        padding-right: 50px !important;
     }
     .NB3_banner_form .b24-form-control-alert-message{
         transform: translateY(0%) !important;
@@ -1840,12 +1852,19 @@
         font-size: 15px !important;
     }
 
+    .NB3_banner{
+        padding-top: 40px;
+    }
+
     .NB3_banner_form {
         min-width: auto;
     }
 
     .NB3_banner_form_p, .NB3_banner_form .b24-form-control-container:has(textarea)::after {
         font-size: 10px;
+    }
+    .NB3_banner_form .b24-form-control-container:has(textarea) .b24-form-control-label{
+        padding-right: 70px !important;
     }
 
     .NB3_info1 {

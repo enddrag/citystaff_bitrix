@@ -410,6 +410,7 @@ input[type="search"]::-webkit-search-results-decoration {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    max-width: 170px;
 }
 
 .NB_avatar_photo {
@@ -1209,7 +1210,18 @@ body:has(section.NB_modal.NB_active) {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-
+.NB_modal_item textarea.b24-form-control{ /*textarea у модального окна с реферальной формой*/
+    resize: none;
+    width: 95% !important;
+    min-width: auto !important;
+    max-width: auto !important;
+    min-height: 104px !important; /*размер 2х от стандартного input*/
+    padding-top: 12px !important; /*отступ для ввода текста*/
+}
+.NB_modal_item .b24-form-control-container:has(textarea) .b24-form-control-label{ /*textarea у модального окна с реферальной формой*/
+    top: 13px !important; /*положение для placeholder*/
+}
+.NB_modal_item textarea.b24-form-control::-webkit-scrollbar, /*textarea у модального окна с реферальной формой*/
 .NB_modal_item_item::-webkit-scrollbar,
 .NB_modal_item_text::-webkit-scrollbar,
 .NB_modal_select .options-container::-webkit-scrollbar {
@@ -1325,7 +1337,7 @@ body:has(section.NB_modal.NB_active) {
     backdrop-filter: blur(1px);
     color: white !important;
     padding-left: 50px !important;
-    padding-top: 0 !important;
+    padding-top: 5px !important;
     padding-bottom: 0 !important;
 }
 
@@ -1633,7 +1645,7 @@ body:has(section.NB_modal.NB_active) {
     height: 30px;
     width: 95%;
     margin-left: 2.5%;
-    top: 27px !important;
+    top: 28px !important;
 }
 
 .b24-form-control:-webkit-autofill,
@@ -1870,6 +1882,16 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_item {
         width: 850px;
     }
+    .NB_modal_item textarea.b24-form-control{ /*textarea у модального окна с реферальной формой*/
+        min-height: 90px !important; /*размер 2х от стандартного input*/
+    }
+    .NB_modal_item textarea.b24-form-control{ /*textarea у модального окна с реферальной формой*/
+        min-height: 90px !important; /*размер 2х от стандартного input*/
+        padding-top: 10px !important; /*отступ для ввода текста*/
+    }
+    .NB_modal_item .b24-form-control-container:has(textarea) .b24-form-control-label{ /*textarea у модального окна с реферальной формой*/
+        top: 9px !important; /*положение для placeholder*/
+    }
 
     .NB_bottomMenu img {
         width: 10px;
@@ -1884,7 +1906,7 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_form_error:before {
         width: 25px;
         height: 25px;
-        transform: rotate(180deg) translateY(-11px) translateX(100%);
+        transform: rotate(180deg) translateY(-10px) translateX(100%);
     }
 
     .NB_selected-option {
@@ -1902,6 +1924,12 @@ body:has(section.NB_modal.NB_active) {
 
     .NB_modal_select .NB_options-container {
         max-height: 175px
+    }
+    .b24-form-control{
+        padding-top: 3px !important;
+    }
+    .b24-form-control-label{
+        top: 24px !important;
     }
     .b24-form-control-alert-message{
         transform: translateY(30%);
@@ -2011,6 +2039,7 @@ body:has(section.NB_modal.NB_active) {
 
     .NB_navbar {
         width: auto;
+        margin-right: 10px;
     }
 
     .NB_nav_special,
@@ -2290,6 +2319,14 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_item {
         width: 700px;
     }
+    .NB_modal_item textarea.b24-form-control{ /*textarea у модального окна с реферальной формой*/
+        min-height: 80px !important; /*размер 2х от стандартного input*/
+        padding-top: 10px !important;
+    }
+    .NB_modal_item .b24-form-control-container:has(textarea) .b24-form-control-label{ /*textarea у модального окна с реферальной формой*/
+        top: 7px !important; /*положение для placeholder*/
+    }
+
 
     .NB_modal_input_form_input, .b24-form-control,
     .NB_modal_input_form_button, .b24-form-btn {
@@ -2331,8 +2368,14 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_form_error:before {
         width: 22px;
         height: 22px;
-        transform: rotate(180deg) translateY(-10px) translateX(100%);
+        transform: rotate(180deg) translateY(-9px) translateX(100%);
         font-size: 16px;
+    }
+    .b24-form-control{
+        padding-top: 4px !important;
+    }
+    .b24-form-control-label{
+        top: 23px !important;
     }
     .b24-form-control-list .b24-form-icon-remove {
         height: 40px !important;
@@ -2503,7 +2546,13 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_item {
         width: 700px;
     }
-
+    .NB_modal_item textarea.b24-form-control{ /*textarea у модального окна с реферальной формой*/
+        min-height: 70px !important; /*размер 2х от стандартного input*/
+        padding-top: 9px !important;
+    }
+    .NB_modal_item .b24-form-control-container:has(textarea) .b24-form-control-label{ /*textarea у модального окна с реферальной формой*/
+        top: 4px !important; /*положение для placeholder*/
+    }
     .NB_modal_input_form_input, .b24-form-control,
     .NB_modal_input_form_button, .b24-form-btn {
         height: 35px !important;
@@ -2536,6 +2585,9 @@ body:has(section.NB_modal.NB_active) {
 
     .NB_modal_select .NB_option {
         padding: 7px 45px
+    }
+    .b24-form-control-label{
+        top: 19px !important;
     }
     .b24-form-control-list .b24-form-icon-remove {
         height: 35px !important;
@@ -2769,6 +2821,17 @@ body:has(section.NB_modal.NB_active) {
         width: 600px;
     }
 
+    .NB_modal_item textarea.b24-form-control{ /*textarea у модального окна с реферальной формой*/
+        min-height:66px !important; /*размер 2х от стандартного input*/
+        padding-top: 7px !important;
+    }
+    .NB_modal_item .b24-form-control-container:has(textarea) .b24-form-control-label{ /*textarea у модального окна с реферальной формой*/
+        top: 3px !important;
+    }
+    .b24-form-control-label{
+        top: 18px !important;
+    }
+
     .NB_modal_input_form_input, .NB_modal_input_form_button, .b24-form-btn, .b24-form-control {
         height: 33px !important;
     }
@@ -2797,7 +2860,7 @@ body:has(section.NB_modal.NB_active) {
     .NB_modal_form_error:before {
         width: 18px;
         height: 18px;
-        transform: rotate(180deg) translateY(-8px) translateX(100%);
+        transform: rotate(180deg) translateY(-7px) translateX(100%);
         font-size: 14px;
     }
 
@@ -2812,10 +2875,6 @@ body:has(section.NB_modal.NB_active) {
 
     .b24-form-dropdown {
         top: 38px !important
-    }
-
-    .b24-form-control-label {
-        top: 42% !important;
     }
 
     .b24-form-icon-after.b24-form-icon-remove {
