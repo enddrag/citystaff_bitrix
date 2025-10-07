@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="CityStaffUIP:docsInfo" exchangeVersion="2" >
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>Контроль качества</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="imgexample.png" type="file">iblock/766/5njcrdu61bufjz7j2ohegegab5l5yorl/imgexample.png</value>
+ </field>
+ <field name="PREVIEW_TEXT">
+  <value>регламенты, скрипты контроля, чек-листы</value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>quality_control</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>83</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="docs_info">документы инфо</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Открыть</value>
+ </property>
+ <property name="link_href">
+  <value>index.php</value>
+ </property>
+ <property name="link1_name"/>
+ <property name="link1_href"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>Курсы мониторинга</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="imgexample.png" type="file">iblock/962/5jbje58786om1pyn6663jg0k1n6232wy/imgexample.png</value>
+ </field>
+ <field name="PREVIEW_TEXT">
+  <value>какой то текст</value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>85</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="docs_info">документы инфо</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Открыть</value>
+ </property>
+ <property name="link_href">
+  <value>test.php</value>
+ </property>
+ <property name="link1_name"/>
+ <property name="link1_href"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>Стаффлики</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="gift.png" type="file">iblock/66b/748c6av9dosc8207vism3d2hprmwrg6x/gift.png</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE">
+  <value name="coin.png" type="file">iblock/870/4ef8w1t7xsubhfjrg4c42gx1kllznehs/coin.png</value>
+ </field>
+ <field name="DETAIL_TEXT">
+  <value>Бонусы, которые можно менять&#13;
+на подарки в маркетплейсе</value>
+ </field>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>staffcoin</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>91</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="bonus_info">бонус инфо</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Открыть</value>
+ </property>
+ <property name="link_href">
+  <value>index.php</value>
+ </property>
+ <property name="link1_name">
+  <value>Маркет</value>
+ </property>
+ <property name="link1_href">
+  <value>index.php</value>
+ </property>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>пригласи друга</value>
+ </field>
+ <field name="PREVIEW_PICTURE"/>
+ <field name="PREVIEW_TEXT">
+  <value><![CDATA[Получи <mark>5000 рублей за друга</mark>]]></value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>html</value>
+ </field>
+ <field name="DETAIL_PICTURE">
+  <value name="pig.png" type="file">iblock/cb2/u4g48xqfvsic5flt8m7xbsmh2lmca13z/pig.png</value>
+ </field>
+ <field name="DETAIL_TEXT">
+  <value>Рекомендуйте своего знакомого на любую вакансию — и получите 5000 рублей после его выхода на работу</value>
+ </field>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>money</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>92</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="bonus_info">бонус инфо</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Оставить заявку</value>
+ </property>
+ <property name="link_href"/>
+ <property name="link1_name"/>
+ <property name="link1_href"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>скидки на спорт</value>
+ </field>
+ <field name="PREVIEW_PICTURE"/>
+ <field name="PREVIEW_TEXT">
+  <value><![CDATA[Занимайтесь спортом
+<mark>со скидкой</mark>]]></value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>html</value>
+ </field>
+ <field name="DETAIL_PICTURE">
+  <value name="sport.png" type="file">iblock/f65/guihhqcd2cz22rih8xzkf6vsj1p6bbmj/sport.png</value>
+ </field>
+ <field name="DETAIL_TEXT">
+  <value>Полный список залови прайс в Ижевске</value>
+ </field>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>sport_offer</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>93</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="bonus_info">бонус инфо</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Оставить заявку</value>
+ </property>
+ <property name="link_href">
+  <value>index.php</value>
+ </property>
+ <property name="link1_name">
+  <value>Открыть</value>
+ </property>
+ <property name="link1_href">
+  <value>index.php</value>
+ </property>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>Поддержка здоровья</value>
+ </field>
+ <field name="PREVIEW_PICTURE"/>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT">
+  <value>Забота при болезни о вас, когда вы на больничном</value>
+ </field>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>health</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>89</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="2" section_code="bonus_white">белые элементы</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Смотреть</value>
+ </property>
+ <property name="link_href">
+  <value>index.php</value>
+ </property>
+ <property name="link1_name"/>
+ <property name="link1_href"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>Спорт</value>
+ </field>
+ <field name="PREVIEW_PICTURE"/>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT">
+  <value>Корпоративные скидки на фитнес</value>
+ </field>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE">
+  <value>sport</value>
+ </field>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>90</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="2" section_code="bonus_white">белые элементы</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Смотреть</value>
+ </property>
+ <property name="link_href">
+  <value>index.php</value>
+ </property>
+ <property name="link1_name"/>
+ <property name="link1_href"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>Курсы по курсам</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="bonus.jpg" type="file">iblock/5de/qxzir9khc1zyy9cbuvsag3vd6o8pd3dt/bonus.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT">
+  <value>Курсы курсов тут</value>
+ </field>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1712</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="docs_info">документы инфо</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+ <property name="link_name">
+  <value>Открыть</value>
+ </property>
+ <property name="link_href">
+  <value>https://demo.citystaff.ru/citystaff/docs_base/index.php</value>
+ </property>
+ <property name="link1_name"/>
+ <property name="link1_href"/>
+</item>
+
+</items>

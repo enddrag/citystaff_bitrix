@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items iblockUid="CityStaffUIP:gallery" exchangeVersion="2" >
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="images (1).jpg" type="file">iblock/a13/0nt1v2qeoy0rbmbg86fqpyyr4eqelg57/images (1).jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>52</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="wintercorp">Зимний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фотка</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="zimnij-timbilding-foto-4-min.jpg" type="file">iblock/3ea/lfodpd0c6ijj5sl6y40nc11pk8lxx6qq/zimnij-timbilding-foto-4-min.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>54</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="wintercorp">Зимний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>g</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="korpa.jpg" type="file">iblock/8d3/zhquba68hi85irduxajkn3939wz263sv/korpa.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>63</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="wintercorp">Зимний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>хото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="images.jpg" type="file">iblock/442/bc9sba6wxozlwqhmky9gs4ppqq763q7g/images.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1713</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="health">Пакеты здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="jj.jpg" type="file">iblock/0fb/xn3fjonrgna9j7h4uxnnao064e8nfhkp/jj.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1756</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="summercorp">Летний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="asd.jpg" type="file">iblock/41a/0kx3fx3fgg86fy1cquazwk13v2ueb790/asd.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1757</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="summercorp">Летний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="sport-prazdnik-6-1-2345343320.jpg" type="file">iblock/cb5/3q7t0ol1t2ggx1a6ou6r5wdy56j1f4iy/sport-prazdnik-6-1-2345343320.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1758</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="summercorp">Летний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="sport-prazdnik-7-3623789749.jpg" type="file">iblock/062/fnr4vq0g826f8d4mwi1gqnqagshk5wvn/sport-prazdnik-7-3623789749.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1759</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="summercorp">Летний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="letniy-timbilding-dlya-sotrudnikov.jpeg" type="file">iblock/7f0/vhc193s75m8udxtt29bast1pdyjc7tjg/letniy-timbilding-dlya-sotrudnikov.jpeg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1760</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="summercorp">Летний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="7e5391a1-50e0-5b15-9a8a-519483da65d0-616x400.png" type="file">iblock/eb2/c1j7bdn3c0cfzx0amwxe0dw5p4ve2wg8/7e5391a1-50e0-5b15-9a8a-519483da65d0-616x400.png</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1761</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="summercorp">Летний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фотототото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="images (2).jpg" type="file">iblock/fee/p2wcn0kxpk8k0x2dmeu16oaedyxpq3nl/images (2).jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1762</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="wintercorp">Зимний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>ф</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="images.jpg" type="file">iblock/c47/pt9no39a9spra67tj2i2bgh6m8acdl1v/images.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1763</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="wintercorp">Зимний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>дедус</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="deda.jpg" type="file">iblock/278/r218umwru58n4vbir3lofp0ad3y14kb3/deda.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1764</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="wintercorp">Зимний корпоратив</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фотокарта</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="Holkf5bhk.jpeg" type="file">iblock/f18/1s2eo78b6aufhb3e8jezvip1kxh494v2/Holkf5bhk.jpeg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1765</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="health">Пакеты здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>что то </value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="Holkf5bhk.jpeg" type="file">iblock/9d8/jpntznilvpp6mg1fkq71opnk82wxkxx8/Holkf5bhk.jpeg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1766</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="health">Пакеты здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>пакет</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="images (3).jpg" type="file">iblock/8ad/k9oy4fvh8z7x7xc8c2pedqfi2dyv6peb/images (3).jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1767</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="health">Пакеты здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>кь</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="veterinarnaya-aptechka.jpg" type="file">iblock/af2/39vblw6x4ahr9vqvzrl4lxtg3az1519m/veterinarnaya-aptechka.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1768</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="health">Пакеты здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>кб</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="1713692081131527070.jpg" type="file">iblock/c01/8u1ygiw5c6euy2esw8alq01lgiovg3w7/1713692081131527070.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1769</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="health">Пакеты здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фыв123</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="shashlyk-iz-baraniny.jpg" type="file">iblock/867/v3oq54ukiw22i96g4gifuvn1ftozwzvi/shashlyk-iz-baraniny.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1770</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="NOTGALLERY">Поддержка здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>фото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="images (1).jpg" type="file">iblock/37c/6z2zv09gcj3hkjyfkqug8bu1yp4psn8e/images (1).jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1771</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="NOTGALLERY">Поддержка здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>шото</value>
+ </field>
+ <field name="PREVIEW_PICTURE">
+  <value name="7047787736.jpg" type="file">iblock/b7b/jer7vgc2zleah53m652kyto5hvmkyh9u/7047787736.jpg</value>
+ </field>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE"/>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1772</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="NOTGALLERY">Поддержка здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+<item>
+ <field name="ACTIVE">
+  <value>Y</value>
+ </field>
+ <field name="ACTIVE_FROM"/>
+ <field name="ACTIVE_TO"/>
+ <field name="SORT">
+  <value>500</value>
+ </field>
+ <field name="NAME">
+  <value>321</value>
+ </field>
+ <field name="PREVIEW_PICTURE"/>
+ <field name="PREVIEW_TEXT"/>
+ <field name="PREVIEW_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="DETAIL_PICTURE">
+  <value name="images (2).jpg" type="file">iblock/fb0/hjkoiu6tu3m23yj23cowldgte3xl81kv/images (2).jpg</value>
+ </field>
+ <field name="DETAIL_TEXT"/>
+ <field name="DETAIL_TEXT_TYPE">
+  <value>text</value>
+ </field>
+ <field name="CODE"/>
+ <field name="TAGS"/>
+ <field name="XML_ID">
+  <value>1773</value>
+ </field>
+ <field name="IBLOCK_SECTION">
+  <value section_depth_level="1" section_code="NOTGALLERY">Поддержка здоровья</value>
+ </field>
+ <field name="IPROPERTY_TEMPLATES"/>
+</item>
+
+</items>
