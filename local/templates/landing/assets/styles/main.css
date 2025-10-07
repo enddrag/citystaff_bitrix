@@ -466,6 +466,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .NB_corner-a {
+    cursor: pointer;
     position: absolute;
     left: 1500px;
     top: 70px;
