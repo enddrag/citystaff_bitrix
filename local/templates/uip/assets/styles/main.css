@@ -383,6 +383,9 @@ input[type="search"]::-webkit-search-results-decoration {
     height: 16px;
     margin-right: 5px;
     margin-bottom: 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .NB_nav_special_p {
@@ -865,6 +868,8 @@ mark {
     transition: box-shadow 0.3s;
     width: 128px;
     height: 56px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .NB_content_community_a:hover,
