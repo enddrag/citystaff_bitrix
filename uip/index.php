@@ -1050,7 +1050,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'PAGER_TEMPLATE' => '.default',
                 'PAGER_TITLE' => 'Страница',
                 'PROPERTY_CODE' => [
-                    0 => '',
+                    0 => 'link',
                     1 => '',
                 ],
                 'SET_BROWSER_TITLE' => 'N',
