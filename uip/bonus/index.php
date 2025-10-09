@@ -1494,8 +1494,10 @@ $APPLICATION->SetTitle('Бонус');
                 'PAGER_TEMPLATE' => '.default',
                 'PAGER_TITLE' => 'Страница',
                 'PROPERTY_CODE' => [
-                    0 => '',
-                    1 => '',
+                    0 => 'link_name',
+                    1 => 'link_href',
+                    2 => 'link1_name',
+                    3 => 'link1_href',
                 ],
                 'SET_BROWSER_TITLE' => 'N',
                 'SET_CANONICAL_URL' => 'N',
