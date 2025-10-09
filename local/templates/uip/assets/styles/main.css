@@ -1453,10 +1453,12 @@ body:has(section.NB_modal.NB_active) {
     object-fit: cover;
     width: 300px;
 }
-#modal1 .NB_modal_item{
+
+#modal1 .NB_modal_item {
     width: 95%;
 }
-#modal1 .NB_modal_item .NB_modal_item_item{
+
+#modal1 .NB_modal_item .NB_modal_item_item {
     width: 80%;
 }
 
