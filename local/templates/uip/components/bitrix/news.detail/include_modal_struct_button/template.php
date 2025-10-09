@@ -18,9 +18,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 $this->setFrameMode(true);
 $link = '';
+
 foreach($arResult['PROPERTIES'] as $prop){
     if($prop['CODE'] === 'link')$link = $prop['VALUE'];
 }
+
 if ($arResult['DETAIL_TEXT'] <> '') : ?>
     <a href="<?=$link?>" class="Fmenu NB_content_department_a NB_rounded-30 d-flex flex-row justify-content-center align-items-center"><?= $arResult['DETAIL_TEXT']; ?></a>
 <?php endif;?>

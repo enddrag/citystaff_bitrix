@@ -1213,19 +1213,8 @@ body:has(section.NB_modal.NB_active) {
 .b24-form-wrapper,
 .NB_modal_input_form_button,
 .b24-form-btn,
-.NB_modal_gradient,
-.NB_modal_struct,
-.NB_modal_struct img {
+.NB_modal_gradient {
     width: 100%;
-}
-
-.NB_modal_struct,
-.NB_modal_struct img {
-    height: 100%;
-}
-
-.NB_modal_struct img {
-    object-fit: cover;
 }
 
 .NB_modal_input_form_items, .b24-form-control-container {
