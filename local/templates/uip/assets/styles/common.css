@@ -20,6 +20,8 @@
     transition: background-color 0.5s;
     border-radius: 30px;
     padding: 5px 12px;
+    overflow-wrap: normal;
+    white-space: nowrap;
 }
 
 .NB1_nav_item a:hover, .NB1_nav_item_active {
