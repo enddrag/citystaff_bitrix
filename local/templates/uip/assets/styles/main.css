@@ -739,6 +739,7 @@ mark {
 
 .NB_content_department_a:hover {
     box-shadow: 0 0 15px rgba(250, 250, 250, 0.668);
+    color: #353536;
 }
 
 .NB_content_department_img {
