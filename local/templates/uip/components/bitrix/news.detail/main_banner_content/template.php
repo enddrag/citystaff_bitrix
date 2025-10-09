@@ -46,53 +46,35 @@ foreach ($arResult['PROPERTIES'] as $property) {
                     && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')
             ) {
                 $a_link = $property['VALUE'];
-                $securityContext = $storage->getCurrentUserSecurityContext();
                 $urlManager = Driver::getInstance()->getUrlManager();
-
-                $folderObjectList = $storage->getChildren($securityContext, [
-                    'filter' => [
-                        'TYPE' => ObjectTable::TYPE_FOLDER,
-                    ],
-                    'order' => [
-                        'ID' => 'DESC',
-                    ],
+                $file = $storage->getChild([
+                        '=TYPE' => ObjectTable::TYPE_FILE,
+                        '=NAME' => $a_link,
                 ]);
 
-                foreach ($folderObjectList as $folder) {
-                    $fileObjectList = $folder->getChildren($securityContext, [
-                        'filter' => [
-                            'TYPE' => ObjectTable::TYPE_FILE,
-                            'NAME' => $a_link,
-                        ],
-                        'limit' => 1,
-                        'order' => [
-                            'ID' => 'DESC',
-                        ],
-
-                    ]);
-                    foreach ($fileObjectList as $file) {
-                        $file_link = $urlManager->getUrlForDownloadFile($file);
-                        $attributes = ItemAttributes::tryBuildByFileId(
+                if ($file) {
+                    $file_link = $urlManager->getUrlForDownloadFile($file);
+                    $attributes = ItemAttributes::tryBuildByFileId(
                             $file->getId(),
                             $urlManager->getUrlForDownloadFile($file),
-                        )->setTitle($file->getName());
-                        $fileExtension = strtolower($file->getExtension());
-                        $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
-                        $audioExtensions = ['mp3', 'wav', 'ogg'];
-                        $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+    )->setTitle($file->getName());
 
-                        if (in_array($fileExtension, $videoExtensions)) {
-                            $attributes->setAttribute('data-viewer-type', 'video');
-                        } elseif (in_array($fileExtension, $audioExtensions)) {
-                            $attributes->setAttribute('data-viewer-type', 'audio');
-                        } elseif (in_array($fileExtension, $imageExtensions)) {
-                            $attributes->setAttribute('data-viewer-type', 'image');
-                        } else {
-                            $attributes->setAttribute('data-viewer-type', 'file');
-                        }
-                        break;
+                    $fileExtension = strtolower($file->getExtension());
+                    $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
+                    $audioExtensions = ['mp3', 'wav', 'ogg'];
+                    $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+
+                    if (in_array($fileExtension, $videoExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'video');
+                    } elseif (in_array($fileExtension, $audioExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'audio');
+                    } elseif (in_array($fileExtension, $imageExtensions)) {
+                        $attributes->setAttribute('data-viewer-type', 'image');
+                    } else {
+                        $attributes->setAttribute('data-viewer-type', 'file');
                     }
                 }
+
             }
             break;
         case 'a_name':
