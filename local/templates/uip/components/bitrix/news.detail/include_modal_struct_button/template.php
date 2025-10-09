@@ -17,7 +17,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 /** @var CBitrixComponent $component */
 
 $this->setFrameMode(true);
-
+$link = '';
+foreach($arResult['PROPERTIES'] as $prop){
+    if($prop['CODE'] === 'link')$link = $prop['VALUE'];
+}
 if ($arResult['DETAIL_TEXT'] <> '') : ?>
-    <p class="Fmenu NB_content_department_a NB_rounded-30 d-flex flex-row justify-content-center align-items-center" data-modal="modal1"><?= $arResult['DETAIL_TEXT']; ?></p>
+    <a href="<?=$link?>" class="Fmenu NB_content_department_a NB_rounded-30 d-flex flex-row justify-content-center align-items-center"><?= $arResult['DETAIL_TEXT']; ?></a>
 <?php endif;?>
