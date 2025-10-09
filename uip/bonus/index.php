@@ -1454,7 +1454,7 @@ $APPLICATION->SetTitle('Бонус');
         <?php
         $APPLICATION->IncludeComponent(
             'bitrix:news.detail',
-            'include_Fbody',
+            'common_b_health',
             [
                 'ACTIVE_DATE_FORMAT' => 'd.m.Y',
                 'ADD_ELEMENT_CHAIN' => 'N',
