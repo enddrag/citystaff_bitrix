@@ -1463,6 +1463,12 @@ body:has(section.NB_modal.NB_active) {
     object-fit: cover;
     width: 300px;
 }
+#modal1 .NB_modal_item{
+    width: 95%;
+}
+#modal1 .NB_modal_item .NB_modal_item_item{
+    width: 80%;
+}
 
 /*Битриксное модальное окно*/
 .b24-form,
@@ -2904,4 +2910,3 @@ div.news-detail img.detail_picture {
     float: left;
     margin: 0 8px 6px 1px;
 }
-

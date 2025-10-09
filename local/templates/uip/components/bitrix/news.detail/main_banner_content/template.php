@@ -5,6 +5,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 }
 
 use Bitrix\Disk\Driver;
+use Bitrix\Disk\File;
 use Bitrix\Disk\Internals\ObjectTable;
 use Bitrix\Main\Loader;
 use Bitrix\Main\UI\Extension;
@@ -43,22 +44,27 @@ foreach ($arResult['PROPERTIES'] as $property) {
         case 'a_link':
             if (
                 Loader::includeModule('disk')
-                    && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')
+                && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')
             ) {
                 $a_link = $property['VALUE'];
-                $urlManager = Driver::getInstance()->getUrlManager();
-                $file = $storage->getChild([
+                $file = File::getModelList([
+                    'filter' => [
+                        'STORAGE_ID' => $storage->getId(),
                         '=TYPE' => ObjectTable::TYPE_FILE,
                         '=NAME' => $a_link,
+                    ],
+                    'limit' => 1,
                 ]);
 
+                $file = $file ? $file[0] : [];
+
                 if ($file) {
+                    $urlManager = Driver::getInstance()->getUrlManager();
                     $file_link = $urlManager->getUrlForDownloadFile($file);
                     $attributes = ItemAttributes::tryBuildByFileId(
-                            $file->getId(),
-                            $urlManager->getUrlForDownloadFile($file),
-    )->setTitle($file->getName());
-
+                        $file->getId(),
+                        $urlManager->getUrlForDownloadFile($file),
+                    )->setTitle($file->getName());
                     $fileExtension = strtolower($file->getExtension());
                     $videoExtensions = ['mp4', 'avi', 'mov', 'wmv', 'flv', 'webm'];
                     $audioExtensions = ['mp3', 'wav', 'ogg'];
@@ -74,7 +80,6 @@ foreach ($arResult['PROPERTIES'] as $property) {
                         $attributes->setAttribute('data-viewer-type', 'file');
                     }
                 }
-
             }
             break;
         case 'a_name':
@@ -92,6 +97,8 @@ foreach ($arResult['PROPERTIES'] as $property) {
         <h1 class="NB_corner_h"><?= $title ?></h1>
     </div>
 </div>
-<video autoplay loop muted playsinline class="NB_banner_preview">
-    <source src="<?=$file_link?>" type="video/mp4">
-</video>
+<?php if ($file_link) { ?>
+    <video autoplay loop muted playsinline class="NB_banner_preview">
+        <source src="<?=$file_link?>" type="video/mp4">
+    </video>
+<?php } ?>

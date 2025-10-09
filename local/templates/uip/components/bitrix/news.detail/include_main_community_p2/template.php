@@ -19,6 +19,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 $this->setFrameMode(true);
 
 if ($arResult['DETAIL_TEXT'] <> '') : ?>
-    <p class="Fbody_big NB_content_community_content_item_right_p NB_rounded-20 "><?= $arResult['DETAIL_TEXT']; ?></p>
+    <p class="Fbody NB_content_community_content_item_right_p NB_rounded-20 "><?= $arResult['DETAIL_TEXT']; ?></p>
 <?php endif; ?>
 

@@ -13,7 +13,7 @@ use Bitrix\Main\Page\Asset;
 use Bitrix\Main\UI\Extension;
 
 if (!CurrentUser::get()->isAuthorized()) {
-    LocalRedirect('/');
+    LocalRedirect('/auth/?backurl=' . urlencode($_SERVER['REQUEST_URI']));
 }
 
 global $APPLICATION;
@@ -103,8 +103,11 @@ if (
         $fileObjectList = $folder->getChildren($securityContext, [
             'filter' => [
                 'TYPE' => ObjectTable::TYPE_FILE,
-                '%NAME' => $extension,
-                '!%NAME' => $contextIgnore,
+                [
+                    'LOGIC' => 'AND',
+                    ['%NAME' => $extension],
+                    ['%NAME' => $contextIgnore],
+                ],
             ],
             'order' => [
                 'ID' => 'DESC',
