@@ -59,12 +59,12 @@ if (
     Loader::includeModule('disk')
     && $storage = Driver::getInstance()->getStorageByCommonId('shared_files_s1')
 ) {
-    $securityContext = $storage->getCurrentUserSecurityContext();
     $urlManager = Driver::getInstance()->getUrlManager();
     //documents
     $fileObjectList = File::getModelList([
         'select' => ['ID', 'NAME', 'TYPE'],
         'filter' => [
+            '=STORAGE_ID' => $storage->getId(),
             '=TYPE' => ObjectTable::TYPE_FILE,
             '%NAME' => $extension,
             '!%NAME' => $contextIgnore,
@@ -88,6 +88,7 @@ if (
     $fileObjectList = File::getModelList([
         'select' => ['ID', 'NAME', 'TYPE'],
         'filter' => [
+            '=STORAGE_ID' => $storage->getId(),
             '=TYPE' => ObjectTable::TYPE_FILE,
             [
                 'LOGIC' => 'AND',
