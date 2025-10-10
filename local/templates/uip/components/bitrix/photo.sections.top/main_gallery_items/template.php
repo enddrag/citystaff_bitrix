@@ -19,6 +19,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 $this->setFrameMode(true);
 ?>
 <div class="photo-sections-top">
+    <?php
+        foreach ($arResult['SECTIONS'] as $arSection): ?>
+        <p class="Fbody NB_content_tradition_p NB_content_tradition_gallery_filter <?= $arSection['CODE'] ?>"><?=$arSection['DESCRIPTION']?></p>
+    <?php endforeach?>
     <div class="NB_content_tradition_menu NB_rounded-50 widthBase d-flex flex-row justify-content-around align-items-center">
         <?php
         foreach ($arResult['SECTIONS'] as $arSection): ?>
@@ -82,7 +86,7 @@ $this->setFrameMode(true);
                         <?php
                         if (is_array($arItem['PICTURE'])): ?>
                             <img
-                                class="NB_content_tradition_gallery_item NB_rounded-20 <?= $arSection['CODE'] ?>"
+                                class="NB_content_tradition_gallery_item NB_content_tradition_gallery_filter NB_rounded-20 <?= $arSection['CODE'] ?>"
                                 id="<?= $this->GetEditAreaId($arItem['ID']); ?>"
                                 src="<?= $arItem['PICTURE']['SRC'] ?>"
                                 alt="<?= $arItem['PICTURE']['ALT'] ?>"
