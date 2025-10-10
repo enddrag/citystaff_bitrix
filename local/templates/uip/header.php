@@ -135,7 +135,7 @@ if (
             /*----------------------галерея-------------------------*/
             // Функция для фильтрации галереи
             function filterGallery(sectionClass) {
-                $('.NB_content_tradition_gallery_item').each(function () {
+                $('.NB_content_tradition_gallery_filter').each(function () {
                     if ($(this).hasClass(sectionClass)) {
                         $(this).css('display', 'block').animate({opacity: 1}, 250);
                     } else {
