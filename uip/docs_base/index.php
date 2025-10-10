@@ -3,10 +3,7 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 
 use Bitrix\Main\Page\Asset;
-use Bitrix\Main\UI\Extension;
 use Bitrix\Main\UI\Viewer\ItemAttributes;
-
-Extension::load('ui.viewer');
 
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/docsBase.js');
 

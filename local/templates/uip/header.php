@@ -5,6 +5,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 }
 
 use Bitrix\Disk\Driver;
+use Bitrix\Disk\File;
 use Bitrix\Disk\Internals\ObjectTable;
 use Bitrix\Intranet\CurrentUser;
 use Bitrix\Main\Context;
@@ -12,8 +13,10 @@ use Bitrix\Main\Loader;
 use Bitrix\Main\Page\Asset;
 use Bitrix\Main\UI\Extension;
 
+$server = Context::getCurrent()->getServer();
+
 if (!CurrentUser::get()->isAuthorized()) {
-    LocalRedirect('/auth/?backurl=' . urlencode($_SERVER['REQUEST_URI']));
+    LocalRedirect('/auth/?backurl=' . urlencode($server->getRaw('REQUEST_URI')));
 }
 
 global $APPLICATION;
@@ -23,14 +26,17 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/styles/common.css');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/search.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/modal.js');
 
-Extension::load(['jquery3', 'ui.bootstrap4']);
+Extension::load([
+    'jquery3',
+    'ui.bootstrap4',
+    'ui.viewer',
+]);
 
-if ($_SERVER['PHP_SELF'] != Context::getCurrent()->getRequest()->getRequestedPage()) {
-    LocalRedirect($_SERVER['PHP_SELF']);
+if ($server->getRaw('PHP_SELF') != Context::getCurrent()->getRequest()->getRequestedPage()) {
+    LocalRedirect($server->getRaw('PHP_SELF'));
 }
 
 Loader::includeModule('iblock');
-Extension::load('ui.viewer');
 
 $IB_ID = [];
 $res = CIBlock::GetList(
@@ -44,22 +50,8 @@ while ($iblock_list = $res->Fetch()) {
     }
 }
 
-$contextIgnore = [
-    'шаблон',
-    'образец',
-    'бланк',
-    'заявление',
-];
-$extension = [
-    '.docx',
-    '.doc',
-    '.xlsx',
-    '.xls',
-    '.pptx',
-    '.ppt',
-    '.pdf',
-];
-
+$contextIgnore = ['шаблон', 'образец', 'бланк', 'заявление'];
+$extension = ['.docx', '.doc', '.xlsx', '.xls', '.pptx', '.ppt', '.pdf'];
 $fileList = [];
 $templateList = [];
 
@@ -69,60 +61,53 @@ if (
 ) {
     $securityContext = $storage->getCurrentUserSecurityContext();
     $urlManager = Driver::getInstance()->getUrlManager();
-    $folderObjectList = $storage->getChildren($securityContext, [
+    //documents
+    $fileObjectList = File::getModelList([
+        'select' => ['ID', 'NAME', 'TYPE'],
         'filter' => [
-            'TYPE' => ObjectTable::TYPE_FOLDER,
+            '=TYPE' => ObjectTable::TYPE_FILE,
+            '%NAME' => $extension,
+            '!%NAME' => $contextIgnore,
         ],
         'order' => [
             'ID' => 'DESC',
         ],
+        'limit' => 100,
     ]);
 
-    foreach ($folderObjectList as $folder) {
-        $fileObjectList = $folder->getChildren($securityContext, [
-            'filter' => [
-                'TYPE' => ObjectTable::TYPE_FILE,
-                '%NAME' => $extension,
-                '!%NAME' => $contextIgnore,
-            ],
-            'order' => [
-                'ID' => 'DESC',
-            ],
-        ]);
-
-        foreach ($fileObjectList as $file) {
-            $fileList[] = [
-                'id' => $file->getId(),
-                'name' => str_replace($extension, '', $file->getName()),
-                'download' => $urlManager->getUrlForDownloadFile($file),
-                'getExtension' => $file->getExtension(),
-            ];
-        }
+    foreach ($fileObjectList as $file) {
+        $fileList[] = [
+            'id' => $file->getId(),
+            'name' => str_replace($extension, '', $file->getName()),
+            'download' => $urlManager->getUrlForDownloadFile($file),
+            'getExtension' => $file->getExtension(),
+        ];
     }
 
-    foreach ($folderObjectList as $folder) {
-        $fileObjectList = $folder->getChildren($securityContext, [
-            'filter' => [
-                'TYPE' => ObjectTable::TYPE_FILE,
-                [
-                    'LOGIC' => 'AND',
-                    ['%NAME' => $extension],
-                    ['%NAME' => $contextIgnore],
-                ],
+    //templates
+    $fileObjectList = File::getModelList([
+        'select' => ['ID', 'NAME', 'TYPE'],
+        'filter' => [
+            '=TYPE' => ObjectTable::TYPE_FILE,
+            [
+                'LOGIC' => 'AND',
+                ['%NAME' => $extension],
+                ['%NAME' => $contextIgnore],
             ],
-            'order' => [
-                'ID' => 'DESC',
-            ],
-        ]);
+        ],
+        'order' => [
+            'ID' => 'DESC',
+        ],
+        'limit' => 100,
+    ]);
 
-        foreach ($fileObjectList as $file) {
-            $templateList[] = [
-                'id' => $file->getId(),
-                'name' => str_replace($extension, '', $file->getName()),
-                'download' => $urlManager->getUrlForDownloadFile($file),
-                'getExtension' => $file->getExtension(),
-            ];
-        }
+    foreach ($fileObjectList as $file) {
+        $templateList[] = [
+            'id' => $file->getId(),
+            'name' => str_replace($extension, '', $file->getName()),
+            'download' => $urlManager->getUrlForDownloadFile($file),
+            'getExtension' => $file->getExtension(),
+        ];
     }
 }
 ?>
@@ -165,12 +150,12 @@ if (
             if ($('.NB_content_tradition_menu_item').length > 0) {
                 $('.NB_content_tradition_menu_item').first().click();
             }
-            /*----------------------------------------------------------*/
         });
     </script>
 </head>
 <body>
     <div>
-        <?php $APPLICATION->ShowPanel(); ?>
+        <?php
+        $APPLICATION->ShowPanel(); ?>
     </div>
 </body>
