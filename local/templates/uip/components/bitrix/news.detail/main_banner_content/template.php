@@ -8,7 +8,6 @@ use Bitrix\Disk\Driver;
 use Bitrix\Disk\File;
 use Bitrix\Disk\Internals\ObjectTable;
 use Bitrix\Main\Loader;
-use Bitrix\Main\UI\Extension;
 use Bitrix\Main\UI\Viewer\ItemAttributes;
 
 /** @var array $arParams */
@@ -24,8 +23,6 @@ use Bitrix\Main\UI\Viewer\ItemAttributes;
 /** @var CBitrixComponent $component */
 
 $this->setFrameMode(true);
-
-Extension::load('ui.viewer');
 
 $title = '';
 $paragraph = '';
@@ -90,7 +87,7 @@ foreach ($arResult['PROPERTIES'] as $property) {
 ?>
 <div class="NB_corner-box widthBase">
     <?php if (!empty($attributes)) :?>
-        <p class="NB_corner-a NB_rounded-30 d-flex align-items-center justify-content-center" <?=$attributes?> ><?= $a_name ?></p>
+        <span class="NB_corner-a NB_rounded-30 d-flex align-items-center justify-content-center" <?=$attributes?> ><?= $a_name ?></span>
     <?php endif;?>
     <div class="NB_corner_content d-flex flex-column justify-content-end">
         <p class="NB_corner_p"><?= $paragraph ?></p>
@@ -98,7 +95,7 @@ foreach ($arResult['PROPERTIES'] as $property) {
     </div>
 </div>
 <?php if ($file_link) { ?>
-    <video autoplay loop muted playsinline class="NB_banner_preview">
+    <video autoplay loop muted playsinline preload="none" loading="lazy" class="NB_banner_preview">
         <source src="<?=$file_link?>" type="video/mp4">
     </video>
 <?php } ?>

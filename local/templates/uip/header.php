@@ -30,6 +30,7 @@ if ($_SERVER['PHP_SELF'] != Context::getCurrent()->getRequest()->getRequestedPag
 }
 
 Loader::includeModule('iblock');
+Extension::load('ui.viewer');
 
 $IB_ID = [];
 $res = CIBlock::GetList(
