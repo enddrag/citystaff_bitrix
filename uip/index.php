@@ -1213,7 +1213,7 @@ $APPLICATION->SetTitle('Главная', true);
                 'LINE_ELEMENT_COUNT' => '3',
                 'PROPERTY_CODE' => ['', ''],
                 'SECTION_COUNT' => '20',
-                'SECTION_FIELDS' => ['ID', 'CODE', 'NAME', ''],
+                'SECTION_FIELDS' => ['ID', 'CODE', 'NAME', 'DESCRIPTION'],
                 'SECTION_SORT_FIELD' => 'sort',
                 'SECTION_SORT_ORDER' => 'asc',
                 'SECTION_URL' => '',
