@@ -659,8 +659,7 @@ mark {
 }
 
 .NB_content_cyrcles_item:hover pre,
-.NB_content_cyrcles_item:hover .NB_content_cyrcles_item_number,
-.NB_content_cyrcles_item:hover .NB_content_cyrcles_item_h {
+.NB_content_cyrcles_item:hover .NB_content_cyrcles_item_number{
     color: white;
 }
 
@@ -669,6 +668,7 @@ mark {
 }
 
 .NB_content_cyrcles_item_number {
+    display: none;
     font-family: 'light_c', serif;
     color: rgba(0, 175, 87, 1);
     transition: background-color 0.3s, color 0.3s;
@@ -696,7 +696,17 @@ mark {
 }
 
 .NB_content_cyrcles_item_h {
+    position: absolute;
     color: rgba(53, 53, 54, 1);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.NB_content_cyrcles_item:hover .NB_content_cyrcles_item_h{
+    opacity: 0;
 }
 
 /*--------отделы---------*/
